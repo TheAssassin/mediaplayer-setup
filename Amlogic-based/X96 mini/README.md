@@ -14,6 +14,11 @@ It should boot automatically from MicroSD. If not, you can try holding the micro
 Booting has worked well so far. There's a UART port expected to be inside, but so far there was no need to open one of those devices up.
 
 
+## Teardown
+
+Due to severe thermal issues, the device was opened up to see what's going on. WIP in [Teardown](Teardown.md).
+
+
 ## Tested distros
 
 - CoreELEC (see [CoreELEC](CoreELEC.md) for more information)
