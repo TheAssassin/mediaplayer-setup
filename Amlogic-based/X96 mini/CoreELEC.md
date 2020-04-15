@@ -33,7 +33,7 @@ It will boot, resize itself, then reboot into CoreELEC. You can either turn it o
 
 ## Add missing RC keymap
 
-There's a [Dropbox share](https://www.dropbox.com/sh/w60gx2c66rpmb4e/AAAVeDersy7MJFCESRCAEGcVa?dl=0) containing keymaps for a large variety of devices. We've found the [X96](https://www.dropbox.com/sh/w60gx2c66rpmb4e/AAAVeDersy7MJFCESRCAEGcVa?dl=0&preview=X96.zip) (that's a sort of slightly larger device, similar to the [MXQ OTT](../MXQ OTT/)) keymaps work reasonably well.
+There's a [Dropbox share](https://www.dropbox.com/sh/w60gx2c66rpmb4e/AAAVeDersy7MJFCESRCAEGcVa?dl=0) containing keymaps for a large variety of devices. We've found the [X96](https://www.dropbox.com/sh/w60gx2c66rpmb4e/AAAVeDersy7MJFCESRCAEGcVa?dl=0&preview=X96.zip) (that's a sort of slightly larger device, similar to the [MXQ OTT](../MXQ OTT/) keymaps work reasonably well.
 
 You can find a copy of the required files in this directory.
 
