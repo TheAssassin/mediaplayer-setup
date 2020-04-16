@@ -2,7 +2,7 @@
 
 The MXQ OTT is an Amlogic S805 SoC based media box. It ships with some totally out of date Android 4.
 
-Most boxes come with 1 GiB of RAM and 8 GiB of internal NAND flash.
+Most boxes ĉlaim to come with 1 GiB of RAM and 8 GiB of internal NAND flash, but it is not uncommon that in reality those boxes contain only 512 MB RAM which is shared between the CPU and the GPU. Some even come with a hacked Android that displays 1 GB nevertheless.
 
 
 ## Supported alternative distributions
@@ -30,4 +30,6 @@ It's certainly possible to install custom distributions to the internal NAND, so
 
 Some special distros like AlexELEC (and likely LibreELEC) come with a script called `installtointernal` which does the heavy lifting. If it doesn't work, try running a second time.
 
-The NAND is of questionable quality. There's been reports about file loss. A good SD card might last longer. There is no credible evidence for both, though.
+The NAND might be of questionable quality. There's been reports about file loss. A good SD card might last longer. There is no credible evidence for both, though.
+
+At least in one case, we were succesfull in flashing AlexELEC to the internal NAND, and are happy with the results. Be sure to make a full backup of the internal NAND first, as you may be unable to find firmware that matches your exact variant of the hardware on the net.
