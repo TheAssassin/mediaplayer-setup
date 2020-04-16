@@ -2,7 +2,7 @@
 
 The MXQ OTT is an Amlogic S805 SoC based media box. It ships with some totally out of date Android 4.
 
-Most boxes ĉlaim to come with 1 GiB of RAM and 8 GiB of internal NAND flash, but it is not uncommon that in reality those boxes contain only 512 MB RAM which is shared between the CPU and the GPU. Some even come with a hacked Android that displays 1 GB nevertheless.
+Most boxes ĉlaim to come with 1 GiB of RAM and 8 GiB of internal NAND flash, but it is not uncommon that in reality those boxes contain only 512 MB RAM which is shared between the CPU and the GPU. Some "fake" boxes even come with a hacked Android that displays 1 GB nevertheless.
 
 
 ## Supported alternative distributions
