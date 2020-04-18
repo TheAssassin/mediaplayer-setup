@@ -1,0 +1,615 @@
+import init.amlogic.usb.rc
+import init.amlogic.board.rc
+import init.amlogic.wifi.rc
+import init.mtk.rc
+
+on early-init
+    mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
+    # Set up kernel tracing, but disable it by default
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+
+on init
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+
+
+    mkdir /factory
+    chown system wifi /dev/wifi_power
+    chmod 0660 /dev/wifi_power
+
+    chmod 666 /sys/class/audiodsp/codec_fatal_err
+    chmod 666 /sys/class/ppmgr/angle
+    chmod 666 /sys/class/vfm/map
+    chmod 666 /sys/class/video/axis
+    chmod 666 /sys/class/video/disable_video
+    chmod 666 /sys/class/tsync/enable
+    chmod 666 /sys/class/tsync/pts_pcrscr
+    chmod 666 /sys/class/tsync/av_threshold_min
+    chmod 666 /sys/class/video/screen_mode
+    chmod 666 /sys/class/vdec/poweron_clock_level
+    chmod 666 /sys/module/ionvideo/parameters/freerun_mode
+    chown media system /sys/class/graphics/fb0/osd_afbcd
+    write /sys/class/graphics/fb0/osd_afbcd 1
+    chmod 666 /sys/class/video/blackout_policy
+    chmod 666 /sys/class/tsync/vpause_flag
+    chmod 0666 /dev/amstream_sub_read
+
+    # for zram
+    mkdir /swap_zram0 0700 root root
+
+    # for tee
+    mkdir /tee 0700 system system
+    wait /dev/block/tee 1000
+    confirm_formated ext4 /dev/block/tee /tee 1024 1024
+
+
+on aml-firstboot-init
+    #format data and cache patrition if not exist
+    wait /dev/block/data 20
+    confirm_formated ext4 /dev/block/data /data
+    wait /dev/block/cache 20
+    confirm_formated ext4 /dev/block/cache /cache
+
+on fs
+    # first, only mount system, quick bringup accelerateboot
+    mount_all /fstab.amlogic --early_system
+    start accelerateboot
+
+    # then, mount other partition.
+    # Note! mount cache is much faster than data, we store
+    # learn result at cache partition. so cache should be
+    # mounted early than data.
+    mount_all /fstab.amlogic --ignore_system
+    mkdir /cache/accelboot 0777 root system
+    mkdir /data/accelboot 0777
+    setprop ro.boot.data_mounted true
+    setprop ro.crypto.fuse_sdcard true
+    swapon_all /fstab.amlogic
+
+on post-fs
+    restorecon_recursive /tee
+    start tee_supplicant
+
+on post-fs-data
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 system dhcp
+
+    mkdir /data/misc/etc 0777 system pppoe
+    mkdir /data/misc/etc/ppp 0777 system pppoe
+    chown system system /etc/ppp
+    chmod 0770 /etc/ppp
+    #create droidota directory for system update
+    mkdir /data/droidota 0771 system system
+    #save log
+    mkdir /data/log 0771 log log
+    mkdir /data/log/dontpanic 0771 log log
+
+    # we will remap this as /storage/sdcard0 with the sdcard fuse tool
+    mkdir /data/media 0770 media_rw media_rw
+
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
+
+on late-fs
+    #boottime fs tune
+    write /sys/block/mmcblk0/queue/iostats 0
+    write /sys/block/mmcblk0/queue/scheduler cfq
+    write /sys/block/mmcblk0/queue/iosched/slice_idle 0
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/mmcplk0/queue/nr_requests 256
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+
+on property:sys.boot_completed=1
+    # end boot time fs tune
+    write /sys/block/mmcblk0/queue/read_ahead_kb 512
+
+on boot
+    #bluetooth
+    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
+    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chmod 0660 /sys/class/rfkill/rfkill0/type
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
+    chmod 0660 /proc/bluetooth/sleep/btwrite
+    chmod 0660 /proc/bluetooth/sleep/lpm
+    # change back to bluetooth from system
+    chown bluetooth net_bt_stack /data/misc/bluetooth
+
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk1/queue/read_ahead_kb 2048
+
+    chown system mediadrm /sys/class/amhdmitx/amhdmitx0/aud_ch
+    chmod 0664 /sys/class/amhdmitx/amhdmitx0/aud_ch
+    insmod  /system/lib/aml_thermal.ko
+    insmod  /system/lib/ddr_window_64.ko
+
+    chown media system /sys/class/tsync/pts_video
+    chown system mediadrm /sys/class/tsync/pts_audio
+    chown system mediadrm /sys/class/tsync/pts_pcrscr
+    chown system mediadrm /sys/class/tsync/event
+    chown media system /sys/class/tsync/mode
+    chown media system /sys/class/tsync/enable
+    chown media system /sys/class/tsync/av_threshold_min
+    chown media system /sys/class/tsync/av_threshold_max
+    chown system system /sys/class/graphics/fb0/blank
+    chown media system /sys/class/graphics/fb0/free_scale_switch
+    chown media system /sys/class/graphics/fb1/blank
+    chown media system /sys/class/graphics/fb0/order
+    chown media system /sys/class/graphics/fb1/order
+    chown media system /sys/class/graphics/fb0/enable_key
+    chown media system /sys/class/graphics/fb0/enable_key_onhold
+    chown media system /sys/module/amlvideodri/parameters/freerun_mode
+    chown media system /sys/module/ionvideo/parameters/freerun_mode
+
+    chmod 0664 /sys/class/graphics/fb0/blank
+    chmod 0664 /sys/class/graphics/fb1/blank
+    chmod 0664 /sys/class/graphics/fb0/free_scale_switch
+
+    chown media system /sys/class/video/blackout_policy
+    chown media system /sys/class/video/screen_mode
+    chown media system /sys/class/video/axis
+    chown media system /sys/class/video/disable_video
+    chown media system /sys/class/video/zoom
+    chown media system /sys/class/video/free_keep_buffer
+    chown media system /sys/class/video/free_cma_buffer
+    chown mediacodec mediadrm /sys/class/codec_mm/tvp_enable
+    chown media system /sys/class/ppmgr/angle
+    chown media system /sys/class/ppmgr/disp
+    chown system system /sys/class/ppmgr/ppscaler
+    chown media system /sys/class/ppmgr/ppscaler_rect
+    chown media system /sys/class/ppmgr/vtarget
+
+    chown media system /sys/class/amaudio/audio_channels_mask
+    chown media system /sys/class/amaudio/enable_resample
+    chown media system /sys/class/amaudio/resample_type
+    chown system mediadrm /sys/class/amaudio/debug
+
+    chown system system /sys/class/audiodsp/digital_raw
+    chown system system /sys/class/audiodsp/ac3_drc_control
+    chown media system /sys/class/audiodsp/dts_dec_control
+    chmod 0664  /sys/class/audiodsp/dts_dec_control
+    chmod 0666  /dev/audiodsp_pcmenc
+    chmod 0666  /dev/audio_spdif
+    chmod 0664  /sys/class/amaudio/debug
+    chmod 0666 /dev/ilitek_ctrl
+    chmod 0660 /dev/wifi_power
+
+# default support XBMC
+    chmod 666 /sys/class/video/axis
+    chmod 666 /sys/class/video/screen_mode
+    chmod 666 /sys/class/video/disable_video
+    chmod 666 /sys/class/tsync/pts_pcrscr
+    chmod 666 /dev/amstream_abuf
+    chmod 666 /dev/amstream_hevc
+    chmod 666 /dev/amstream_hevc_frame
+    chmod 666 /dev/amstream_hevc_sched
+    chmod 666 /dev/amstream_mpps
+    chmod 666 /dev/amstream_mpts
+    chmod 666 /dev/amstream_mpts_sched
+    chmod 666 /dev/amstream_rm
+    chmod 666 /dev/amstream_sub
+    chmod 666 /dev/amstream_sub_read
+    chmod 666 /dev/amstream_userdata
+    chmod 666 /dev/amstream_vbuf
+    chmod 666 /dev/amstream_vframe
+    chmod 666 /dev/amstream_vbuf_sched
+    chmod 666 /dev/amstream_dves_avc
+    chmod 666 /dev/amstream_dves_hevc
+    chmod 666 /dev/amvideo
+    chmod 666 /dev/ionvideo
+    chmod 666 /dev/media
+    chmod 666 /dev/media.amports
+    chmod 666 /dev/media.codec_mm
+    chmod 666 /dev/media.parser
+    chmod 666 /dev/media.decoder
+    chmod 666 /dev/media.video
+    chmod 666 /dev/media.tsync
+    chmod 666 /dev/media.audio
+    chmod 666 /dev/media.vfm
+    chmod 666 /dev/vfm
+    chmod 666 /dev/amsubtitle
+    chown media system /dev/media
+    chown media system /dev/media.amports
+    chown media system /dev/media.codec_mm
+    chown media system /dev/media.parser
+    chown media system /dev/media.decoder
+    chown media system /dev/media.video
+    chown media system /dev/media.tsync
+    chown media system /dev/media.audio
+    chown media system /dev/media.vfm
+    chown media system /dev/vfm
+    chown media system /dev/amsubtitle
+#add for XBMC BlueRay 3d and audio Passthrough
+    chmod 666 /sys/class/audiodsp/digital_raw
+    chmod 666 /sys/class/audiodsp/digital_codec
+    chmod 666 /sys/class/ppmgr/ppmgr_3d_mode
+    chmod 666 /sys/class/video/blackout_policy
+    chmod 666 /dev/snd/controlC0
+    chmod 666 /dev/snd/pcmC0D0c
+    chmod 666 /dev/snd/pcmC0D0p
+    chmod 666 /dev/snd/pcmC0D1c
+    chmod 666 /dev/snd/pcmC0D1p
+    chmod 666 /dev/snd/timer
+    chmod 666 /sys/devices/platform/spdif-dit.0/spdif_mute
+    chmod 666 /sys/class/amhdmitx/amhdmitx0/config
+
+    chown system system /sys/class/subtitle/enable
+    chown system system /sys/class/subtitle/total
+    chown system system /sys/class/subtitle/width
+    chown system system /sys/class/subtitle/height
+    chown system system /sys/class/subtitle/type
+    chown system system /sys/class/subtitle/curr
+    chown system system /sys/class/subtitle/size
+    chown system system /sys/class/subtitle/data
+    chown system system /sys/class/subtitle/startpts
+    chown system system /sys/class/subtitle/fps
+    chown system system /sys/class/subtitle/subtype
+    chown media system /sys/class/audiodsp/codec_fatal_err
+    chown media system /sys/class/subtitle/index
+    chown media system /sys/class/audiodsp/digital_codec
+
+    # DVB
+    chmod 0666 /dev/dvb0.frontend0
+    chmod 0666 /dev/dvb0.demux0
+    chmod 0666 /dev/dvb0.demux1
+    chmod 0666 /dev/dvb0.demux2
+    chmod 0666 /dev/dvb0.dvr0
+    chmod 0666 /dev/dvb0.dvr1
+    chmod 0666 /dev/dvb0.dvr2
+
+    chown media system /dev/dvb0.frontend0
+    chown media system /dev/dvb0.demux0
+    chown media system /dev/dvb0.demux1
+    chown media system /dev/dvb0.demux2
+    chown media system /dev/dvb0.dvr0
+    chown media system /dev/dvb0.dvr1
+	chmod media system /dev/smc0
+    chown media system /dev/dvb0.dvr2
+
+    chown media system /sys/class/stb/demux0_source
+    chown media system /sys/class/stb/demux1_source
+    chown media system /sys/class/stb/demux2_source
+    chown media system /sys/class/stb/source
+    chown media system /sys/class/stb/asyncfifo0_source
+    chown media system /sys/class/stb/asyncfifo1_source
+    chown media system /sys/class/stb/asyncfifo0_flush_size
+    chown media system /sys/class/stb/asyncfifo1_flush_size
+    chown media system /sys/class/stb/video_pts
+    chown media system /sys/class/stb/audio_pts
+    chown media system /sys/class/stb/dsc_source
+
+    chmod 0660 /dev/amaudio_ctl
+    chown media system /sys/class/tsync/pcr_recover
+
+    chown media system /sys/module/amvdec_h264/parameters/dec_control
+    chown media system /sys/module/amvdec_mpeg12/parameters/dec_control
+    chown media system /sys/module/di/parameters/bypass_hd
+    chown media system /sys/module/di/parameters/bypass_all
+    chown media system /sys/module/amvideo/parameters/smooth_sync_enable
+    chown media system /sys/module/amvdec_h264/parameters/error_recovery_mode
+
+    chown media system /sys/module/amvdec_h265/parameters/double_write_mode
+    chmod 666 /sys/module/amvdec_h265/parameters/double_write_mode
+
+    chown media system /sys/module/deinterlace/parameters/deinterlace_mode
+    chown media system /sys/class/graphics/fb0/block_mode
+
+    # HDMI/LCD switch
+    chown system system /sys/class/display/mode
+    chown media system /sys/class/display/axis
+    chown system system /sys/class/graphics/fb0/scale
+    chown system system /sys/class/graphics/fb1/scale
+    chown system system /sys/class/graphics/fb0/scale_axis
+    chown system system /sys/class/graphics/fb1/scale_axis
+    chown system system /sys/class/amhdmitx/amhdmitx0/disp_mode
+    chown system system /sys/class/amhdmitx/amhdmitx0/cec_config
+    chown system system /sys/class/amhdmitx/amhdmitx0/phy_addr
+    chown system system /sys/class/amhdmitx/amhdmitx0/hpd_state
+    chown system system /sys/class/amhdmitx/amhdmitx0/cec
+    chown system system /sys/class/amhdmitx/amhdmitx0/cec_lang_config
+    chown system system /sys/class/amhdmitx/amhdmitx0/config
+    chown system system /sys/class/amhdmitx/amhdmitx0/avmute
+    chmod 644 /sys/class/amhdmitx/amhdmitx0/avmute
+    chown system mediadrm /sys/class/amhdmitx/amhdmitx0/aud_output_chs
+    chown media system /sys/class/switch/hdmi/state
+    chmod 0660 /sys/class/switch/hdmi/state
+    chown media system /sys/devices/virtual/switch/hdmi/state
+    chmod 0660 /sys/devices/virtual/switch/hdmi/state
+
+    chown media  system /sys/class/vfm/map
+
+    # Free scale
+    chown system system /sys/class/graphics/fb0/free_scale
+    chown system system /sys/class/graphics/fb0/scale_width
+    chown system system /sys/class/graphics/fb0/scale_height
+    chown system system /sys/class/graphics/fb0/free_scale_axis
+    chown system system /sys/class/graphics/fb1/free_scale
+    chown system system /sys/class/graphics/fb1/scale_width
+    chown system system /sys/class/graphics/fb1/scale_height
+    chown media system /sys/class/graphics/fb0/request2XScale
+    chown system system /sys/class/graphics/fb0/freescale_mode
+    chown system system /sys/class/graphics/fb0/free_scale_axis
+    chown system system /sys/class/graphics/fb0/window_axis
+
+    # CPU scaling
+    chown system system /sys/class/thermal/thermal_zone0/mode
+    chown system system /sys/class/thermal/thermal_zone1/mode
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/hmp_boost
+    chown system system /sys/devices/system/cpu/cpufreq/conservative/freq_step
+
+    chown system system /sys/devices/system/cpu/cpufreq/performance2/sampling_rate
+    chown system system /sys/devices/system/cpu/cpufreq/performance2/down_threshold
+    chown system system /sys/devices/system/cpu/cpufreq/performance2/up_threshold
+    chown system system /sys/devices/system/cpu/cpufreq/conservative/sampling_rate
+    chown system system /sys/devices/system/cpu/cpufreq/conservative/down_threshold
+    chown system system /sys/devices/system/cpu/cpufreq/conservative/up_threshold
+    chown system system /sys/class/mali_freq/max
+    chown system system /sys/class/freq_limit/limit
+    chown system system /sys/devices/system/cpu/cpu1/online
+
+    chmod 664 /sys/class/thermal/thermal_zone0/mode
+    chmod 664 /sys/class/thermal/thermal_zone1/mode
+    chmod 664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chmod 664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chmod 664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chmod 664 /sys/devices/system/cpu/cpu0/cpufreq/hmp_boost
+    chmod 664 /sys/devices/system/cpu/cpufreq/conservative/freq_step
+    chmod 664 /sys/devices/system/cpu/cpufreq/performance2/sampling_rate
+    chmod 664 /sys/devices/system/cpu/cpufreq/performance2/down_threshold
+    chmod 664 /sys/devices/system/cpu/cpufreq/performance2/up_threshold
+    chmod 664 /sys/devices/system/cpu/cpufreq/conservative/sampling_rate
+    chmod 664 /sys/devices/system/cpu/cpufreq/conservative/down_threshold
+    chmod 664 /sys/devices/system/cpu/cpufreq/conservative/up_threshold
+    chmod 664 /sys/class/mali_freq/max
+    chmod 664 /sys/devices/system/cpu/cpu1/online
+
+    chown system system /sys/devices/system/clocksource/clocksource0/current_clocksource
+    # usbpm
+    chown system system /sys/devices/dwc2_a/peri_power
+    chown system system /sys/devices/dwc2_a/peri_sleepm
+    chown system system /sys/devices/dwc2_a/peri_otg_disable
+    chown system system /sys/devices/dwc2_b/peri_sleepm
+    chown system system /sys/devices/dwc2_b/peri_otg_disable
+    chown system system /sys/class/aml_mod/mod_off
+    chown system system /sys/class/aml_mod/mod_on
+
+    # hdcp2
+    write /sys/class/unifykeys/attach 1
+    chown media root /sys/class/unifykeys/name
+    chown media root /sys/class/unifykeys/read
+    write /proc/sys/net/ipv4/tcp_max_syn_backlog 2048
+    write /proc/sys/net/core/rmem_max 524288
+
+    mkdir /data/misc/hdcp 0770 media media
+    chown media root /sys/devices/platform/crypto_device/status
+    chown media root /sys/devices/platform/crypto_device/algname
+    chown media root /sys/devices/platform/crypto_device/keysize
+    chown media root /sys/devices/platform/crypto_device/keyaddr
+    chown media root /sys/devices/platform/crypto_device/srcaddr
+    chown media root /sys/devices/platform/crypto_device/dstaddr
+    chown media root /sys/devices/platform/crypto_device/size
+    chown media root /sys/devices/platform/crypto_device/dir
+
+    chown media system /sys/class/mpgpu/scale_mode
+    chmod 664 /sys/class/mpgpu/scale_mode
+    chown system system /sys/class/mpgpu/mpgpucmd
+    chmod 664 /sys/class/mpgpu/mpgpucmd
+
+    #di detect 3D
+    chmod 664 /sys/module/di/parameters/det3d_en
+    chmod 664 /sys/module/di/parameters/prog_proc_config
+    chown root system /sys/module/di/parameters/det3d_en
+    chown root system /sys/module/di/parameters/prog_proc_config
+
+#   start sdcard
+
+    write /sys/class/vfm/map "rm default"
+    write /sys/class/vfm/map "add default decoder ppmgr deinterlace amvideo"
+
+service system_control /system/bin/systemcontrol
+    class core
+    user root
+    group system
+    seclabel u:r:system_control:s0
+
+
+service hdmi_cec /system/bin/hdmi_cec
+    class core
+    user root
+    group system
+    seclabel u:r:hdmi_cec:s0
+
+# virtual sdcard daemon running as media_rw (1023)
+#service sdcard /system/bin/sdcard -u 1023 -g 1023 /data/media /mnt/shell/emulated
+#   class late_start
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
+
+service fuse_udisk0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/udisk0 /storage/udisk0
+    class late_start
+    disabled
+
+service fuse_udisk1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/udisk1 /storage/udisk1
+    class late_start
+    disabled
+
+service fuse_sr0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sr0 /storage/sr0
+    class late_start
+    disabled
+
+service fuse_loop /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/loop /storage/loop
+    class late_start
+    disabled
+
+# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
+service watchdogd /sbin/watchdogd 10 20
+    class core
+    disabled
+    seclabel u:r:watchdogd:s0
+
+
+
+service dhcpcd_eth0 /system/bin/dhcpcd -ABKLG
+    class main
+    disabled
+    oneshot
+
+service dhcpcd_usbnet0 /system/bin/dhcpcd -ABKLG
+    class main
+    disabled
+    oneshot
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
+service dhcpcd_p2p /system/bin/dhcpcd -aABKL
+    class main
+    disabled
+    oneshot
+
+service iprenew_wlan0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+
+service iprenew_p2p /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+
+# on userdebug and eng builds, enable kgdb on the serial console
+on property:ro.debuggable=1
+    write /sys/module/kgdboc/parameters/kgdboc ttyFIQ2
+    write /sys/module/fiq_debugger/parameters/kgdb_enable 1
+
+service remotecfg /system/bin/remotecfg /system/etc/remote.conf
+    class main
+    oneshot
+    seclabel u:r:remotecfg:s0
+
+service pppoe_wrapper /system/bin/pppoe_wrapper
+    class main
+    group system inet
+    oneshot
+    seclabel u:r:pppoe_wrapper:s0
+
+service usbpm /system/bin/usbtestpm
+    class main
+    user system
+    group system
+    seclabel u:r:usbpm:s0
+    disabled
+
+service imageserver /system/bin/imageserver
+    class main
+    user root
+    group system
+    seclabel u:r:imageserver:s0
+
+service bootvideo /system/bin/bootplayer /system/etc/bootvideo
+    class main
+    user root
+    group system
+    disabled
+    oneshot
+
+service instaboot /system/bin/instabootserver
+    class core
+    disabled
+    user root
+    group root
+    seclabel u:r:instaboot:s0
+
+on property:config.disable_instaboot=false
+    start instaboot
+
+on property:instaboot.status=completed
+    start remotecfg
+
+on property:dev.bootcomplete=1
+    start usbpm
+
+on property:vold.post_fs_data_done=1
+    start tee_supplicant
+
+service hdcp_tx22 /system/bin/hdcp_tx22 \
+    -f /system/etc/firmware/firmware.le
+    class main
+    disabled
+    oneshot
+
+service ddrtest /system/bin/ddrtest.sh
+    class main
+    user root
+    group root
+    oneshot
+
+service factoryreset /system/bin/factoryreset.sh
+    class main
+    user root
+    group root
+    oneshot
+    seclabel u:r:install_recovery:s0
+
+service loadmtk /system/bin/insmod /system/lib/btmtksdio.ko
+    #user bluetooth
+    #class main
+    #group bluetooth net_bt_stack
+    disabled
+    oneshot
+service remtk /system/bin/rmmod /system/lib/btmtksdio.ko
+    #user bluetooth
+    #class main
+    #group bluetooth net_bt_stack
+    disabled
+    oneshot
+on property:bluetooth.btdriver.mtk=true
+    start loadmtk
+on property:bluetooth.btdriver.mtk=false
+  start remtk
+service loadrtk /system/bin/insmod /system/lib/rtk_btusb.ko
+    #user bluetooth
+    #class main
+    #group bluetooth net_bt_stack
+    disabled
+    oneshot
+service rertk /system/bin/rmmod /system/lib/rtk_btusb.ko
+    #user bluetooth
+    #class main
+    #group bluetooth net_bt_stack
+    disabled
+    oneshot
+service accelerateboot /system/bin/accelerateboot
+    class core
+    writepid /dev/cpuset/foreground/tasks
+    user root
+    ioprio idle 1
+    oneshot
+    disabled
+
+on property:bluetooth.rtk.btdriver=true
+    start loadrtk
+on property:bluetooth.rtk.btdriver=false
+    start rertk
+
+# logcat offline log
+service aml_logcat /system/bin/aml_logcat -b system -b events -b main -b crash -n 2 -r 5000 -v threadtime -f /data/log/logcat.log
+    class main
+    user root
+    group system
+    ioprio idle 7
+    disabled
+    seclabel u:r:aml_logcat:s0
+
+#on property:ro.debuggable=1
+#    start aml_logcat
