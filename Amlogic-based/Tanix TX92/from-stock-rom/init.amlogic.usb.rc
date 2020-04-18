@@ -1,0 +1,106 @@
+import init.amlogic.usb.rc
+
+on early-init
+    loglevel 3
+
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+    write /sys/class/freq_limit/limit 0
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor performance
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_dflt_freq 2016000
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_dflt_freq 2016000
+
+    #mount debugfs debugfs /sys/kernel/debug
+    mount configfs configfs /sys/kernel/config
+    #mount usbfs none /proc/bus/usb
+
+    insmod /boot/optee.ko
+    insmod /boot/optee_armtz.ko
+
+on property:dev.bootcomplete=1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+
+on init
+
+on post-fs-data
+    insmod /system/lib/mali.ko mali_debug_level=2 mali_shared_mem_size=0x40000000
+    # ko for dolby vision
+    insmod /system/lib/dovi.ko
+
+on boot
+    setprop ro.radio.noril true
+    #write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    #write /sys/class/freq_limit/limit 0
+    #write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+    #write /sys/devices/system/cpu/cpu0/cpufreq/scaling_dflt_freq 2016000
+    #write /sys/devices/system/cpu/cpu4/cpufreq/scaling_dflt_freq 2016000
+
+#open osd for s912
+		write /sys/class/graphics/fb0/osd_afbcd 1
+
+#HDMI IN
+    chmod 666 /sys/class/sii9233a/port
+    chmod 666 /sys/class/sii9233a/enable
+    chmod 666 /sys/module/tvin_vdin/parameters/max_buf_num
+
+    #chmod 0666 /dev/amstream_sub_read
+
+#    insmod  /system/lib/audio_data.ko
+
+    # chmod 0666 /dev/ge2d
+    chmod 666 /dev/cec
+    chmod 0666 /dev/opteearmtz00
+    chmod 0666 /dev/tee0
+    start sud
+	start installxbmc
+	start fastinstall
+    start xbmc_addons
+
+on fs
+on post-fs-data
+   mkdir  /data/tee
+
+service tee_supplicant /system/bin/tee-supplicant
+		class main
+		oneshot
+		seclabel u:r:tee:s0
+
+service preinstall /system/bin/preinstall.sh
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:dev.bootcomplete=1
+    start preinstall
+
+on property:dev.mac.start=1
+    start zndmac
+
+service installxbmc /system/bin/installxbmc.sh
+    user root
+    group root
+    class main
+    oneshot
+
+service xbmc_addons /system/bin/xbmc_addons.sh
+    class main
+    disabled
+    oneshot
+
+service fastinstall /system/bin/fastinstall.sh
+    user root
+    group root
+    disabled
+    oneshot
+
+service sud /system/xbin/sud --daemon
+    user root
+    group root
+    disabled
+    oneshot
+
+service zndmac /system/xbin/zndmac
+    class main
+    disabled
+    oneshot
