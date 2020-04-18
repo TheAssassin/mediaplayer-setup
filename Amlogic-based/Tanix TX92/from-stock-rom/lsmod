@@ -1,0 +1,9 @@
+Module                  Size  Used by
+dwc3                   18211  0 
+wlan                 4052007  0 
+mac80211              412090  0 
+cfg80211              435665  2 wlan,mac80211
+compat                  1857  2 wlan,cfg80211
+aml_fd628               8379  1 
+ddr_window              4386  0 
+mali_kbase            352358  28 
