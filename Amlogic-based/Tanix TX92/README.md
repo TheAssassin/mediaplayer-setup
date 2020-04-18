@@ -20,4 +20,6 @@ The box is apparently available in different memory configurations, e.g., 2/16 G
 
 The Armbian project does not want to support TV boxes nor the "Single Armbian image for RK + AML + AW".
 
+@150balbes is doing great work on Amlogic boxes but unfortunately not in an "upstream" way. Downloads are stored on Yandex, a Russian site, which sometimes gives: "Download limit exceeded. You can save the folder to Yandex.Disk and download it from there."
+
 So ideally we could find a way to boot Debian or Ubuntu proper without Armbian.
