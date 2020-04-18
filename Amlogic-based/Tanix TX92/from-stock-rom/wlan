@@ -1,0 +1,11 @@
+q201:/ # dmesg | grep wlan                                                                                                           
+[    1.649143@3] Wifi: bcmdhd_init_wlan_mem: bcmdhd_init_wlan_mem: WIFI MEM Allocated
+[   20.937118@1] wlan: loading driver v4.5.10.016
+[   20.991757@7] wlan: [4918:E :HDD] wlan_hdd_cfg80211_init: wiphy->bands[i] is NULL, i = 2
+[   21.137623@4] wlan: [4918:E :VOS] ol_transfer_bin_file: transferring file: bdwlan30.bin size 8124 bytes done!
+[   21.199060@6] wlan: [4918:E :VOS] ol_transfer_bin_file: transferring file: otp30.bin size 23773 bytes done!
+[   22.344040@6] wlan: [4918:E :VOS] ol_transfer_bin_file: transferring file: qwlan30.bin size 592500 bytes done!
+[   22.392533@1] wlan: [4918:E :SAP] dfs_init_radar_filters[201]: Unknown dfs domain 0 
+[   22.507936@4] wlan: [3006:E :WDA] wma_rx_service_ready_event: Firmware build version : 0000030a
+[   22.516664@4] wlan: [3006:E :WDA] wma_rx_service_ready_event: Board version: 0.22014009
+[   22.574541@1] Modules linked in: wlan(O+) mac80211 cfg80211(O) compat(O) aml_fd628(O) ddr_window mali_kbase(O)
