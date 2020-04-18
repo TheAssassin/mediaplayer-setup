@@ -6,6 +6,8 @@ As of 4/2020, this GPU is said to play video smoother in a Linux web browser tha
 
 This box does _not_ have Gigabit Ethernet (even though the SOC could support it).
 
+Apparently it is using a Qualcomm QCA9377 802.11a/b/g/n/ac WLAN and Bluetooth 5 chip https://www.qualcomm.com/products/qca9377.
+
 The Tanix TX92 is very well-built. Unlike with cheaper boxes, the PCB is mounted upward facing, hence the connectors are in the correct orientation.
 
 ## Stock ROM Android
