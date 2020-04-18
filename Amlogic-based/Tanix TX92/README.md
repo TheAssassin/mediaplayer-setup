@@ -1,5 +1,7 @@
 # Tanix TX92
 
+http://www.tanix-box.com/project-view/tanix-tx92-android-tv-box-powered-amlogic-s912/
+
 The Tanix TX92 features an Octacore 64-bit Amlogic s812 SOC with a T820 GPU. 
 
 As of 4/2020, this GPU is said to play video smoother in a Linux web browser than most others. In our tests, YouTube video plays smooth in Chrome on @150balbes Armbian in a window, and "almost smooth" in fullscreen.
