@@ -1,0 +1,22 @@
+q201:/ # dmesg | grep mmcblk                                                                                                         
+[    2.847198@2] mmcblk0: emmc:0001 016G72 14.6 GiB 
+[    2.847591@2] mmcblk0boot0: emmc:0001 016G72 partition 1 4.00 MiB
+[    2.847982@2] mmcblk0boot1: emmc:0001 016G72 partition 2 4.00 MiB
+[    2.848381@2] mmcblk0rpmb: emmc:0001 016G72 partition 3 4.00 MiB
+[    2.849839@1]  mmcblk0: unknown partition table
+[    2.850855@1] [mmcblk0p01]           bootloader  offset 0x000000000000, size 0x000000400000 
+[    2.851000@2] [mmcblk0p02]             reserved  offset 0x000002400000, size 0x000004000000 
+[    2.851132@1] [mmcblk0p03]                cache  offset 0x000006c00000, size 0x000020000000 
+[    2.851261@2] [mmcblk0p04]                  env  offset 0x000027400000, size 0x000000800000 
+[    2.851390@1] [mmcblk0p05]                 logo  offset 0x000028400000, size 0x000002000000 
+[    2.851515@2] [mmcblk0p06]             recovery  offset 0x00002ac00000, size 0x000002000000 
+[    2.851635@1] [mmcblk0p07]                  rsv  offset 0x00002d400000, size 0x000000800000 
+[    2.851763@2] [mmcblk0p08]                  tee  offset 0x00002e400000, size 0x000000800000 
+[    2.851892@1] [mmcblk0p09]                crypt  offset 0x00002f400000, size 0x000002000000 
+[    2.852014@2] [mmcblk0p10]                 misc  offset 0x000031c00000, size 0x000002000000 
+[    2.852141@1] [mmcblk0p11]                 boot  offset 0x000034400000, size 0x000002000000 
+[    2.852269@2] [mmcblk0p12]               system  offset 0x000036c00000, size 0x000080000000 
+[    2.852396@1] [mmcblk0p13]                 data  offset 0x0000b7400000, size 0x0002f4000000 
+[    2.858337@1]  mmcblk0boot1: unknown partition table
+[    2.859337@1]  mmcblk0boot0: unknown partition table
+(...)
