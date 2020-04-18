@@ -22,7 +22,7 @@ Armbian is a project to run Debian and/or Ubuntu on ARM-based systems. Unfortuna
 
 @150balbes is a developer who is doing special Armbian builds for Amlogic-based retail products ("TV boxes"). Despite its name, this is not an official Armbian project and the Armbian project refuses to support his work.
 
-## Debian, openSUSE, Fedora, Ubuntu,...
+### Debian, openSUSE, Fedora, Ubuntu,...
 
 Those "mainstream" distributions are increasingly adding aarch64 builds and partly even ISO images. However, none of them are specifically built for Amlogic-based systems, and hence do not boot out of the box (possibly unless a EFI-capable U-Boot is used, to be verified).
 
