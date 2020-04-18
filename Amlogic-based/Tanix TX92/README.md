@@ -13,3 +13,11 @@ The Android in the stock ROM is pre-rooted. Using Termux (installed from https:/
 ## dtb
 
 The box is apparently available in different memory configurations, e.g., 2/16 GB. So far it is not clear which dtb is 100% working. Using `meson-gxm-q200.dtb` the system boots but WLAN and Bluetooth are not working.
+
+## Running Armbian
+
+@150balbes "Single Armbian image for RK + AML + AW" from https://forum.armbian.com/topic/12162-single-armbian-image-for-rk-aml-aw/ works on this box. Using `meson-gxm-q200.dtb` the system boots but WLAN and Bluetooth are not working.
+
+The Armbian project does not want to support TV boxes nor the "Single Armbian image for RK + AML + AW".
+
+So ideally we could find a way to boot Debian or Ubuntu proper without Armbian.
