@@ -25,3 +25,7 @@ The Armbian project does not want to support TV boxes nor the "Single Armbian im
 @150balbes is doing great work on Amlogic boxes but unfortunately not in an "upstream" way. Downloads are stored on Yandex, a Russian site, which sometimes gives: "Download limit exceeded. You can save the folder to Yandex.Disk and download it from there."
 
 So ideally we could find a way to boot Debian or Ubuntu proper without Armbian.
+
+## LED display
+
+The box has a LED display that can show messages such as "boot" (apparently written there by the bootloader) and time, LAN status, etc. (written there by the system). There is a kernel driver and userland tool for FD628 and similar compatible LED controller drivers available at https://github.com/LibreELEC/linux_openvfd. LibreELEC has integrated it, there is a configuration file specifically for the TX92 at https://github.com/LibreELEC/linux_openvfd/blob/master/conf/meson-gxm-tx92.conf.
