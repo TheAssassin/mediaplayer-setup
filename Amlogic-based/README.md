@@ -1,10 +1,30 @@
 # Amlogic SOCs
 
+## Linux support
+
+### Linux Meson
+
 The [Linux Meson](http://linux-meson.com/doku.php) project is there to bring Amlogic SoC support into the mainline Linux kernel.
 
-As of 4/2020 this is in a bootable state, although not all distributions are using the mainline kernel yet.
+As of 4/2020 this is in a bootable state, although not all distributions are using the mainline kernel yet. The Linux Meson project works "upstream". This means that there are no downloadable images, but the idea is that Linux distributions will pick up the software sooner or later.
 
 Unfortunately, the Linux Meson project's documentation on how to boot into e.g., Debian using the mainline kernel is not very clear. Any insights appreciated.
+
+### LibreELEC, CoreELEC, AlexELEC
+
+LibreELEC, CoreELEC, AlexELEC are media center focused distributions with builds for Armlogic systems. They ship with KODI.
+
+### Armbian
+
+Armbian is a project to run Debian and/or Ubuntu on ARM-based systems. Unfortunately they don't want to support retail products, only developer boards. Despite its name, this is not an official Debian project.
+
+### @150balbes Armbian
+
+@150balbes is a developer who is doing special Armbian builds for Amlogic-based retail products ("TV boxes"). Despite its name, this is not an official Armbian project and the Armbian project refuses to support his work.
+
+## Debian, openSUSE, Fedora, Ubuntu,...
+
+Those "mainstream" distributions are increasingly adding aarch64 builds and partly even ISO images. However, none of them are specifically built for Amlogic-based systems, and hence do not boot out of the box (possibly unless a EFI-capable U-Boot is used, to be verified).
 
 ## Booting
 
