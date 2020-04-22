@@ -39,3 +39,85 @@ Seemingly, as long as there is a bootloader installed to the internal memory of 
 ### USB booting
 
 Unlike most Raspberry Pis, Amlogic devices can boot not only from SD card, but also from USB. This has been verified on a X96 mini and a Tanix TX92 by attaching a USB card reader and putting the SD card into that USB card reader. It still boots, even if the card reader is attached via a USB hub (a feat that even some Intel desktop machines don't manage to do).
+
+## Booting generic kernels in 64-bit Amlogic devices
+
+__Work in progress. Contributions welcome.__
+
+Amlogic systems are supposed to be able to boot generic "mainline" kernels. If we use a kernel from a rolling release distribution such as openSUSE Tumbleweed or Debian sid, we should be able to run the latest kernel on Amlogic devices.
+
+@150balbes Armbian uses a `boot.cmd` compiled into a `boot.scr`  and `s905_autoscript.cmd` compiled into a `s905_autoscript` that uses `uEnv.txt` to configure boot parameters. At least in those scripts it is mandatory to have an `uInitrd`, otherwise it will not proceed to run the boot command.
+
+### Generate uInitrd
+
+@150balbes Armbian automatically converts initrd to  `uInitrd` as required by running [this](https://github.com/150balbes/Build-Armbian/blob/master/packages/bsp/common/etc/initramfs/post-update.d/99-uboot) code:
+
+```
+mkimage -A arm64 -O linux -T ramdisk -C none -a 0 -e 0 -n uInitrd -d /boot/initrd.img-* /boot/uInitrd
+```
+
+#### Trying openSUSE
+
+Are we able to take an openSUSE Tumbleweed kernel and ramdisk and boot them on an Amlogic device?
+
+The first issue is that the openSUSE initrd seems to be in a different format:
+
+```
+# Ubuntu
+me@host:~$ file /boot/initrd.img-*
+/boot/initrd.img-4.18.0-15-generic: ASCII cpio archive (SVR4 with no CRC)
+
+# openSUSE
+me@host:~$ sudo mount 'openSUSE-Tumbleweed-XFCE-Live-aarch64-Snapshot20200411-Media.iso' /mnt
+me@host:~$ sudo file '/mnt/boot/aarch64/loader/initrd'
+/mnt/boot/aarch64/loader/initrd: XZ compressed data
+```
+
+Does this matter? Let's try t o put the openSUSE kernel and initrd onto the `BOOT` partition of a @150balbes Armbian system:
+
+```
+me@host:~$ sudo mkimage -A arm64 -O linux -T ramdisk -C none -a 0 -e 0 -n uInitrd -d /mnt/boot/aarch64/loader/initrd '/media/me/BOOT/uInitrd'
+
+me@host:~$ sudo cp /mnt/boot/aarch64/loader/linux '/media/me/BOOT/zImage'
+```
+
+When trying to boot, the boot stalls at the Amlogic boot screen.
+
+What happens if we try to run the openSUSE kernel with the @150balbes Armbian ramdisk? **It boots!** So we know that the Amlogic device can boot a openSUSE Tumbleweed kernel but we still need to do some work to get the openSUSE ramdisk loaded.
+
+Maybe our mkimage command is wrong?
+
+Let's try to extract the XZ initrd and recompress it as a gz one:
+
+```
+me@host:~$ sudo su
+me@host:~$ mkdir initrd && cd initrd
+me@host:~$ xz -dc < /mnt/boot/aarch64/loader/initrd | cpio -idmv
+me@host:~$ find . | cpio -o -c | gzip -9 > ../initrdfile
+cd ..
+me@host:~$ sudo mkimage -A arm64 -O linux -T ramdisk -C none -a 0 -e 0 -n uInitrd -d initrdfile '/media/me/BOOT/uInitrd'
+```
+
+**It boots!** So we know that the Amlogic device can boot a openSUSE Tumbleweed kernel and a repacked openSUSE Tumbleweed initrd.
+
+Without an openSUSE live image it cannot boot a root fs obviously. So we need to transfer that over, too.  And we need to change the kernel arguments in uEnv.txt. So copying the `LiveOS` directory to the `ROOTFS` partition. (Not clear whether the openSUSE ramdisk can boot it from there...)
+
+```
+append=root=live:LABEL=ROOTFS rd.live.image rd.live.overlay.persistent rd.live.overlay.cowfs=ext4
+```
+
+We see `RAMDISK: incomplete write (16269 != 27512)`. it is unclear whether this is the root cause why we end up with
+
+here are the available partitions: ram0 - ram15, mmcblk1, 
+
+`VFS: Unable to mount root fs on unknown-block(0,0)`
+
+The openSUSE initrd is huge, whereas the @150balbes Armbian one is just around 15 MB.
+
+Is this the culprit?
+
+Do we have to change something in U-Boot?
+
+Can we chainload a newer U-Boot (e.g., by renaming it `u-boot.ext`)?
+
+It seems that it stalls on the Amlogic boot screen then... a serial console would be helpful here.
