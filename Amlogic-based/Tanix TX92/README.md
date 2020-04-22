@@ -37,3 +37,7 @@ So ideally we could find a way to boot Debian or Ubuntu proper without Armbian.
 ## LED display
 
 The box has a LED display that can show messages such as "boot" (apparently written there by the bootloader) and time, LAN status, etc. (written there by the system). There is a kernel driver and userland tool for FD628 and similar compatible LED controller drivers available at https://github.com/LibreELEC/linux_openvfd. LibreELEC has integrated it, there is a configuration file specifically for the TX92 at https://github.com/LibreELEC/linux_openvfd/blob/master/conf/meson-gxm-tx92.conf.
+
+## Opening the device
+
+Under three out of the four rubber feet there are scres which need to be removed before the housing can be opened.
