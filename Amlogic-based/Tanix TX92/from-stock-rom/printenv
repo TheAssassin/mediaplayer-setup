@@ -13,7 +13,7 @@ aml_dt=gxm_q201_2g
 baudrate=115200
 bcb_cmd=get_valid_slot;
 boot_part=boot
-bootargs=rootfstype=ramfs init=/init console=ttyS0,115200 no_console_suspend earlyprintk=aml-uart,0xc81004c0 ramoops.pstore_en=1 ramoops.record_size=0x8000 ramoops.console_size=0x4000 androidboot.selinux=permissive logo=osd1,loaded,0x3d800000,576cvbs maxcpus=8 vout=576cvbs,enable hdmimode=1080p60hz cvbsmode=576cvbs hdmitx= cvbsdrv=0 pq= androidboot.firstboot=0 jtag=apao androidboot.ddrclk=792MHz androidboot.hardware=amlogic mac=06:41:71:02:75:3a androidboot.mac=06:41:71:02:75:3a androidboot.slot_suffix=_a
+bootargs=rootfstype=ramfs init=/init console=ttyS0,115200 no_console_suspend earlyprintk=aml-uart,0xc81004c0 ramoops.pstore_en=1 ramoops.record_size=0x8000 ramoops.console_size=0x4000 androidboot.selinux=permissive logo=osd1,loaded,0x3d800000,576cvbs maxcpus=8 vout=576cvbs,enable hdmimode=1080p60hz cvbsmode=576cvbs hdmitx= cvbsdrv=0 pq= androidboot.firstboot=0 jtag=apao androidboot.ddrclk=792MHz androidboot.hardware=amlogic mac=06:41:71:xx:xx:xx androidboot.mac=06:41:71:xx:xx:xx androidboot.slot_suffix=_a
 bootcmd=run start_autoscript; run storeboot
 bootdelay=1
 bootup_offset=0x1130180
