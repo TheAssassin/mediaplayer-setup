@@ -53,3 +53,21 @@ The box has a LED display that can show messages such as "boot" (apparently writ
 ## Opening the device
 
 Under three out of the four rubber feet there are scres which need to be removed before the housing can be opened.
+
+## Trying to run own U-Boot
+
+Not sure but this whole `s905_autoscript` thing may come from @150balbes Armbian. In any case, if there is a file called `u-boot.ext` then it is loaded and executed. At that point, however, everything stalls... at least when using the `u-boot.sd` file that comes with @150balbes Armbian.
+
+```
+reading s905_autoscript
+1654 bytes read in 4 ms (403.3 KiB/s)
+## Executing script at 01020000
+start amlogic old u-boot
+## Error: "bootfromsd" not defined
+reading boot_android
+** Unable to read file boot_android **
+** Bad device usb 0 **
+reading u-boot.ext
+709768 bytes read in 43 ms (15.7 MiB/s)
+## Starting application at 0x01000000 ...
+```
