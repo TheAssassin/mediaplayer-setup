@@ -625,6 +625,8 @@ domain-1 init dvfs: 4
 [    3.869191] ---[ end Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0) ]---
 ```
 
+Is this the culprit? `rootfs image is not initramfs (incorrect cpio method used: use -H newc option); looks like an initrd`
+
 Can we chainload a newer U-Boot (e.g., by renaming it `u-boot.ext`)?
 
 It seems that it stalls on the Amlogic boot screen then... a serial console would be helpful here. Serial console actually shows nothing here... just that the U-Boot is being started... then there is no more output
