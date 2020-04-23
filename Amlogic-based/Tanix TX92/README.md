@@ -16,11 +16,23 @@ The Tanix TX92 is very well-built. Unlike with cheaper boxes, the PCB is mounted
 
 The Android in the stock ROM is pre-rooted. Using Termux (installed from https://f-droid.org/), the `su` command conveniently works out of the box.
 
-The stock Android calls the system `q201`.
-
 ## dtb
 
 The box is apparently available in different memory configurations, e.g., 2/16 GB. So far it is not clear which dtb is 100% working. Using `meson-gxm-q200.dtb` the system boots but WLAN and Bluetooth are not working (possibly only because the firmware for the QCA9377 is missing).
+
+The stock rom U-Boot calls the board `gxm_q201_v1`, has `aml_dt=gxm_q201_2g` in `printenv`, and prints
+
+```
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 3 dtbs.
+        aml_dt soc: gxm platform: q201 variant: 2g
+        dtb 0 soc: gxm   plat: q201   vari: 1g
+        dtb 1 soc: gxm   plat: q201   vari: 2g
+        dtb 2 soc: gxm   plat: q201   vari: 3g
+      Find match dtb: 1
+```
 
 ## Running Desktop Linux
 
