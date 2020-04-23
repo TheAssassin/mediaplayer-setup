@@ -1,0 +1,2236 @@
+GXM:BL1:dc8b51:76f1a5;FEAT:ADFC318C:80;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+TE: 63875
+BL2 Built : 11:58:42, May 27 2017. 
+gxl gc3c9a84 - xiaobo.gu@droid05
+set vdd cpu_a to 1120 mv
+set vdd cpu_b to 1050 mv
+set vddee to 1000 mv
+Board ID = 3
+CPU clk: 1200MHz
+DQS-corr enabled
+DDR scramble enabled
+DDR3 chl: Rank0+1 @ 792MHz - PASS
+Rank0: 1024MB(auto)-2T-11
+Rank1: 1024MB(auto)-2T-11
+DataBus test pass!
+AddrBus test pass!
+Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x00004000
+New fip structure!
+Load bl30 from eMMC, src: 0x00010200, des: 0x01100000, size: 0x0000d600
+Load bl31 from eMMC, src: 0x00020200, des: 0x05100000, size: 0x00018400
+Load bl33 from eMMC, src: 0x0003c200, des: 0x01000000, size: 0x00066200
+NOTICE:  BL3-1: v1.0(release):3348978
+NOTICE:  BL3-1: Built : 15:44:01, May 12 2017
+NOTICE:  BL3-1: BL33 decompress pass
+mpu_config_enable:ok
+[Image: gxl_v1.1.3221-2cfba69 2017-05-27 16:03:58 qiufang.dai@droid07]
+OPS=0x82
+wdt: reset registers!
+22 4c 4d 1e 36 41 74 76 df c5 4b de [0.277867 Inits done]
+secure task start!
+high task start!
+low task start!
+ERROR:   Error initializing runtime service opteed_fast
+U-Boot 2015.01-gc83f85a-dirty (Aug 29 2017 - 17:36:09)
+DRAM:  2 GiB
+Relocation Offset is: 76eb3000
+register usb cfg[0][1] = 0000000077f5ad80
+[CANVAS]canvas init
+vpu: error: vpu: check dts: FDT_ERR_BADMAGIC, load default parameters
+vpu: clk_level = 7
+vpu: set clk: 666667000Hz, readback: 666660000Hz(0x300)
+vpu: vpu_clk_gate_init_off
+vpp: vpp_init
+boot_device_flag : 1
+Nand PHY Ver:1.01.001.0006 (c) 2013 Amlogic Inc.
+init bus_cycle=6, bus_timing=7, system=5.0ns
+reset failed
+get_chip_type and ret:fffffffe
+get_chip_type and ret:fffffffe
+chip detect failed and ret:fffffffe
+nandphy_init failed and ret=0xfffffff1
+MMC:   aml_priv->desc_buf = 0x0000000073eb36b0
+aml_priv->desc_buf = 0x0000000073eb59d0
+SDIO Port B: 0, SDIO Port C: 1
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+init_part() 293: PART_TYPE_AML
+[mmc_init] mmc init success
+dtb magic 5f4c4d41
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 3 dtbs.
+        aml_dt soc: gxm platform: q201 variant: 2g
+        dtb 0 soc: gxm   plat: q201   vari: 1g
+        dtb 1 soc: gxm   plat: q201   vari: 2g
+        dtb 2 soc: gxm   plat: q201   vari: 3g
+      Find match dtb: 1
+start dts,buffer=0000000073eb8200,dt_addr=0000000073ec3a00
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 3 dtbs.
+        aml_dt soc: gxm platform: q201 variant: 2g
+        dtb 0 soc: gxm   plat: q201   vari: 1g
+        dtb 1 soc: gxm   plat: q201   vari: 2g
+        dtb 2 soc: gxm   plat: q201   vari: 3g
+      Find match dtb: 1
+parts: 10
+00:      logo	0000000002000000 1
+01:  recovery	0000000002000000 1
+02:       rsv	0000000000800000 1
+03:       tee	0000000000800000 1
+04:     crypt	0000000002000000 1
+05:      misc	0000000002000000 1
+06:      boot	0000000002000000 1
+07:    system	0000000080000000 1
+08:     cache	0000000020000000 2
+09:      data	ffffffffffffffff 4
+init_part() 293: PART_TYPE_AML
+eMMC/TSD partition table have been checked OK!
+check pattern success
+mmc env offset: 0x27400000 
+In:    serial
+Out:   serial
+Err:   serial
+reboot_mode=cold_boot
+hpd_state=0
+cvbs performance type = 6, table = 0
+[store]To run cmd[emmc dtb_read 0x1000000 0x40000]
+_verify_dtb_checksum()-917: calc 6c1a58f3, store 6c1a58f3
+_verify_dtb_checksum()-917: calc 6c1a58f3, store 6c1a58f3
+dtb_read()-1039: total valid 2
+dtb_read()-1106: do nothing
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 3 dtbs.
+        aml_dt soc: gxm platform: q201 variant: 2g
+        dtb 0 soc: gxm   plat: q201   vari: 1g
+        dtb 1 soc: gxm   plat: q201   vari: 2g
+        dtb 2 soc: gxm   plat: q201   vari: 3g
+      Find match dtb: 1
+vpp: vpp_pq_load pq val error !!!
+setenv ddrclk  792 MHz
+Net:   dwmac.c9410000
+Start read misc partition datas!
+info->attemp_times = 0
+info->active_slot = 0
+info->slot_info[0].bootable = 1
+info->slot_info[0].online = 1
+info->slot_info[1].bootable = 0
+info->slot_info[1].online = 0
+info->attemp_times = 0
+attemp_times = 0 
+active slot = 0 
+wipe_data=successful
+wipe_cache=successful
+upgrade_step=2
+[OSD]load fb addr from dts
+[OSD]fb_addr for logo: 0x7f851000
+[OSD]load fb addr from dts
+[OSD]fb_addr for logo: 0x7f851000
+[CANVAS]addr=0x7f851000 width=3840, height=2160
+amlkey_init() enter!
+[EFUSE_MSG]keynum is 4
+[BL31]: tee size: 0
+[KM]Error:f[key_manage_query_size]L507:key[usid] not programed yet
+[KM]Error:f[key_manage_query_size]L507:key[deviceid] not programed yet
+saradc - saradc sub-system
+Usage:
+saradc saradc open <channel>		- open a SARADC channel
+saradc close	- close the SARADC
+saradc getval	- get the value in current channel
+saradc get_in_range <min> <max>	- return 0 if current value in the range of current channel
+time_out = f4240
+ir init
+irkey_update - irkey_update time_value
+Usage:
+irkey_update 
+InUsbBurn
+noSof
+Hit Enter or space or Ctrl+C key to stop autoboot -- :  1 
+card out
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+emmc/sd response timeout, cmd1, status=0x1ff2800
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 3000140 NbrPorts 3
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+** Bad device usb 0 **
+** Bad device usb 1 **
+** Bad device usb 2 **
+** Bad device usb 3 **
+** Unrecognized filesystem type **
+ee_gate_off ...
+## Booting Android Image at 0x01080000 ...
+reloc_addr =73f38450
+copy done
+Kernel command line: buildvariant=userdebug
+load dtb from 0x1000000 ......
+      Amlogic multi-dtb tool
+      Single dtb detected
+   Uncompressing Kernel Image ... OK
+   kernel loaded at 0x01080000, end = 0x021c8440
+   Loading Ramdisk to 73d31000, end 73ea099d ... OK
+   Loading Device Tree to 000000001fff2000, end 000000001ffffdc0 ... OK
+fdt_instaboot: no instaboot image
+Starting kernel ...
+uboot time: 4755845 us
+[    0.000000@0] Initializing cgroup subsys cpu
+[    0.000000@0] Initializing cgroup subsys cpuacct
+[    0.000000@0] Linux version 3.14.29-g990065d (server@ubuntu) (gcc version 4.9.2 20140904 (prerelease) (crosstool-NG linaro-1.13.1-4.9-2014.09 - Linaro GCC 4.9-2014.09) ) #1 SMP PREEMPT Fri Nov 3 15:37:23 CST 2017
+[    0.000000@0] CPU: AArch64 Processor [410fd034] revision 4
+[    0.000000@0] no prop version_code
+[    0.000000@0] bootconsole [earlycon0] enabled
+[    0.000000@0] fdt Reserved memory table:
+[    0.000000@0]                  linux,di: 0x000000007e200000 - 0x0000000080000000  (30 MiB)
+[    0.000000@0] DI: DI reserved memory: created CMA memory pool at 0x000000007e200000, size 30 MiB
+[    0.000000@0]       linux,chunk-reserve: 0x000000007a200000 - 0x000000007e200000  (64 MiB)
+[    0.000000@0]             linux,ion-dev: 0x0000000076200000 - 0x000000007a200000  (64 MiB)
+[    0.000000@0]           linux,vdin1_cma: 0x0000000075000000 - 0x0000000076000000  (16 MiB)
+[    0.000000@0] cma: Reserved 16 MiB at 75000000, total cma pages:4096
+[    0.000000@0]               linux,ppmgr: 0x0000000076200000 - 0x0000000076200000  (0 MiB)
+[    0.000000@0]        linux,codec_mm_cma: 0x000000005ec00000 - 0x0000000073c00000  (336 MiB)
+[    0.000000@0] cma: Reserved 336 MiB at 5ec00000, total cma pages:90112
+[    0.000000@0]              linux,picdec: 0x0000000076200000 - 0x0000000076200000  (0 MiB)
+[    0.000000@0] Reserved memory: incorrect alignment of CMA region
+[    0.000000@0]   linux,codec_mm_reserved: 0x000000005ab00000 - 0x000000005ec00000  (65 MiB)
+[    0.000000@0] fdt Reserved memory total:  579 MiB
+[    0.000000@0] cma: Reserved 8 MiB at 74800000, total cma pages:92160
+[    0.000000@0] psci: Using PSCI v0.1 Function IDs from DT
+[    0.000000@0] PERCPU: Embedded 12 pages/cpu @ffffffc07616c000 s19968 r8192 d20992 u49152
+[    0.000000@0] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 511749
+[    0.000000@0] Kernel command line: rootfstype=ramfs init=/init console=ttyS0,115200 no_console_suspend earlyprintk=aml-uart,0xc81004c0 ramoops.pstore_en=1 ramoops.record_size=0x8000 ramoops.console_size=0x4000 androidboot.selinux=permissive logo=osd1,loaded,0x3d800000,576cvbs maxcpus=8 vout=576cvbs,enable hdmimode=1080p60hz cvbsmode=576cvbs hdmitx= cvbsdrv=0 pq= androidboot.firstboot=0 jtag=apao androidboot.ddrclk=792MHz androidboot.hardware=amlogic mac=06:41:71:xx:xx:xx3a androidboot.mac=06:41:71:xx:xx:xx androidboot.slot_suffix=_a buildvariant=userdebug
+[    0.000000@0] logo: osd1
+[    0.000000@0] logo: loaded
+[    0.000000@0] logo: 0x3d800000
+[    0.000000@0] logo: 576cvbs
+[    0.000000@0] vout_serve: 576cvbs
+[    0.000000@0] vout_serve: enable: 1
+[    0.000000@0] logo: get hdmimode: 1080p60hz
+[    0.000000@0] logo: get cvbsmode: 576cvbs
+[    0.000000@0] tv_vout: cvbs performance line = 0
+[    0.000000@0] [amvecm] pq string error !!!
+[    0.000000@0] jtag: jtag select 2
+[    0.000000@0] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000@0] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000@0] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000@0] Memory: 1421180K/2092032K available (10970K kernel code, 1253K rwdata, 4164K rodata, 1303K init, 3809K bss, 670852K reserved)
+[    0.000000@0] Virtual kernel memory layout:
+[    0.000000@0]     vmalloc : 0xffffff8000000000 - 0xffffff8040000000   (  1024 MB)
+[    0.000000@0]     vmemmap : 0xffffff8040010000 - 0xffffff8042c10000   (    44 MB)
+[    0.000000@0]     modules : 0xffffffbffc000000 - 0xffffffc000000000   (    64 MB)
+[    0.000000@0]     memory  : 0xffffffc000000000 - 0xffffffc080000000   (  2048 MB)
+[    0.000000@0]       .init : 0xffffffc001f49000 - 0xffffffc00208ee00   (  1304 kB)
+[    0.000000@0]       .text : 0xffffffc001080000 - 0xffffffc001f48814   ( 15139 kB)
+[    0.000000@0]       .data : 0xffffffc00208f000 - 0xffffffc0021c8440   (  1254 kB)
+[    0.000000@0] PM: Registered nosave memory: [mem 0x01080000-0x01f47fff]
+[    0.000000@0] SLUB: HWalign=64, Order=0-1, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000@0] arch_multi_cluster:1
+[    0.000000@0] Preemptible hierarchical RCU implementation.
+[    0.000000@0] NR_IRQS:64 nr_irqs:64 0
+[    0.000000@0] Architected cp15 timer(s) running at 24.00MHz (phys).
+[    0.000004@0] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 2863311519744ns
+[    0.008246@0] meson_bc_timer: mclk->mux_reg =ffffff8000014990,mclk->reg =ffffff8000016994
+[    0.016828@0] Console: colour dummy device 80x25
+[    0.021097@0] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.031672@0] pid_max: default: 32768 minimum: 301
+[    0.036582@0] Security Framework initialized
+[    0.040787@0] SELinux:  Initializing.
+[    0.044532@0] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.051369@0] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.065198@0] Initializing cgroup subsys debug
+[    0.065237@0] Initializing cgroup subsys freezer
+[    0.068755@0] ftrace: allocating 37833 entries in 148 pages
+[    0.124739@0] /cpus/cpu@0: Missing clock-frequency property
+[    0.124779@0] /cpus/cpu@1: Missing clock-frequency property
+[    0.130357@0] /cpus/cpu@2: Missing clock-frequency property
+[    0.135988@0] /cpus/cpu@3: Missing clock-frequency property
+[    0.141559@0] /cpus/cpu@100: Missing clock-frequency property
+[    0.147341@0] /cpus/cpu@101: Missing clock-frequency property
+[    0.153110@0] /cpus/cpu@102: Missing clock-frequency property
+[    0.158892@0] /cpus/cpu@103: Missing clock-frequency property
+[    0.164659@0] hw perfevents: enabled with arm/armv8-pmuv3 PMU driver, 7 counters available
+[    0.214974@0] Meson chip version = RevA (22:A - 82:0)
+[    0.233389@1] CPU1: Booted secondary processor
+[    0.253357@2] CPU2: Booted secondary processor
+[    0.273364@3] CPU3: Booted secondary processor
+[    0.293405@4] CPU4: Booted secondary processor
+[    0.313396@5] CPU5: Booted secondary processor
+[    0.333418@6] CPU6: Booted secondary processor
+[    0.353449@7] CPU7: Booted secondary processor
+[    0.353541@0] Brought up 8 CPUs
+[    0.382358@0] SMP: Total of 8 processors activated.
+[    0.396672@2] sched: registering cpufreq notifiers for scale-invariant loads
+[    0.398194@2] instabooting: 0
+[    0.417536@2] cma: cma_init_reserved_areas, use_cma_first:1
+[    0.417644@2] pinctrl core: initialized pinctrl subsystem
+[    0.423670@2] regulator-dummy: no parameters
+[    0.428181@3] NET: Registered protocol family 16
+[    0.434481@2] ramoops: using module parameters
+[    0.436975@2] console [pstore-1] enabled
+[    0.440306@2] pstore: Registered ramoops as persistent store backend
+[    0.446727@2] ramoops: attached 0x100000@0x7300000, ecc: 0/0
+[    0.453396@3] cpuidle: using governor menu
+[    0.456800@2] aml_vdac_init: module init
+[    0.460608@2] register canvas platform driver
+[    0.464901@2] register rdma platform driver
+[    0.471358@2] vdso: 2 pages (1 code, 1 data) at base ffffffc002098000
+[    0.475526@2] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.482890@2] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.489761@2] software IO TLB [mem 0x56c00000-0x57000000] (4MB) mapped at [ffffffc056c00000-ffffffc056ffffff]
+[    0.498816@2] Serial: AMBA PL011 UART driver
+[    0.503692@2] aml_i2c version: 20140813
+[    0.507152@3] i2c-core: driver [pmu4] using legacy resume method
+[    0.513120@2] codec_mm:codec_mm_module_init
+[    0.517227@3] media_configs_system_init
+[    0.521173@3] aml_watch_point_probe, in
+[    0.525332@2] meson_mpll_clk: register mpll_clk_out0 success done
+[    0.530973@2] meson_mpll_clk: register mpll_clk_out1 success done
+[    0.537084@2] meson_mpll_clk: register mpll_clk_out2 success done
+[    0.543462@2] clk_sys: register PLL sys_pll success done
+[    0.548567@2] gxl_clk: [ xtal 	] ->clockrate: 24000000Hz
+[    0.553890@2] gxl_clk: [ 32Khz 	] ->clockrate: 32000Hz
+[    0.559045@2] gxl_clk: [ clk81 	] ->clockrate: 166666666Hz
+[    0.564571@2] gxl_clk: [ fixed_pll 	] ->clockrate: 2000000000Hz
+[    0.570507@2] gxl_clk: [ fclk_div2 	] ->clockrate: 1000000000Hz
+[    0.576462@2] gxl_clk: [ fclk_div3 	] ->clockrate: 666666666Hz
+[    0.582319@2] gxl_clk: [ fclk_div4 	] ->clockrate: 500000000Hz
+[    0.588192@2] gxl_clk: [ fclk_div5 	] ->clockrate: 400000000Hz
+[    0.594044@2] gxl_clk: [ fclk_div7 	] ->clockrate: 285714285Hz
+[    0.599938@2] gxl_clk: clock initialization complete
+[    0.605072@2] clkmsr: Gxl msr_clk_reg0=ffffff800003c75c,msr_clk_reg2=ffffff800003e764
+[    0.615574@2] aml_iomap: amlogic iomap probe done
+[    0.618195@3] pinmux-gxl c1109880.pinmux: Init pinux probe!
+[    0.624423@2] pinmux-gxl c1109880.pinmux: Probed amlogic pinctrl driver
+[    0.630284@3] genirq: Setting trigger mode 8 for irq 241 failed (gic_set_type+0x0/0xbc)
+[    0.637841@3] genirq: Setting trigger mode 8 for irq 242 failed (gic_set_type+0x0/0xbc)
+[    0.646043@3] genirq: Setting trigger mode 8 for irq 241 failed (gic_set_type+0x0/0xbc)
+[    0.653973@3] genirq: Setting trigger mode 8 for irq 242 failed (gic_set_type+0x0/0xbc)
+domain-0 init dvfs: 4
+domain-1 init dvfs: 4
+[    0.674704@2] codec_mm has 2 memory regions
+[    0.674770@2] codec_mm codec_mm.22: assigned reserved memory node linux,codec_mm_cma ok
+[    0.681376@2] codec_mm codec_mm.22: assigned reserved memory node linux,codec_mm_reserved ok
+[    0.690007@2] codec_mm has 2 memory regions
+[    0.694076@2] codec_mm codec_mm.22: assigned reserved memory node linux,codec_mm_cma ok
+[    0.702121@2] codec_mm codec_mm.22: assigned reserved memory node linux,codec_mm_reserved ok
+[    0.713139@3] vpu: driver version: v04
+[    0.714455@3] vpu: load vpu_clk: 666667000Hz(7)
+[    0.719025@3] vpu: vpu_probe OK
+[    0.723857@3] tv_vout: tvout_probe
+[    0.725490@3] tv_vout: chrdev devno 266338304 for disp
+[    0.730631@3] vout_notify: vout_register_server
+[    0.735181@3] tv_vout: register tv module server ok
+[    0.740319@2] tv_vout: create cdev tv
+[    0.743841@2] tv_vout: tvout_probe OK
+[    0.748130@2] canvas_probe reg=00000000c8838000,size=400
+[    0.752801@2] canvas maped reg_base =ffffff800009a000
+[    0.762112@3] rdma_probe
+[    1.158764@3] bio: create slab <bio-0> at 0
+[    1.159951@3] SCSI subsystem initialized
+[    1.161989@2] usbcore: registered new interface driver usbfs
+[    1.167130@3] usbcore: registered new interface driver hub
+[    1.172853@2] usbcore: registered new device driver usb
+[    1.178839@2] i2c-gpio i2c_gpio.43: using pins 172 (SDA) and 173 (SCL)
+[    1.184477@2] Linux video capture interface: v2.00
+[    1.189465@2] pps_core: LinuxPPS API ver. 1 registered
+[    1.194307@2] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.204431@3] PTP clock support registered
+[    1.208504@3] hdmitx: system: Ver: 2014May6
+[    1.212181@3] hdmitx: amhdmitx_probe
+[    1.215945@2] hdmitx: hdmi_init_chip_type: 0
+[    1.219930@2] hdmitx hpd irq = 89
+[    1.224477@2] hdmitx20: Mapped PHY: 0xc1100000
+[    1.227654@2] hdmitx20: Mapped PHY: 0xc8834400
+[    1.232111@2] hdmitx20: Mapped PHY: 0xd0100000
+[    1.236652@2] hdmitx20: Mapped PHY: 0xc8100000
+[    1.241030@2] hdmitx20: Mapped PHY: 0xc883c000
+[    1.245492@2] hdmitx20: Mapped PHY: 0xc1104400
+[    1.249961@2] hdmitx20: Mapped PHY: 0xc883a000
+[    1.254416@2] hdmitx20: Mapped PHY: 0xda83a000
+[    1.258879@2] hdmitx20: Mapped PHY: 0xd0044000
+[    1.263683@2] avmute set to 1
+[    1.266321@2] hdmitx: attr default
+[    1.270340@3] tv_vout: tv_set_current_vmode[925]fps_target_mode=8
+[    1.275876@3] tv_vout: mode is 8,sync_duration_den=1,sync_duration_num=50
+[    1.282686@3] tv_vout: already display in uboot
+[    1.287235@3] vout_serve: vinfo mode is: 576cvbs
+[    1.291865@3] vout_serve: init mode 576cvbs
+[    1.296330@3] vout_serve: create_vout_fops OK
+[    1.300460@3] vout_serve: create vout attribute OK
+[    1.305252@3] vout_serve: meson_vout_probe OK
+[    1.309839@3] logo: logo_init
+[    1.313090@3] osd_rdma: osd_rdma_init: rdma_table p=0x74841000,op=0x74841000 , v=0xffffff80000b9000
+[    1.321735@3] rdma_register, rdma_table_addr ffffff80000c9000 rdma_table_addr_phy 74842000 reg_buf ffffffc0569f5000
+[    1.332215@3] rdma_register success, handle 1 table_size 4096
+[    1.337978@3] osd_rdma: osd_rdma_init:osd reset rdma handle = 1.
+[    1.344096@3] rdma_register, rdma_table_addr ffffff80000d9000 rdma_table_addr_phy 74843000 reg_buf ffffffc05737e000
+[    1.354523@3] rdma_register success, handle 2 table_size 4096
+[    1.360290@3] osd_rdma: osd_rdma_init:osd rdma handle = 2.
+[    1.366338@3] Advanced Linux Sound Architecture Driver Initialized.
+[    1.372768@3] Bluetooth: Core ver 2.18
+[    1.376014@0] NET: Registered protocol family 31
+[    1.380505@0] Bluetooth: HCI device and connection manager initialized
+[    1.387093@0] Bluetooth: HCI socket layer initialized
+[    1.392144@0] Bluetooth: L2CAP socket layer initialized
+[    1.397462@0] Bluetooth: SCO socket layer initialized
+[    1.402472@0] NetLabel: Initializing
+[    1.406052@0] NetLabel:  domain hash size = 128
+[    1.410610@0] NetLabel:  protocols = UNLABELED CIPSOv4
+[    1.415842@0] NetLabel:  unlabeled traffic allowed by default
+[    1.424229@3] Switched to clocksource arch_sys_counter
+[    1.468152@3] register gxtv_demod demod driver
+[    1.468578@0] [amlatvdemod..]aml_atvdemod_init.
+[    1.471685@0] NET: Registered protocol family 2
+[    1.476788@0] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    1.483709@0] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    1.490689@0] TCP: Hash tables configured (established 16384 bind 16384)
+[    1.497266@0] TCP: reno registered
+[    1.500552@0] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.506980@0] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    1.513663@0] NET: Registered protocol family 1
+[    1.518305@0] RPC: Registered named UNIX socket transport module.
+[    1.524083@0] RPC: Registered udp transport module.
+[    1.529112@0] RPC: Registered tcp transport module.
+[    1.533882@0] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.540737@0] pwm: output_co = 16 ; clock_co = 8
+[    1.545239@0] pwm: npwm= 16
+[    1.548201@3] pwm: probe ok
+[    1.551184@3] wifi: power_on_pin_OD = 0;
+[    1.554778@3] aml_wifi wifi.38: [wifi_dev_probe] no power_on_pin2
+[    1.560865@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] pwm phandle val=3e;pwm-channel1=4;pwm-channel2=12
+[    1.570905@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] pwm_config1[0] = 30541
+[    1.578602@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] pwm_config2[0] = 30518
+[    1.586302@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] pwm_config1[1] = 15270
+[    1.593995@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] pwm_config2[1] = 15259
+[    1.601702@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] pwm_config1[2] = 6
+[    1.609051@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] pwm_config2[2] = 9
+[    1.616401@3] aml_wifi wifi.38: [pwm_double_channel_conf_dt] wifi pwm dt ok
+[    1.623412@3] aml_wifi wifi.38: [pwm_double_channel_conf] wifi pwm conf ok
+[    1.630358@3] aml_wifi wifi.38: [wifi_dev_probe] dhd_static_buf setup
+[    1.636863@3] Wifi: bcmdhd_init_wlan_mem: bcmdhd_init_wlan_mem: WIFI MEM Allocated
+[    1.644403@3] aml_wifi wifi.38: [wifi_dev_probe] interrupt_pin=241
+[    1.650608@3] aml_wifi wifi.38: [wifi_dev_probe] irq_num=100, irq_trigger_type=1
+[    1.658051@3] aml_wifi wifi.38: [wifi_dev_probe] power_on_pin=240
+[    1.664170@3] aml_wifi wifi.38: [wifi_dev_probe] clock_32k_pin=0
+[    1.670525@3] aml_wifi wifi.38: [wifi_setup_dt] wifi_setup_dt
+[    1.676030@3] aml_wifi wifi.38: [wifi_setup_dt] interrupt_pin(241)
+[    1.682205@3] aml_wifi wifi.38: [wifi_setup_dt] power_on_pin(240)
+[    1.688698@3] Unpacking initramfs...
+[    1.751135@0] Freeing initrd memory: 1468K (ffffffc073d31000 - ffffffc073ea0000)
+[    1.758706@3] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    1.759676@3] Initialise system trusted keyring
+[    1.764182@3] audit: initializing netlink subsys (disabled)
+[    1.769807@3] audit: type=2000 audit(1.690:1): initialized
+[    1.776233@3] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    1.789390@3] VFS: Disk quotas dquot_6.5.2
+[    1.789675@3] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.799942@3] NFS: Registering the id_resolver key type
+[    1.800006@3] Key type id_resolver registered
+[    1.804195@3] Key type id_legacy registered
+[    1.808602@3] NTFS driver 2.1.30 [Flags: R/O].
+[    1.813311@3] jffs2: version 2.2. (NAND) (SUMMARY)  
+ 2001-2006 Red Hat, Inc.
+[    1.821021@3] fuse init (API version 7.22)
+[    1.824951@0] msgmni has been set to 3498
+[    1.829853@3] NET: Registered protocol family 38
+[    1.832906@3] Key type asymmetric registered
+[    1.837308@3] Asymmetric key parser 'x509' registered
+[    1.842671@0] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    1.849903@0] io scheduler noop registered
+[    1.853984@0] io scheduler deadline registered
+[    1.858791@3] io scheduler cfq registered (default)
+[    1.913692@0] meson-rng c8834000.rng: hwrng registered
+[    1.917741@0] loop: module loaded
+[    1.918390@0] zram: Created 1 device(s) ...
+[    1.921853@1] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    1.929330@1] tun: Universal TUN/TAP device driver, 1.6
+[    1.932702@1] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.065118@2] libphy: stmmac: probed
+[    2.065152@2] eth0: PHY ID 001cc916 at 0 IRQ POLL (stmmac-0:00) active
+[    2.069688@2] eth0: PHY ID 001cc916 at 7 IRQ POLL (stmmac-0:07)
+[    2.076178@2] PPP generic driver version 2.4.2
+[    2.080321@1] PPP BSD Compression module registered
+[    2.085023@1] PPP Deflate Compression module registered
+[    2.090268@1] PPP MPPE Compression module registered
+[    2.095276@1] NET: Registered protocol family 24
+[    2.100087@0] usbcore: registered new interface driver asix
+[    2.105679@0] usbcore: registered new interface driver ax88179_178a
+[    2.111912@1] usbcore: registered new interface driver cdc_ether
+[    2.117973@0] usbcore: registered new interface driver net1080
+[    2.123799@0] usbcore: registered new interface driver cdc_subset
+[    2.129947@1] usbcore: registered new interface driver zaurus
+[    2.135766@0] usbcore: registered new interface driver cdc_ncm
+[    2.141774@1] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.148200@1] ehci-h20ahb: H20AHB-EHCI Host Controller driver
+[    2.154264@0] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.160867@1] usbcore: registered new interface driver cdc_acm
+[    2.166250@1] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    2.174606@0] usbcore: registered new interface driver usb-storage
+[    2.180972@1] usbcore: registered new interface driver usbserial
+[    2.187515@1] amlogic-new-usb2 d0078000.usb2phy: USB2 phy probe:phy_mem:0xd0078000, iomap phy_base:0xffffff800010e000
+[    2.197689@0] amlogic-new-usb3 d0078080.usb3phy: This phy has no usb port
+[    2.204200@0] amlogic-new-usb3 d0078080.usb3phy: USB3 phy probe:phy_mem:0xd0078080, iomap phy_base:0xffffff800011a080
+[    2.215632@0] mousedev: PS/2 mouse device common for all mice
+[    2.221170@2] usbcore: registered new interface driver xpad
+[    2.226476@1] i2c /dev entries driver
+[    2.230443@1] IR NEC protocol handler initialized
+[    2.234668@1] IR RC5(x) protocol handler initialized
+[    2.239612@1] IR RC6 protocol handler initialized
+[    2.244347@1] IR JVC protocol handler initialized
+[    2.249062@1] IR Sony protocol handler initialized
+[    2.253875@1] IR RC5 (streamzap) protocol handler initialized
+[    2.259674@1] IR SANYO protocol handler initialized
+[    2.264557@1] IR MCE Keyboard/mouse protocol handler initialized
+[    2.270781@1] usbcore: registered new interface driver uvcvideo
+[    2.276588@1] USB Video Class driver (1.1.1)
+[    2.280969@2] usbcore: registered new interface driver cx231xx
+[    2.286742@2] cx231xx: Cx231xx dvb Extension initialized
+[    2.292990@1] device-mapper: ioctl: 4.27.0-ioctl (2013-10-30) initialised: dm-devel@redhat.com
+[    2.300856@1] Bluetooth: HCI UART driver ver 2.2
+[    2.305346@1] Bluetooth: HCI H4 protocol initialized
+[    2.310687@1] cpu cpu0: bL_cpufreq_init: CPU 0 initialized
+[    2.318095@0] cpu cpu4: bL_cpufreq_init: CPU 4 initialized
+[    2.321505@0] arm_big_little: bL_cpufreq_register: Registered platform driver: scpi
+[    2.329356@2] CPUidle arm64: cpuidle init start!!
+[    2.334352@2] CPUidle arm64: cpuidle init done!
+[    2.338987@3] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.344369@2] @@@@@@@@@@_____2______in dia_init()
+[    2.348640@2] ATVR driver - init called!
+[    2.352659@2] usbcore: registered new interface driver usbhid
+[    2.358360@2] usbhid: USB HID core driver
+[    2.362779@3] ashmem: initialized
+[    2.365948@2] logger: created 256K log 'log_main'
+[    2.370571@2] logger: created 256K log 'log_events'
+[    2.375533@3] logger: created 256K log 'log_radio'
+[    2.380316@3] logger: created 256K log 'log_system'
+[    2.386269@2] meson_uart c81004c0.serial: ==uart0 reg addr = ffffff800011c4c0
+[    2.392234@2] c81004c0.serial: ttyS0 at MMIO 0xc81004c0 (irq = 225, base_baud = 1500000) is a meson_uart
+[    2.407266@2] meson_uart c81004c0.serial: ttyS0 use xtal(8M) 24000000 change 0 to 115200
+[    2.409894@2] console [ttyS0] enabled
+[    2.409894@2] console [ttyS0] enabled
+[    2.417176@2] bootconsole [earlycon0] disabled
+[    2.417176@2] bootconsole [earlycon0] disabled
+[    2.426634@2] meson_uart c11084c0.serial: ==uart1 reg addr = ffffff800011e4c0
+[    2.432954@2] c11084c0.serial: ttyS1 at MMIO 0xc11084c0 (irq = 58, base_baud = 1500000) is a meson_uart
+[    2.443427@2] meson-gpu-clkgen c883c000.gpu_clk: can't request region for resource [mem 0xc883c000-0xc883cfff]
+[    2.452182@2] meson-gpu-clkgen: probe of c883c000.gpu_clk failed with error -16
+[    2.459886@2] hdmitx_hdcp_init
+[    2.463626@0] aml_vrtc rtc.37: rtc core: registered aml_vrtc as rtc0
+[    2.469023@2] BLASTER Driver Init
+[    2.472599@2] secmon has 1 memory regions
+[    2.476012@2] secmon: share in base: 0xffffff800013a000, share out base: 0xffffff800013c000
+[    2.484275@2] secmon secmon.4: assigned reserved memory node linux,secmon ok
+[    2.491220@2] secmon: probe done
+[    2.494785@2] storage: storage in base: 0xffffff8001800000
+[    2.499847@2] storage: storage out base: 0xffffff8001880000
+[    2.505376@2] storage: storage block base: 0xffffff8001900000
+[    2.511058@2] storage: probe done!
+[    2.515189@2] aml_sd_emmc_probe: line 3608
+[    2.518481@2] mmc driver version: 1.07, 2017-4-26: Support new emmc host controller for version 3
+[    2.527805@2] aml_sd_emmc_reg_init 1152
+[    2.531133@2] get property:                ocr_avail, value:0x00200080
+[    2.537554@2] get property:                    f_min, value:300000
+[    2.543662@2] get property:                    f_max, value:100000000
+[    2.550102@2] get property:             max_req_size, value:0x00020000
+[    2.556528@2] get property:                  pinname, str:emmc
+[    2.562293@2] get property:                card_type, value:1
+[    2.568008@2] get property:                gpio_dat3, str:
+[    2.573419@2] get property:                 hw_reset, str:
+[    2.578938@2] emmc:pdata->caps = c0000d47
+[    2.582829@2] emmc:pdata->caps2 = 18060
+[    2.586643@2] emmc:pdata->pm_caps = 0
+[    2.590259@2] storage 1, boot 1
+[    2.593341@2] get_storage_dev return 1
+[    2.634249@2] [aml_sd_emmc_probe] aml_sd_emmc_probe() success!
+[    2.634475@2] aml_sd_emmc_probe: line 3608
+[    2.638888@2] aml_sd_emmc_reg_init 1152
+[    2.642353@2] get property:                ocr_avail, value:0x00200080
+[    2.648774@2] get property:                    f_min, value:400000
+[    2.654893@2] get property:                    f_max, value:100000000
+[    2.661264@2] get property:             max_req_size, value:0x00020000
+[    2.667780@2] get property:                   irq_in, value:3
+[    2.673428@2] get property:                  irq_out, value:5
+[    2.679147@2] get property:                  gpio_cd, str:
+[    2.684587@2] get property:                  pinname, str:sd
+[    2.690170@2] get property:                 jtag_pin, str:
+[    2.695612@2] get property:                card_type, value:5
+[    2.700163@1] emmc: BKOPS_EN bit is not set
+[    2.705464@2] get property:                gpio_dat3, str:
+[    2.706920@1] emmc: trying cali 0-th time(s)
+[    2.712201@1] emmc: delay[0]=    0 padding= 4, bidx=0
+[    2.712204@1] emmc: delay[1]=    0 padding= 4, bidx=0
+[    2.712206@1] emmc: delay[2]=    0 padding= 4, bidx=0
+[    2.712208@1] emmc: delay[3]=  500 padding= 2, bidx=0
+[    2.712210@1] emmc: delay[4]=  250 padding= 3, bidx=0
+[    2.712212@1] emmc: delay[5]=  250 padding= 3, bidx=0
+[    2.712214@1] emmc: delay[6]=  250 padding= 3, bidx=0
+[    2.712216@1] emmc: delay[7]=  250 padding= 3, bidx=0
+[    2.712218@1] emmc: calibration result @ 0: max(500), min(0)
+[    2.712221@1] emmc: line_delay =0x11110222, max_cal_result =500
+[    2.712223@1] emmc: base_index_max 0, base_index_min 0
+[    2.712229@1] emmc: clk 100000000 SDR mode tuning start
+[    2.712604@1] emmc: rx_tuning_result[0] = 10
+[    2.712978@1] emmc: rx_tuning_result[1] = 10
+[    2.713352@1] emmc: rx_tuning_result[2] = 10
+[    2.713726@1] emmc: rx_tuning_result[3] = 10
+[    2.714100@1] emmc: rx_tuning_result[4] = 10
+[    2.714495@1] emmc: rx_tuning_result[5] = 10
+[    2.714869@1] emmc: rx_tuning_result[6] = 10
+[    2.715274@1] emmc: rx_tuning_result[7] = 10
+[    2.715649@1] emmc: rx_tuning_result[8] = 10
+[    2.715688@1] emmc: best_win_start =0, best_win_size =9
+[    2.715691@1] emmc: sd_emmc_regs->gclock=0x100024a,sd_emmc_regs->gadjust=0x42000
+[    2.715694@1] emmc: gclock =0x100024a, gdelay=0x11110222, gadjust=0x42000
+[    2.715869@1] emmc: support driver strength type 1
+[    2.715973@1] emmc: try set sd/emmc to DDR mode
+[    2.715976@1] emmc: try set sd/emmc to DDR mode
+[    2.716181@1] emmc: new HS400 MMC card at address 0001
+[    2.717057@1] emmc: clock 100000000, 8-bit-bus-width
+[    2.717057@1]  
+[    2.717058@1] mmcblk0: emmc:0001 016G72 14.6 GiB 
+[    2.717242@1] mmcblk0boot0: emmc:0001 016G72 partition 1 4.00 MiB
+[    2.717376@1] mmcblk0boot1: emmc:0001 016G72 partition 2 4.00 MiB
+[    2.717494@1] mmcblk0rpmb: emmc:0001 016G72 partition 3 4.00 MiB
+[    2.718528@1]  mmcblk0: unknown partition table
+[    2.719429@1] [mmc_read_partition_tbl] mmc read partition OK!
+[    2.719432@1] add_emmc_partition
+[    2.719877@1] [mmcblk0p01]           bootloader  offset 0x000000000000, size 0x000000400000 
+[    2.720228@1] [mmcblk0p02]             reserved  offset 0x000002400000, size 0x000004000000 
+[    2.720676@1] [mmcblk0p03]                cache  offset 0x000006c00000, size 0x000020000000 
+[    2.720928@1] [mmcblk0p04]                  env  offset 0x000027400000, size 0x000000800000 
+[    2.721055@1] [mmcblk0p05]                 logo  offset 0x000028400000, size 0x000002000000 
+[    2.721186@0] [mmcblk0p06]             recovery  offset 0x00002ac00000, size 0x000002000000 
+[    2.721340@1] [mmcblk0p07]                  rsv  offset 0x00002d400000, size 0x000000800000 
+[    2.721469@0] [mmcblk0p08]                  tee  offset 0x00002e400000, size 0x000000800000 
+[    2.721601@1] [mmcblk0p09]                crypt  offset 0x00002f400000, size 0x000002000000 
+[    2.721724@0] [mmcblk0p10]                 misc  offset 0x000031c00000, size 0x000002000000 
+[    2.721854@1] [mmcblk0p11]                 boot  offset 0x000034400000, size 0x000002000000 
+[    2.721983@0] [mmcblk0p12]               system  offset 0x000036c00000, size 0x000080000000 
+[    2.722116@1] [mmcblk0p13]                 data  offset 0x0000b7400000, size 0x0002f4000000 
+[    2.722144@1] card key: card_blk_probe.
+[    2.722148@1] emmc_key_init:527 emmc key lba_start:0x12020,lba_end:0x12220
+[    2.722150@1] emmc key: emmc_key_init:552 ok.
+[    2.724934@1] amlmmc_dtb_init: register dtb chardev
+[    2.724934@1] calc 6c1a58f3, store 6c1a58f3
+[    2.727088@1] calc 6c1a58f3, store 6c1a58f3
+[    2.727090@1] total valid 2
+[    2.727545@0] amlmmc_dtb_init: register dtb chardev OK
+[    2.727545@0] Exit aml_emmc_partition_ops OK.
+[    2.728638@1]  mmcblk0boot1: unknown partition table
+[    2.729631@1]  mmcblk0boot0: unknown partition table
+[    2.729904@0] clear_emmc_wait_flag
+[    3.057818@2] sd:pdata->caps = 7
+[    3.060972@2] sd:pdata->caps2 = 0
+[    3.064236@2] sd:pdata->pm_caps = 0
+[    3.104419@2] [aml_sd_emmc_probe] aml_sd_emmc_probe() success!
+[    3.104562@4] [aml_is_card_insert] card OUT
+[    3.104667@5] [aml_is_card_insert] card OUT
+[    3.112912@2] aml_sd_emmc_probe: line 3608
+[    3.117361@2] aml_sd_emmc_reg_init 1152
+[    3.120788@2] get property:                ocr_avail, value:0x00200080
+[    3.127216@2] get property:                    f_min, value:400000
+[    3.133327@2] get property:                    f_max, value:200000000
+[    3.139716@2] get property:             max_req_size, value:0x00020000
+[    3.146216@2] get property:                  pinname, str:sdio
+[    3.151959@2] get property:                card_type, value:3
+[    3.157720@2] sdio:pdata->caps = 7810f
+[    3.161361@2] sdio:pdata->caps2 = 0
+[    3.164816@2] sdio:pdata->pm_caps = 1
+[    3.204267@0] [aml_sd_emmc_probe] aml_sd_emmc_probe() success!
+[    3.205496@0] ion_dev has 1 memory regions
+[    3.208551@0] ion_dev ion_dev.25: assigned reserved memory node linux,ion-dev ok
+[    3.244240@0] ion_chunk_heap_create: base 2048917504 size 67108864 align 0
+[    3.258963@0] ion_carveout_heap_create: base 1981808640 size 67108864 align 0
+[    3.260885@0] fb: osd_init_module
+[    3.263849@0] fb: viu vsync irq: 35
+[    3.267214@0] fb: failed to init reserved memory
+[    3.271741@0] fb: osd_set_free_scale_mode_hw
+[    3.276066@0] fb: osd_probe vinfo:ffffffc002147af8
+[    3.280718@0] fb: init fbdev bpp is:32
+[    3.285410@0] fb: set osd0 reverse as NONE
+[    3.295004@0] fb: osd probe OK
+[    3.295257@0] ge2d: ge2d_init_module
+[    3.295976@0] ge2d: ge2d_dev major:240
+[    3.300050@0] ge2d: vpu clock is 666660000 HZ
+[    3.303999@0] ge2d: ge2d clock is 400 MHZ
+[    3.307982@0] ge2d: ge2d: pdev=ffffffc05718b400, irq=182, rstc=0xffffffc0561c3d80, clk=ffffffc0570d0000
+[    3.317370@0] ge2d: mapped phy: 0xd0160000
+[    3.321329@0] ge2d: ge2d start monitor
+[    3.325125@1] ge2d: ge2d workqueue monitor start
+[    3.325412@0] sysled: module init
+[    3.325542@0] sysled: init level = 0
+[    3.325544@0] sysled: led_gpio = 154
+[    3.325545@0] sysled: active_low = 0
+[    3.325713@2] sysled: module probed ok
+[    3.326165@2] pwmled: module init
+[    3.326179@2] aml_ledlight_init!
+[    3.326261@2] ledlight_probe!
+[e   3.326288@2] led_name: power_led
+[    3.326304@2] gpio pin: 154
+[    3.326308@2] gpio active: 1
+[    3.326310@2] led_type: R&G
+[    3.326311@2] ledlight gpio-num is 1
+[    3.326313@2] ledlight_count_gpio, gpio count: 0
+[    3.326314@2] ledlight_count_gpio, gpio count: 1
+[    3.326317@2] set_led set pin: 154, level: 1
+[    3.326610@0] codec:Amlogic A/V streaming port init
+[    3.328727@0] codec:get gate demux control ok ffffffc0563e8d80
+[    3.328733@0] codec:get gate parser_top control ok ffffffc0563e8600
+[    3.328738@0] codec:get gate vpu_intr control ok ffffffc0563e8d40
+[    3.328746@0] codec:get gate vdec control ok ffffffc0563e5bc0
+[    3.329695@0] codec:[tsync_pcr_init]init success.
+[    3.329720@0] codec:amvideocap_init_module
+[    3.329880@0] codec:amvideocap_probe,amvideocap
+[    3.329883@0] codec:use cma buf.
+[    3.329885@0] codec:amvideocap_dev_register
+[    3.330582@2] codec:amvdec_mmpeg4 module init
+[    3.330984@0] ammvdec_h264 module init
+[    3.332622@0] amvenc_avc_probe -- reserved memory config fail.
+[    3.332625@0] amvenc_avc - cma memory pool size: 40 MB
+[    3.332647@0] encode_wq_init.
+[    3.332652@0] encode start monitor.
+[    3.332720@2] encode workqueue monitor start.
+[    3.333092@2] jpegenc module init
+[    3.333433@0] codec:picdec_driver_probe called.
+[    3.333436@0] picdec has 1 memory regions
+[    3.333466@0] codec:picdec_driver_probe done.
+[    3.334411@2] codec:vdec_request_irq ffffffc0017ad014, vsync
+[    3.334634@0] codec:create_ge2d_work_queue video task ok
+[    3.335240@2] rdma_register, rdma_table_addr ffffff8000256000 rdma_table_addr_phy 74850000 reg_buf ffffffc055f70000
+[    3.335244@2] rdma_register success, handle 3 table_size 32768
+[    3.335246@2] video_rdma:rdma_init video rdma handle = 3.
+[    3.335252@2] codec:used fix clk for vdec clk source!
+[    3.335256@2] codec:register clk_set_setting cpu[34]
+[    3.335722@2] vpu_init
+[    3.335908@2] vpu_probe
+[    3.335912@2] HevcEnc reserved memory config fail.
+[    3.335917@2] HevcEnc - cma memory pool size: 64 MB
+[    3.335920@2] HevcEnc - wave420l_irq: 219
+[    3.335963@2] vpu base address get from platform driver physical base addr=0xc8810000, virtual base=0xffffff80003d8000
+[    3.336289@2] success to probe vpu device with video memory from cma
+[    3.336588@0] DI: di_module_init ok.
+[    3.336593@0] DI: di_module_init: major 233
+[    3.336801@2] DI: di_probe
+[    3.336947@0] deinterlace has 1 memory regions
+[    3.336989@0] deinterlace deinterlace.29: assigned reserved memory node linux,di ok
+[    3.336993@0] DI-di_probe: get flag_cma error.
+[    3.337013@0] di_irq:78,timerc_irq:38
+[    3.337169@0] rdma_register, rdma_table_addr ffffff800019c000 rdma_table_addr_phy 7484a000 reg_buf ffffffc055ffc000
+[    3.337171@0] rdma_register success, handle 4 table_size 8192
+[    3.337173@0] DI: di_probe allocate rdma channel 4.
+[    3.337178@0] DI: DI hw version 2.
+[    3.337186@0] 0x000000db:Y=db,U=0,V=0
+[    3.337188@0] 0x000000dc:Y=dc,U=0,V=0
+[    3.337190@0] 0x000000dd:Y=dd,U=0,V=0
+[    3.337192@0] 0x000000de:Y=de,U=0,V=0
+[    3.337193@0] 0x000000df:Y=df,U=0,V=0
+[    3.337195@0] 0x000000e0:Y=e0,U=0,V=0
+[    3.337196@0] 0x000000e1:Y=e1,U=0,V=0
+[    3.337198@0] 0x000000e2:Y=e2,U=0,V=0
+[    3.337200@0] 0x000000e3:Y=e3,U=0,V=0
+[    3.337202@0] 0x000000f0:Y=f0,U=0,V=0
+[    3.337205@0] 0x000000f1:Y=f1,U=0,V=0
+[    3.337207@0] 0x000000f2:Y=f2,U=0,V=0
+[    3.337209@0] 0x000000f3:Y=f3,U=0,V=0
+[    3.337210@0] 0x000000f4:Y=f4,U=0,V=0
+[    3.337212@0] 0x000000f5:Y=f5,U=0,V=0
+[    3.337213@0] 0x000000f6:Y=f6,U=0,V=0
+[    3.337217@0] 0x000000f7:Y=f7,U=0,V=0
+[    3.337219@0] 0x000000f8:Y=f8,U=0,V=0
+[    3.337220@0] 0x000000f9:Y=f9,U=0,V=0
+[    3.337222@0] 0x000000fa:Y=fa,U=0,V=0
+[    3.337223@0] 0x000000fb:Y=fb,U=0,V=0
+[    3.337225@0] 0x000000fc:Y=fc,U=0,V=0
+[    3.337228@0] 0x000000fd:Y=fd,U=0,V=0
+[    3.337229@0] 0x000000fe:Y=fe,U=0,V=0
+[    3.337231@0] 0x000000ff:Y=ff,U=0,V=0
+[    3.337233@0] DI: support multi decoding 253~254~255.
+[    3.337305@0] DI: di_probe:Di use HRTIMER
+[    3.337720@2] efusekeynum: 4
+[    3.337729@2] efusekeyname:             mac	offset:     0	size:     6
+[    3.337735@2] efusekeyname:          mac_bt	offset:     6	size:     6
+[    3.337740@2] efusekeyname:        mac_wifi	offset:    12	size:     6
+[    3.337745@2] efusekeyname:            usid	offset:    18	size:    16
+[    3.337995@2] efuse efuse.10: probe OK!
+[    3.338360@0] key unify config unifykey-num is 14
+[    3.338402@0] key unify fact unifykey-num is 14
+[    3.338407@0] aml_unifykeys_probe:1280=============unifykey_devno:e700000
+[    3.338620@0] 
+6unifykey: device unifykeys created ok
+[    3.338743@2] 
+6aml_unifykeys_init done!
+[    3.338746@2] PPMGRDRV: warn: ppmgr module init func called
+[    3.338884@2] PPMGRDRV: err: ppmgr_driver_probe called
+[    3.338887@2] ppmgr has 1 memory regions
+[    3.338921@2] PPMGRDRV: info: ppmgr_dev major:230
+[    3.339163@2] PPMGRDRV: info: ppmgr_probe done
+[    3.339578@2] amlogic rfkill init
+[    3.339687@2] enter bt_probe of_node
+[    3.339705@2] not get gpio_en
+[    3.339709@2] power on valid level is high
+[    3.339709@2] bt: power_on_pin_OD = 0;
+[    3.340009@2] Bluetooth: BlueSleep Mode Driver Ver 1.2
+[    3.340547@2] ionvideo-000: V4L2 device registered as video13
+[    3.340663@0] ionvideo-001: V4L2 device registered as video14
+[    3.340777@2] ionvideo-002: V4L2 device registered as video15
+[    3.340895@0] ionvideo-003: V4L2 device registered as video16
+[    3.341004@2] ionvideo-004: V4L2 device registered as video17
+[    3.341112@0] ionvideo-005: V4L2 device registered as video18
+[    3.341225@2] ionvideo-006: V4L2 device registered as video19
+[    3.341338@0] ionvideo-007: V4L2 device registered as video20
+[    3.341456@2] ionvideo-008: V4L2 device registered as video21
+[    3.341457@2] ionvid: info: Video Technology Magazine Ion Video
+[    3.341459@2] ionvid: info: Capture Board ver 1.0 successfully loaded
+[    3.341468@2] audio_dsp: [dsp]register dsp to char divece(257)
+[    3.342123@0] amaudio: amaudio: driver amaudio succuess!
+[    3.342443@2] amlvid:info: amlvideo_init called
+[    3.342443@2] amlvid:info: amlvideo_create_instance called
+[    3.342447@2] amlvid:info: v4l2_dev.name=:amlvideo-000
+[    3.342586@0] amlvideo-000: V4L2 device registered as video10
+[    3.342937@0] vdin_drv_init: major 229
+[    3.343272@2] rdma_register, rdma_table_addr ffffff80001a9000 rdma_table_addr_phy 7484c000 reg_buf ffffffc055fff200
+[    3.343276@2] rdma_register success, handle 5 table_size 512
+[    3.343278@2] vdin_drv_probe:vdin.0 rdma hanld 5.
+[    3.343463@0] 
+[    3.343463@0]  vdin memory resource undefined!!
+[    3.343468@0] vdin0 cma_mem_size = 16 MB
+[    3.343473@0] vdin0 irq: 115 rdma irq: 2
+[    3.343508@0] vdin_drv_probe: fclk_div5 is 400 MHZ
+[    3.343527@0] vdin_drv_probe: vdin[0] clock is 50 MHZ
+[    3.343729@2] vdin_drv_probe: driver initialized ok
+[    3.343846@2] rdma_register, rdma_table_addr ffffff80001ab000 rdma_table_addr_phy 7484d000 reg_buf ffffffc055fff600
+[    3.343848@2] rdma_register success, handle 6 table_size 512
+[    3.343850@2] vdin_drv_probe:vdin.1 rdma hanld 6.
+[    3.344038@0] vdin1 has 1 memory regions
+[    3.344073@0] vdin vdin1.31: assigned reserved memory node linux,vdin1_cma ok
+[    3.344075@0] 
+[    3.344075@0]  vdin memory resource done.
+[    3.344079@0] vdin1 cma_mem_size = 16 MB
+[    3.344083@0] vdin1 irq: 117 rdma irq: 4
+[    3.344108@0] vdin_drv_probe: fclk_div5 is 400 MHZ
+[    3.344116@0] vdin_drv_probe: vdin[1] clock is 50 MHZ
+[    3.344356@0] vdin_drv_probe: driver initialized ok
+[    3.344529@3] vdin_drv_init: vdin driver init done
+[    3.344535@3] tvafe_drv_init: major 228
+[    3.344916@3] tvafe: tvafe_init.
+[    3.345239@3] vbi: vbi_init.
+[    3.345759@0] [RX]-hdmirx: hdmirx_init.
+[    3.345763@0] ESM HLD: Initializing...
+[    3.345765@0] ESM HLD: Registering device range 'esm_rx'...
+[    3.345774@0] ESM HLD: Device range 'esm_rx' has been registered.
+[    3.345775@0] ESM HLD: Creating class /sys/class/elliptic_rx...
+[    3.345848@3] ESM HLD: The class /sys/class/elliptic_rx has been created.
+[    3.345850@3] ESM HLD: Creating device 'esm_rx'...
+[    3.345966@0] ESM HLD: Device 'esm_rx' has been created.
+[    3.345968@0] ESM HLD: Done initializing the HLD driver.
+[    3.345969@0] amvdec_656in module: init.
+[    3.345972@0] amvdec_656in_init_module. 1 hardware detected!.
+[    3.345975@0] amvdec_656in_init_module:major 225
+[    3.346173@3] amvdec_656in_probe:start probe .
+[    3.346178@3] amvdec_656in_probe: bt656 devp->index =0
+[    3.346211@3] amvdec_656in_probe: bt656[0] clock is 333 MHZ
+[    3.346335@0] amvdec_656in_probe:bt656[0]start get  ioremap .
+[    3.346350@0] amvdec_656in_probe: bt656[0] maped reg_base =ffffff80001ae000, size=7c
+[    3.346353@0] amvdec_656in_probe: tvin_frontend_init done :0
+[    3.346358@0] amvdec_656in probe ok.
+[    3.346373@0] amvdec_656in_probe:start probe .
+[    3.346376@0] amvdec_656in_probe: bt656 devp->index =1
+[    3.346393@0] amvdec_656in_probe: bt656[1] clock is 333 MHZ
+[    3.346499@3] amvdec_656in_probe:bt656[1]start get  ioremap .
+[    3.346509@3] amvdec_656in_probe: bt656[1] maped reg_base =ffffff80001ba000, size=7c
+[    3.346511@3] amvdec_656in_probe: tvin_frontend_init done :1
+[    3.346516@3] amvdec_656in probe ok.
+[    3.346669@0] amvdec_656in_init_module: bt656 driver init done
+[    3.346673@0] [viuin..]viuin_init_module viuin module init
+[    3.347087@0] [viuin..]viuin_probe probe ok.
+[    3.347162@3] aml_vecm_init:module init
+[    3.347298@3] 
+[    3.347298@3]  VECM probe start
+[    3.347577@3] Can't find  wb_sel.
+[    3.347582@3] dolby_vision_init_receiver(dvel)
+[    3.347589@3] dolby_vision_init_receiver: dvel
+[    3.347737@3] aml_vecm_probe: ok
+[    3.348477@0] saradc c1108680.saradc: initialized by BL30
+[    3.348488@0] saradc c1108680.saradc: calibration start:
+[    3.348535@0] saradc c1108680.saradc: nominal=0, value=6
+[    3.348582@0] saradc c1108680.saradc: nominal=256, value=231
+[    3.348628@0] saradc c1108680.saradc: nominal=512, value=461
+[    3.348674@0] saradc c1108680.saradc: nominal=768, value=692
+[    3.348720@0] saradc c1108680.saradc: nominal=1023, value=920
+[    3.348723@0] saradc c1108680.saradc: calibration end: coef=4549
+[    3.348946@3] remote: Driver init
+[    3.349027@3] remote: platform_data g_remote_ao_offset=580
+[    3.349029@3] remote: platform_data irq =228
+[    3.349054@3] remote: set drvdata completed
+[    3.349080@3] remote: device_create_file completed 
+[    3.349376@3] input: aml_keypad as /devices/meson-remote.12/input/input0
+[    3.349622@3] remote: input_register_device completed 
+[    3.349678@3] remote: set_remote_mode[74]
+[    3.349702@3] remote: remote config major:223
+[    3.349890@3] remote: physical address:0x558e4000
+[    3.350505@3] gpio-key gpio_keypad.53: gpio_key: 0 name(power) pin()
+[    3.350510@3] gpio-key gpio_keypad.53: amlogic_gpio_name_map_num pin 0!::
+[    3.350528@3] gpio-key gpio_keypad.53: gpio_key: 0 power(147)
+[    3.350568@3] gpio-key gpio_keypad.53: start setup_timer
+[    3.350576@3] gpio-key gpio_keypad.53: power key(160) registed.
+[    3.350780@0] input: gpio_keypad as /devices/gpio_keypad.53/input/input1
+[    3.350908@3] gpio-key gpio_keypad.53: gpio keypad register input device completed.
+[    3.350917@3] input input1: gpio keypad major:222
+[    3.352114@0] Sensor: lsm303d_init
+[    3.352334@3] Sensor: stk8313_init
+[    3.352411@0] Sensor: stk831x_init
+[    3.352483@3] Sensor: mxc622x_acc_init
+[    3.352577@0] Sensor: mxc6255xc_acc_init
+[    3.352723@0] Sensor: l3gd20_gyr_init
+[    3.353691@0] aml dvb init
+[    3.354135@0] Amlogic Demod DVB-T/C DebugIF Init
+[    3.354398@0] Amlogic Demod DVB-T/C DebugIF Init ok----------------
+[    3.356432@3] jtag: module init
+[    3.356629@0] jtag: pinctrl setup apao
+[    3.356631@0] jtag: set state 2
+[    3.444234@3] input input1: key 160 up
+fuse_pw_en: 0x3
+WARNING! efuse bits is disabled
+Enable A53 JTAG cluster 0 to AO
+[    4.413378@0] jtag: module probed ok
+[    4.414134@3] defendkey c8834500.defendkey: defendkey_devno:d900000
+[    4.417846@0] defendkey c8834500.defendkey: defendkey: device defendkey created ok
+[    4.425591@3] defendkey: driver init
+[    4.429304@3] input: cec_input as /devices/virtual/input/input2
+[    4.434777@0] cectx aocec: no hdmirx reg resource
+[    4.439200@0] cectx aocec: no hhi reg resource
+[    4.443506@0] cec: wake up flag:0
+[    4.449461@0] aml_aes_dma c883e000.aml_aes: Aml AES_dma
+[    4.452565@3] aml_tdes_dma c883e000.aml_tdes: Aml TDES_dma
+[    4.458583@0] aml_sha_dma c883e000.aml_sha: Aml SHA1/SHA224/SHA256 dma
+[    4.464600@0] usbcore: registered new interface driver snd-usb-audio
+[    4.471768@3] aml_codec_T9015 c8832000.t9015: aml_T9015_audio_codec_probe
+[    4.479443@0] aml-i2s-dai I2S.45: I2S Mic is in platform!
+[    4.482571@3] aml_pcm_dai: pcm mode detection =1
+[    4.487354@0] aml_spdif_dai: enterd aml_spdif_play,set_clock:-1,sample_rate=4
+[    4.493885@0] aml_spdif_dai: set normal 512 fs /4 fs
+[    4.498956@0] aml_spdif_dai: set 958 audio clk div 4
+[    4.503708@0] aml_audio_hw: IEC958 16bit
+[    4.507761@0] hdmitx: audio: aout notify rate 48000
+[    4.512413@0] hdmitx: audio: aout notify size 16
+[    4.517046@0] hdmitx: audio: aout notify format CT_PCM
+[    4.523169@0] aml_snd_card: aml_multi_dev_parse_of ...
+[    4.527181@0] aml_snd_card: no multi dev!
+[    4.734461@0] aml_snd_card: headphone detection disable=1
+[    4.734496@0] aml_snd_card: no spk event delay time set
+[    4.740372@0] aml_snd_m8_card aml_m8_snd.52: T9015-audio-hifi <-> I2S.45 mapping ok
+[    4.747926@0] aml_snd_m8_card aml_m8_snd.52: dit-hifi <-> SPDIF.46 mapping ok
+[    4.754174@0] aml_pcm: enter aml_pcm_new dai->name: PCM.47 dai->id: 0
+[    4.760820@0] aml_snd_m8_card aml_m8_snd.52: pcm2bt-pcm <-> PCM.47 mapping ok
+[    4.767587@0] aml_snd_m8_card aml_m8_snd.52: ASoC: no source widget found for LOUTL
+[    4.775237@0] aml_snd_m8_card aml_m8_snd.52: ASoC: Failed to add route LOUTL -> direct -> Ext Spk
+[    4.783927@0] aml_snd_m8_card aml_m8_snd.52: ASoC: no source widget found for LOUTR
+[    4.791547@0] aml_snd_m8_card aml_m8_snd.52: ASoC: Failed to add route LOUTR -> direct -> Ext Spk
+[    4.803079@1] GACT probability NOT on
+[    4.803921@1] Mirror/redirect action on
+[    4.807727@1] u32 classifier
+[    4.810552@1]     Actions configured
+[    4.814092@1] Netfilter messages via NETLINK v0.30.
+[    4.818980@1] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    4.825639@1] ctnetlink v0.93: registering with nfnetlink.
+[    4.831117@1] xt_time: kernel timezone is -0000
+[    4.835144@1] ipip: IPv4 over IPv4 tunneling driver
+[    4.841433@1] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.845506@1] arp_tables: (C) 2002 David S. Miller
+[    4.850879@1] TCP: cubic registered
+[    4.853505@1] Initializing XFRM netlink socket
+[    4.858864@1] NET: Registered protocol family 10
+[    4.863560@0] mip6: Mobile IPv6
+[    4.865647@0] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    4.873532@0] sit: IPv6 over IPv4 tunneling driver
+[    4.877369@0] NET: Registered protocol family 17
+[    4.880456@0] NET: Registered protocol family 15
+[    4.887319@0] Bridge firewalling registered
+[    4.889219@0] Bluetooth: Can't register RFCOMM TTY driver
+[    4.894529@0] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    4.899997@0] Bluetooth: BNEP filters: protocol multicast
+[    4.905312@0] Bluetooth: BNEP socket layer initialized
+[    4.910351@0] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    4.916438@0] Bluetooth: HIDP socket layer initialized
+[    4.921540@0] l2tp_core: L2TP core driver, V2.0
+[    4.925990@0] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    4.930878@0] l2tp_ip: L2TP IP encapsulation support (L2TPv3)
+[    4.936642@0] l2tp_netlink: L2TP netlink interface
+[    4.941348@0] l2tp_eth: L2TP ethernet pseudowire support (L2TPv3)
+[    4.947398@0] l2tp_debugfs: L2TP debugfs support
+[    4.951916@0] l2tp_ip6: L2TP IP encapsulation support for IPv6 (L2TPv3)
+[    4.958574@0] NET: Registered protocol family 35
+[    4.963112@0] Key type dns_resolver registered
+[    4.969473@0] Registering SWP/SWPB emulation handler
+[    4.973044@0] Loading compiled-in X.509 certificates
+[    4.977506@0] regulator-dummy: disabling
+[    4.981764@0] aml_vrtc rtc.37: setting system clock to 2015-01-01 00:00:10 UTC (1420070410)
+[    4.991796@0] hdmirx_ext: [hdmiin_drv_init] ver: Jul042016.1
+[    4.995485@0] gxbb_pm: enter meson_pm_probe!
+[    4.999335@0] gxbb_pm: meson_pm_probe done
+[    5.004283@0] cpucore_cooling_register, max_cpu_core_num:4
+[    5.009020@0] cpucore_cooling_register, max_cpu_core_num:4
+[    5.029849@0] aml_istbt_dev_ready NULL
+[    5.02990[    5.034601@0] meson_uart c81004c0.serial: ttyS0 use xtal(8M) 24000000 change 115200 to 115200
+[    5.038156@0] Freeing unused kernel memory: 1300K (ffffffc001f49000 - ffffffc00208e000)
+[    5.064460@0] init: init first stage started!
+[    5.209709@5] audit: type=1403 audit(1420070410.720:2): policy loaded auid=4294967295 ses=4294967295
+[    5.213938@5] init: (Initializing SELinux non-enforcing took 0.15s.)
+[    5.223855@5] init: init second stage started!
+[    5.231308@5] init: Running restorecon...
+[    5.323262@0] init: waitpid failed: No child processes
+[    5.323630@0] init: (Loading properties from /default.prop took 0.00s.)
+[    5.331833@0] init: (Parsing /init.environ.rc took 0.00s.)
+[    5.335393@0] init: (Parsing /init.usb.rc took 0.00s.)
+[    5.340703@0] init: /init.amlogic.rc: 269: chmod requires 2 arguments
+[    5.347723@0] init: (Parsing init.amlogic.usb.rc took 0.00s.)
+[    5.352497@0] init: (Parsing init.amlogic.usb.rc took 0.00s.)
+[    5.357818@0] init: (Parsing init.amlogic.board.rc took 0.01s.)
+[    5.364037@0] init: (Parsing init.amlogic.usb.rc took 0.00s.)
+[    5.369221@0] init: (Parsing init.amlogic.wifi.rc took 0.01s.)
+[    5.375122@0] init: could not import file 'init.mtk.rc' from '/init.amlogic.rc': No such file or directory
+[    5.384553@0] init: (Parsing /init.amlogic.rc took 0.04s.)
+[    5.390688@0] init: (Parsing /init.usb.configfs.rc took 0.00s.)
+[    5.396209@0] init: (Parsing /init.zygote64_32.rc took 0.00s.)
+[    5.401629@0] init: (Parsing /init.rc took 0.07s.)
+[    5.474789@0] init: Starting service 'ueventd'...
+[    5.476333@0] init: insmod: open("/boot/optee.ko") failed: No such file or directory[    5.477627@1] ueventd: ueventd started!
+[    5.479798@1] ueventd: coldboot /sys/class
+[    5.482884@1] ueventd: coldboot /sys/block
+[    5.482928@1] ueventd: coldboot /sys/devices/virtual/tty/console
+[    5.485553@1] ueventd: coldboot /sys/devices/virtual/tty/tty
+[    5.486408@1] ueventd: coldboot /sys/devices/virtual/tty/ptmx
+[    5.487297@1] ueventd: coldboot /sys/devices
+[    5.514947@0] init: insmod: open("/boot/optee_armtz.ko") failed: No such file or directoryueventd: Coldboot took 0.31s.
+[    5.789511@2] ueventd: coldboot /sys/devices/virtual/tty
+[    5.792657@2] audit: type=1400 audit(1420070411.300:3): avc:  denied  { relabelfrom } for  pid=3104 comm="ueventd" name="tty" dev="tmpfs" ino=9261 scontext=u:r:ueventd:s0 tconte
+5.812775@2] audit: type=1400 audit(1420070411.320:4): avc:  denied  { relabelto } for  pid=3104 comm="ueventd" name="tty" dev="tmpfs" ino=9261 scontext=u:r:ueventd:s0 tcontext=u:object_r:owntty_device:s0 tclass=chr_file permissive=1
+[    5.828647@3] audit: type=1400 audit(1420070411.340:5): avc:  denied  { relabelfrom } for  pid=3104 comm="ueventd" name="ptmx" dev="tmpfs" ino=9262 scontext=u:r:ueventd:s0 tcontext=u:object_r:ptmx_device:s0 tclass=chr_file permissive=1
+[    5.848447@3] audit: type=1400 audit(1420070411.360:6): avc:  denied  { relabelto } for  pid=3104 comm="ueventd" name="ptmx" dev="tmpfs" ino=9262 scontext=u:r:ueventd:s0 tcontext=u:object_r:ptmx_device:s0 tclass=chr_file permissive=1
+[    5.874381@0] meson_uart c81004c0.serial: ttyS0 use xtal(8M) 24000000 change 115200 to 115200
+[    5.879020@3] audit: type=1400 audit(1420070411.390:7): avc:  denied  { relabelfrom } for  pid=3104 comm="ueventd" name="console" dev="tmpfs" ino=9260 scontext=u:r:ueventd:s0 tcontext=u:object_r:console_device:s0 tclass=chr_file permissive=1
+[    5.898641@3] audit: type=1400 audit(1420070411.410:8): avc:  denied  { relabelto } for  pid=3104 comm="ueventd" name="console" dev="tmpfs" ino=9260 scontext=u:r:ueventd:s0 tcontext=u:object_r:console_device:s0 tclass=chr_file permissive=1
+[    6.452789@3] ueventd: Coldboot tty took 0.66s.
+[    6.476652@1] fb: afbc: 1
+[    6.477306@1] init: enter do_confirm_formated /dev/block/tee, /tee
+[    6.479788@1] init: blocksize 1024, bytes_per_inode 1024
+[    6.485064@1] init: do_confirm_formated ext4 try mount
+[    6.493592@1] EXT4-fs (mmcblk0p8): recovery complete
+[    6.495277@1] EXT4-fs (mmcblk0p8): mounted filesystem with ordered data mode. Opts: noauto_da_alloc
+[    6.546962@1] fs_mgr: only system!, ignore mount_point:/misc
+[    6.550628@1] EXT4-fs (mmcblk0p12): mounted filesystem with ordered data mode. Opts: (null)
+[    6.555436@1] fs_mgr: __mount(source=/dev/block/system,target=/system,type=ext4)=0
+[    6.562886@1] fs_mgr: only system!, ignore mount_point:/cache
+[    6.568481@1] fs_mgr: only system!, ignore mount_point:/data
+[    6.574071@1] fs_mgr: only system!, ignore mount_point:/swap_zram0
+[    6.580219@1] fs_mgr: only system!, ignore mount_point:/tee
+[    6.590677@7] fs_mgr: ignore system!, ignore mount_point:/system
+[    6.592789@0] EXT4-fs (mmcblk0p3): Ignoring removed nomblk_io_submit option
+[    6.606174@0] EXT4-fs (mmcblk0p3): recovery complete
+[    6.606469@0] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    6.606698@3] random: accelerateboot urandom read with 61 bits of entropy available
+[    6.606895@3] audit: type=1400 audit(1420070412.120:9): avc:  denied  { module_request } for  pid=4027 comm="accelerateboot" kmod="personality-8" scontext=u:r:accelerateboot:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[    6.643888@0] fs_mgr: check_fs(): mount(/dev/block/cache,/cache,ext4)=0: Success
+[    6.686131@0] fs_mgr: check_fs(): unmount(/cache) succeeded
+[    6.686345@0] fs_mgr: Running /system/bin/e2fsck on /dev/block/cache
+[    6.777507@5] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    6.777507@5] 
+[    6.778254@5] e2fsck: Pass 1: Checking inodes, blocks, and sizes
+[    6.778254@5] 
+[    6.785875@5] e2fsck: Pass 2: Checking directory structure
+[    6.785875@5] 
+[    6.792890@5] e2fsck: Pass 3: Checking directory connectivity
+[    6.792890@5] 
+[    6.800230@5] e2fsck: Pass 4: Checking reference counts
+[    6.800230@5] 
+[    6.807057@5] e2fsck: Pass 5: Checking group summary information
+[    6.807057@5] 
+[    6.814692@1] e2fsck: /dev/block/cache: 23/32768 files (4.3% non-contiguous), 4308/131072 blocks
+[    6.814692@1] 
+[    6.826064@1] EXT4-fs (mmcblk0p3): Ignoring removed nomblk_io_submit option
+[    6.833632@1] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: nodelalloc,nomblk_io_submit,errors=panic
+[    6.843158@1] fs_mgr: __mount(source=/dev/block/cache,target=/cache,type=ext4)=0
+[    6.851397@1] EXT4-fs (mmcblk0p13): Ignoring removed nomblk_io_submit option
+[    6.852266@7] accelerate: Error reading block data /system/lib64/libc.so
+[    6.859814@7] audit: type=1400 audit(1420070412.370:10): avc:  denied  { read } for  pid=4027 comm="accelerateboot" name="vold" dev="mmcblk0p12" ino=548 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:vold_exec:s0 tclass=file permissive=1
+[    6.859857@7] audit: type=1400 audit(1420070412.370:11): avc:  denied  { open } for  pid=4027 comm="accelerateboot" path="/system/bin/vold" dev="mmcblk0p12" ino=548 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:vold_exec:s0 tclass=file permissive=1
+[    7.055165@1] EXT4-fs (mmcblk0p13): 2 orphan inodes deleted
+[    7.055200@1] EXT4-fs (mmcblk0p13): recovery complete
+[    7.067222@1] EXT4-fs (mmcblk0p13): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    7.072498@1] fs_mgr: check_fs(): mount(/dev/block/data,/data,ext4)=0: Success
+[    7.096697@7] audit: type=1400 audit(1420070412.610:12): avc:  denied  { read } for  pid=4027 comm="accelerateboot" name="keystore" dev="mmcblk0p12" ino=369 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:keystore_exec:s0 tclass=file permissive=1
+[    7.113166@7] audit: type=1400 audit(1420070412.620:13): avc:  denied  { open } for  pid=4027 comm="accelerateboot" path="/system/bin/keystore" dev="mmcblk0p12" ino=369 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:keystore_exec:s0 tclass=file permissive=1
+[    7.144358@5] fs_mgr: check_fs(): unmount(/data) succeeded
+[    7.144439@5] fs_mgr: Running /system/bin/e2fsck on /dev/block/data
+[    8.344342@2] random: nonblocking pool is initialized
+[    8.401757@6] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    8.401757@6] 
+[    8.402517@6] e2fsck: Pass 1: Checking inodes, blocks, and sizes
+[    8.402517@6] 
+[    8.410134@6] e2fsck: Pass 2: Checking directory structure
+[    8.410134@6] 
+[    8.417174@6] e2fsck: Pass 3: Checking directory connectivity
+[    8.417174@6] 
+[    8.424514@6] e2fsck: Pass 4: Checking reference counts
+[    8.424514@6] 
+[    8.431301@6] e2fsck: Pass 5: Checking group summary information
+[    8.431301@6] 
+[    8.438923@6] e2fsck: /dev/block/data: 16548/775200 files (7.2% non-contiguous), 336794/3096572 blocks
+[    8.438923@6] 
+[    8.458726@1] EXT4-fs (mmcblk0p13): Ignoring removed nomblk_io_submit option
+[    8.463110@1] EXT4-fs (mmcblk0p13): mounted filesystem with ordered data mode. Opts: nodelalloc,nomblk_io_submit,errors=panic
+[    8.471500@1] fs_mgr: __mount(source=/dev/block/data,target=/data,type=ext4)=0
+[    8.497230@1] EXT4-fs (mmcblk0p8): Ignoring removed nomblk_io_submit option
+[    8.499805@1] EXT4-fs (mmcblk0p8): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    8.509290@1] fs_mgr: check_fs(): mount(/dev/block/tee,/tee,ext4)=0: Success
+[    8.572598@7] fs_mgr: check_fs(): unmount(/tee) succeeded
+[    8.572678@7] fs_mgr: Running /system/bin/e2fsck on /dev/block/tee
+[    8.621671@4] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    8.621671@4] 
+[    8.622412@4] e2fsck: Pass 1: Checking inodes, blocks, and sizes
+[    8.622412@4] 
+[    8.630050@4] e2fsck: Pass 2: Checking directory structure
+[    8.630050@4] 
+[    8.637090@4] e2fsck: Pass 3: Checking directory connectivity
+[    8.637090@4] 
+[    8.644486@3] e2fsck: Pass 4: Checking reference counts
+[    8.644486@3] 
+[    8.651197@3] e2fsck: Pass 5: Checking group summary information
+[    8.651197@3] 
+[    8.658805@3] e2fsck: /dev/block/tee: 11/8192 files (0.0% non-contiguous), 3112/8192 blocks
+[    8.658805@3] 
+[    8.683752@3] EXT4-fs (mmcblk0p8): Ignoring removed nomblk_io_submit option
+[    8.686438@3] EXT4-fs (mmcblk0p8): mounted filesystem with ordered data mode. Opts: nodelalloc,nomblk_io_submit,errors=panic
+[    8.696363@3] fs_mgr: __mount(source=/dev/block/tee,target=/tee,type=ext4)=0
+[    8.703694@7] init: here: 1, 1 mount_mode:512
+[    8.740578@7] Adding 511996k swap on /dev/block/zram0.  Priority:-1 extents:1 across:511996k SS
+[    8.747238@4] audit: type=1400 audit(1420070414.260:14): avc:  denied  { search } for  pid=4036 comm="accelerateboot" name="keystore" dev="mmcblk0p13" ino=432485 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:keystore_data_file:s0 tclass=dir permissive=1
+[    8.759213@7] init: cannot find '/system/bin/tee-supplicant' (No such file or directory), disabling 'tee_supplicant'
+[    8.762928@7] init: /recovery not specified in fstab
+[    8.766841@0] audit: type=1400 audit(1420070414.280:15): avc:  denied  { module_request } for  pid=4052 comm="debuggerd" kmod="personality-8" scontext=u:r:debuggerd:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[    8.805009@0] logd.auditd: start
+[    8.805097@0] logd.klogd: 8730866586
+[    8.817245@5] accelerate: Error reading block data /system/framework/arm/boot-framework.oat
+[    8.846601@0] type=1400 audit(1420070414.330:16): avc: denied { read } for pid=4036 comm="accelerateboot" name=".metadata" dev="mmcblk0p13" ino=432523 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:keystore_data_file:s0 tclass=file permissive=1
+[    8.863584@0] type=1400 audit(1420070414.330:17): avc: denied { open } for pid=4036 comm="accelerateboot" path="/data/misc/keystore/.metadata" dev="mmcblk0p13" ino=432523 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:keystore_data_file:s0 tclass=file permissive=1
+[    8.886739@0] type=1400 audit(1420070414.340:18): avc: denied { search } for pid=4036 comm="accelerateboot" name="com.google.android.gms" dev="mmcblk0p13" ino=32792 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=dir permissive=1
+[    8.910174@0] type=1400 audit(1420070414.340:19): avc: denied { open } for pid=4036 comm="accelerateboot" path="/data/data/com.google.android.gms/files/perfprofd.conf" dev="mmcblk0p13" ino=35071 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=1
+[    8.965502@5] accelerate: Error reading block data /system/framework/arm/boot-org.apache.http.legacy.boot.oat
+[    9.002643@4] dig: dig start!
+[    9.012355@6] accelerate: Error reading block data /system/lib/libpppoejni.so
+[    9.170281@1] init: decode_uid: Unable to find UID for 'pppoe'. Returning UINT_MAX
+[    9.173600@1] init: decode_uid: Unable to find UID for 'pppoe'. Returning UINT_MAX
+[    9.385893@5] mali_kbase: unknown parameter 'mali_debug_level' ignored
+[    9.386841@5] mali_kbase: unknown parameter 'mali_shared_mem_size' ignored
+[    9.397280@5] ftrace: Allocated trace_printk buffers
+[    9.399173@5] mali d00c0000.t82x: Continuing without Mali regulator control
+[    9.405573@5] mali d00c0000.t82x: set min pp to default 1
+[    9.410793@5] mali d00c0000.t82x: set min clk default to 0
+[    9.416317@3] mali d00c0000.t82x: dvfs table is 5
+[    9.420853@3] mali d00c0000.t82x: dvfs table addr ffffffc0558b5818, ele size=48
+[    9.428120@3] mali d00c0000.t82x: max clk set 3
+[    9.432580@3] mali d00c0000.t82x: turbo clk set to 4
+[    9.437507@3] mali d00c0000.t82x: default clk set to 1
+[    9.442667@3] mali_plat=ffffffbffc04b550
+[    9.446996@3] gpu cooling register okay with err=0
+[    9.451396@3] gpu core cooling register okay with err=0
+[    9.456615@3] gpu_power_main, 63
+[    9.459840@3] hrtimer: interrupt took 14416 ns
+[    9.464341@3] mali d00c0000.t82x: GPU identified as 0x0820 r1p0 status 0
+[    9.472041@0] mali d00c0000.t82x: Probed as mali0
+[    9.475930@0] init: insmod: open("/system/lib/dovi.ko") failed: No such file or directory
+[    9.545674@0] type=1400 audit(1420070415.060:20): avc: denied { read } for pid=4036 comm="accelerateboot" name="base.apk" dev="mmcblk0p13" ino=489605 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:apk_data_file:s0 tclass=file permissive=1
+[    9.561847@0] type=1400 audit(1420070415.060:21): avc: denied { open } for pid=4036 comm="accelerateboot" path="/data/app/com.ionitech.airscreen-1/base.apk" dev="mmcblk0p13" ino=489605 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:apk_data_file:s0 tclass=file permissive=1
+[    9.598372@5] accelerate: Error reading block data /data/app/com.ionitech.airscreen-1/lib/arm/libijkffmpeg.so
+[    9.703269@5] init: insmod: open("/system/lib/aml_thermal.ko") failed: No such file or directory[    9.703950@2] binder: 4112:4112 transaction failed 29189, size 0-0
+[    9.706920@1] logd.daemon: reinit
+[    9.717608@2] ddr_window,module_VER_:2017-03-18-11-13
+[    9.726205@2] amlkey_init() enter!
+[    9.744376@0] type=1400 audit(1420070415.250:22): avc: denied { getattr } for pid=4114 comm="hdmi_cec" path="/vendor" dev="rootfs" ino=43 scontext=u:r:hdmi_cec:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[    9.763277@0] type=1400 audit(1420070415.250:23): avc: denied { getattr } for pid=4113 comm="systemcontrol" path="/vendor" dev="rootfs" ino=43 scontext=u:r:system_control:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[    9.779413@0] type=1400 audit(1420070415.270:24): avc: denied { search } for pid=4036 comm="accelerateboot" name="com.android.providers.downloads" dev="mmcblk0p13" ino=32681 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=dir permissive=1
+[    9.845919@0] fb: osd_open index=0,open_count=1
+[    9.845952@0] fb: use ion buffer for fb memory
+[    9.849284@0] fb: OSD0 as afbcd mode
+[    9.852963@0] meson-fb meson-fb.19: create ion_client ffffffc055bd90c0, handle=ffffffc053cac0c0
+[    9.861485@0] meson-fb meson-fb.19: ion memory(0): created fb at 0x0000000076200000, size 8 MiB
+[    9.870033@0] fb:  0, phy: 0x0000000076200000, vir:0xffffff80071ff000, size=8300K
+[    9.870033@0] 
+[    9.879300@0] meson-fb meson-fb.19: create ion_client ffffffc055bd90c0, handle=ffffffc0555b7a80
+[    9.887762@0] meson-fb meson-fb.19: ion memory(0): created fb at 0x0000000076a1b000, size 8 MiB
+[    9.896395@0] fb:  0, phy: 0x0000000076a1b000, vir:0xffffff8007a1b000, size=8300K
+[    9.896395@0] 
+[    9.905597@0] meson-fb meson-fb.19: create ion_client ffffffc055bd90c0, handle=ffffffc054795d00
+[    9.914006@0] meson-fb meson-fb.19: ion memory(0): created fb at 0x0000000077236000, size 8 MiB
+[    9.922715@0] fb:  0, phy: 0x0000000077236000, vir:0xffffff8008237000, size=8300K
+[    9.922715@0] 
+[    9.931693@0] fb: Frame buffer memory assigned at
+[    9.936212@0] fb:  0, phy: 0x0000000076200000, vir:0xffffff80071ff000, size=8300K
+[    9.936212@0] 
+[    9.945409@0] fb:  0, phy: 0x0000000076200000, vir:0xffffff80071ff000, size=8300K
+[    9.945409@0] 
+[    9.954463@0] fb:  0, phy: 0x0000000076a1b000, vir:0xffffff8007a1b000, size=8300K
+[    9.954463@0] 
+[    9.963532@0] fb:  0, phy: 0x0000000077236000, vir:0xffffff8008237000, size=8300K
+[    9.963532@0] 
+[    9.972584@0] fb: ---------------clear fb0 memory ffffff80071ff000
+[    9.980375@0] fb: ---------------clear fb0 memory ffffff8007a1b000
+[    9.986483@0] fb: ---------------clear fb0 memory ffffff8008237000
+[    9.992606@0] fb: osd[0] canvas.idx =0x40
+[    9.994912@0] fb: osd[0] canvas.addr=0x76200000
+[    9.999411@0] fb: osd[0] canvas.width=7680
+[   10.003437@0] fb: osd[0] canvas.height=3240
+[   10.007602@0] fb: osd[0] frame.width=1920
+[   10.011546@0] fb: osd[0] frame.height=1080
+[   10.023088@0] type=1400 audit(1420070415.530:25): avc: denied { open } for pid=4036 comm="accelerateboot" path="/data/data/com.android.providers.downloads/databases/downloads.db" dev="mmcblk0p13" ino=32950 scontext=u:r:accelerateboot:s0 tcontext=u:object_r:app_data_file:s0:c512,c768 tclass=file permissive=1
+[   10.047385@6] emmc_key_read:428, read ok
+[   10.047401@6] amlkey_init() storagekey_info.buffer=ffffff8001900000, storagekey_info.size = 40000!
+[   10.048870@0] type=1400 audit(1420070415.560:26): avc: denied { open } for pid=4113 comm="systemcontrol" path="/dev/__properties__/u:object_r:logpersistd_logging_prop:s0" dev="tmpfs" ino=10260 scontext=u:r:system_control:s0 tcontext=u:object_r:logpersistd_logging_prop:s0 tclass=file permissive=1
+[   10.049024@0] type=1400 audit(1420070415.560:27): avc: denied { getattr } for pid=4113 comm="systemcontrol" path="/dev/__properties__/u:object_r:logpersistd_logging_prop:s0" dev="tmpfs" ino=10260 scontext=u:r:system_control:s0 tcontext=u:object_r:logpersistd_logging_prop:s0 tclass=file permissive=1
+[   10.049405@6] vfm_map_store:rm default
+[   10.049446@6] vfm_map_store:add default decoder ppmgr deinterlace amvideo
+[   10.049524@6] init: property_set("ro.radio.noril", "true") failed
+[   10.049586@6] fb: afbc: 1
+[   10.050133@6] init: Service sud does not have a SELinux domain defined.
+[   10.051088@6] init: Service installxbmc does not have a SELinux domain defined.
+[   10.051163@0] type=1400 audit(1420070415.560:28): avc: denied { execute_no_trans } for pid=4142 comm="init" path="/system/xbin/sud" dev="mmcblk0p12" ino=2823 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   10.052010@6] init: Service fastinstall does not have a SELinux domain defined.
+[   10.053015@6] init: Service xbmc_addons does not have a SELinux domain defined.
+[   10.065065@2] warning: `sud' uses 32-bit capabilities (legacy support in use)
+[   10.112900@5] accelerate: Error reading block data /data/dalvik-cache/arm/system@priv-app@Phonesky@Phonesky.apk@classes.dex
+[   10.127012@0] type=1400 audit(1420070415.640:29): avc: denied { write } for pid=4158 comm="setprop" name="property_service" dev="tmpfs" ino=395 scontext=u:r:toolbox:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+[   10.127505@0] type=1400 audit(1420070415.640:30): avc: denied { connectto } for pid=4158 comm="setprop" path="/dev/socket/property_service" scontext=u:r:toolbox:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+[   10.182399@7] accelerate: Error reading block data /system/priv-app/Settings_oranth/Settings_oranth.apk
+[   10.182403@5] accelerate: Error reading block data /data/data/com.android.vending/databases/scheduler
+[   10.190611@5] accelerate: Error reading block data /data/data/com.google.android.gms/shared_prefs/google_ads_flags.xml
+[   10.190614@4] accelerate: Error readi   10.279390@3] meson_uart c81004c0.serial: ttyS0 use xtal(8M) 24000000 change 115200 to 115200
+[   10.279800@7] set hdcp_pwr 1
+[   10.280033@6] init: avc:  denied  { set } for property=dev.xbmc.addon pid=4158 uid=0 gid=0 scontext=u:r:toolbox:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+[   10.282721@6] android_usb: Cannot enable 'adb' (-22)init: cannot find '/system/bin/tee-supplicant' (No such file or directory), disabling 'tee_supplicant'
+[   10.283036@6] init: cannot find '/system/bin/update_verifier' (No such file or directory), disabling 'exec 2 (/system/bin/update_verifier)'
+[   10.283103@6] init: cannot find '/system/bin/install-recovery.sh' (No such file or directory), disabling 'flash_recovery'
+[   10.284019@1] fb: osd_open index=1,open_count=1
+[   10.284021@1] fb: use ion buffer for fb memory
+[   10.284115@1] meson-fb meson-fb.19: create ion_client ffffffc055bd90c0, handle=ffffffc0555b72c0
+[   10.284119@1] meson-fb meson-fb.19: ion memory(1): created fb at 0x0000000077a51000, size 1 MiB
+[   10.284124@1] fb: Frame buffer memory assigned at
+[   10.284124@1] fb:  1, phy: 0x0000000077a51000, vir:0xffffff8008a93000, size=1024K
+[   10.284124@1] 
+[   10.284127@1] fb: fb1 open, logo index:1
+[   10.285887@6] init: Service ddrtest does not have a SELinux domain defined.
+[   10.286617@6] init: cannot find '/system/bin/factoryreset.sh' (No such file or directory), disabling 'factoryreset'
+[   10.287929@1] remote: cur_mode = 0
+[   10.287936@1] remote: set_remote_mode[74]
+[   10.289085@7] type=1400 audit(1420070415.800:31): avc: denied { getattr } for pid=4161 comm="pppoe_wrapper" path="/vendor" dev="rootfs" ino=43 scontext=u:r:pppoe_wrapper:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   10.291015@7] type=1400 audit(1420070415.800:32): avc: denied { module_request } for pid=4162 comm="imageserver" kmod="personality-8" scontext=u:r:imageserver:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.292352@5] type=1400 audit(1420070415.800:33): avc: denied { module_request } for pid=4167 comm="app_process32" kmod="personality-8" scontext=u:r:zygote:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.293434@7] init: couldn't write 4171 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+[   10.304406@7] type=1400 audit(1420070415.810:34): avc: denied { getattr } for pid=4162 comm="imageserver" path="/vendor" dev="rootfs" ino=43 scontext=u:r:imageserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   10.304652@7] type=1400 audit(1420070415.810:35): avc: denied { module_request } for pid=4178 comm="mediadrmserver" kmod="personality-8" scontext=u:r:mediadrmserver:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.308589@4] type=1400 audit(1420070415.820:36): avc: denied { getattr } for pid=4178 comm="mediadrmserver" path="/vendor" dev="rootfs" ino=43 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   10.325013@4] type=1400 audit(1420070415.840:37): avc: denied { module_request } for pid=4168 comm="audioserver" kmod="personality-8" scontext=u:r:audioserver:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.327898@4] type=1400 audit(1420070415.840:38): avc: denied { module_request } for pid=4171 comm="cameraserver" kmod="personality-8" scontext=u:r:cameraserver:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.330702@4] restore hdcp_pwr 0
+[   10.333047@4] hdmitx: set frac_rate_policy as 0
+[   10.346969@1] EXT4-fs (mmcblk0p12): warning: maximal mount count reached, running e2fsck is recommended
+[   10.366174@1] EXT4-fs (mmcblk0p12): re-mounted. Opts: (null)
+[   10.366712@4] type=1400 audit(1420070415.840:39): avc: denied { module_request } for pid=4179 comm="mediaextractor" kmod="personality-8" scontext=u:r:mediaextractor:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.379794@4] type=1400 audit(1420070415.840:40): avc: denied { module_request } for pid=4181 comm="mediaserver" kmod="personality-8" scontext=u:r:mediaserver:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.434674@4] type=1400 audit(1420070415.840:41): avc: denied { module_request } for pid=4177 comm="mediacodec" kmod="personality-8" scontext=u:r:mediacodec:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.435206@4] type=1400 audit(1420070415.840:42): avc: denied { module_request } for pid=4172 comm="drmserver" kmod="personality-8" scontext=u:r:drmserver:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[   10.435735@4] type=1400 audit(1420070415.850:43): avc: denied { getattr } for pid=4168 comm="audioserver" path="/vendor" dev="rootfs" ino=43 scontext=u:r:audioserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   10.435876@4] type=1400 audit(1420070415.850:44): avc: denied { getattr } for pid=4177 comm="mediacodec" path="/vendor" dev="rootfs" ino=43 scontext=u:r:mediacodec:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   10.435981@4] type=1400 audit(1420070415.880:45): avc: denied { getattr } for pid=4171 comm="cameraserver" path="/vendor" dev="rootfs" ino=43 scontext=u:r:cameraserver:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   10.641091@7] type=1400 audit(1420070416.150:46): avc: denied { setattr } for pid=4198 comm="sud" name="su" dev="mmcblk0p12" ino=2822 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   10.705557@5] healthd: No battery devices found
+[   10.722738@4] type=1400 audit(1420070416.230:47): avc: denied { relabelfrom } for pid=4214 comm="toybox" name="su" dev="mmcblk0p12" ino=2822 scontext=u:r:toolbox:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   10.725576@4] type=1400 audit(1420070416.230:48): avc: denied { relabelto } for pid=4214 comm="toybox" name="su" dev="mmcblk0p12" ino=2822 scontext=u:r:toolbox:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+Hello Jten!!!
+Hello Jten!!!
+Hello Jten!!![   10.796367@7] EXT4-fs (mmcblk0p12): re-mounted. Opts: (null)
+q201:/ $ [   10.915680@5] type=1400 audit(1420070416.430:49): avc: denied { write } for pid=4244 comm="toybox" name="/" dev="rootfs" ino=1 scontext=u:r:toolbox:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+[   10.929586@5] type=1400 audit(1420070416.430:50): avc: denied { add_name } for pid=4244 comm="toybox" name="tmp-mksh" scontext=u:r:toolbox:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+[   10.945883@5] type=1400 audit(1420070416.430:51): avc: denied { create } for pid=4244 comm="toybox" name="tmp-mksh" scontext=u:r:toolbox:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+[   10.963038@5] type=1400 audit(1420070416.460:52): avc: denied { setattr } for pid=4248 comm="toybox" name="tmp-mksh" dev="rootfs" ino=9597 scontext=u:r:toolbox:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+[   10.982050@5] type=1400 audit(1420070416.480:53): avc: denied { relabelfrom } for pid=4251 comm="toybox" name="tmp-mksh" dev="rootfs" ino=9597 scontext=u:r:toolbox:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+[   10.983775@1] audit: audit_lost=1 audit_rate_limit=20 audit_backlog_limit=64
+[   10.983779@1] audit: rate limit exceeded
+[   11.012438@5] type=1400 audit(1420070416.480:54): avc: denied { relabelto } for pid=4251 comm="toybox" name="tmp-mksh" dev="rootfs" ino=9597 scontext=u:r:toolbox:s0 tcontext=u:object_r:rootfs:s0 tclass=dir permissive=1
+[   11.040596@6] init: avc:  denied  { set } for property=supolicy.loaded pid=4260 uid=0 gid=0 scontext=u:r:toolbox:s0 tcontext=u:object_r:default_prop:s0 tclass=property_service permissive=1
+[   11.846210@4] fb: osd[0] enable: 1 (surfaceflinger)
+[   12.212598@4] fb: osd[1] enable: 0 scale:0x0 (systemcontrol)
+[   12.212642@4] fb: osd[0] enable: 1 scale:0x10001 (systemcontrol)
+[   12.235129@4] fb: free_scale_switch to fb0, mode: 0x10001
+[   12.235486@4] vout_serve: osd0=> x:0,y:0,w:1920,h:1080
+[   12.235486@4] osd1=> x:0,y:0,w:18,h:18
+[   12.243804@4] fb: current vmode=576cvbs, cmd: 0x30000
+[   12.255262@4] fb: osd[1] set scale, h_scale: ENABLE, v_scale: ENABLE
+[   12.255980@4] fb: osd[1].scaledata: 1920 720 1080 288
+[   12.261083@4] fb: osd[1].pandata: 0 0 0 0
+[   13.987625@3] request_suspend_state: wakeup (3->0) at 13913400963 (2015-01-01 00:00:19.505945462 UTC)
+[   13.991181@3] request_suspend_state,164,old_sleep=0,new_state=0
+[   17.970573@7] lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+[   17.972251@7] lowmemorykiller: oom_adj 0 => oom_score_adj 0
+[   17.977862@7] lowmemorykiller: oom_adj 2 => oom_score_adj 117
+[   17.983462@7] lowmemorykiller: oom_adj 4 => oom_score_adj 235
+[   17.989190@7] lowmemorykiller: oom_adj 6 => oom_score_adj 352
+[   17.994875@7] lowmemorykiller: oom_adj 9 => oom_score_adj 529
+[   18.000528@7] lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+[   21.327008@5] aml_wifi wifi.38: [usb_power_control] Set WiFi power down
+[   21.364841@4] avc open
+[   21.364882@4] amvenc_avc  check CMA pool sucess, max instance: 2.
+[   21.367681@4] allocating phys 0x5ab00000, size 20480k, wq:ffffffc04469e200.
+[   21.374633@0] amvenc_avc  memory config sucess, buff start:0x5ab00000, size is 0x1400000, wq:ffffffc04469e200.
+[   21.384843@0] avc release, wq:ffffffc04469e200
+[   21.388916@0] remove  encode_work_queue ffffffc04469e200 sucess, _destroy_encode_work_queue line 3450.
+[   21.471264@0] type=1400 audit(1420070426.980:72): avc: denied { getattr } for pid=4699 comm="bcmdl" path="/vendor" dev="rootfs" ino=43 scontext=u:r:bcmdl:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   21.528804@2] aml_wifi wifi.38: [usb_power_control] Set WiFi power on !
+[   21.530984@0] [aml_sd_emmc_irq] sdio: resp_timeout,vstat:0xa3ff2800,virqc:3fff
+[   21.536952@0] [aml_host_bus_fsm_show] sdio: err: wait for irq service, bus_fsm:0x8
+[   21.544306@4] aml_sd_emmc_data_thread 2642 sdio: cmd:52
+[   21.550672@0] [aml_sd_emmc_irq] sdio: resp_timeout,vstat:0xa3ff2800,virqc:3fff
+[   21.556790@0] [aml_host_bus_fsm_show] sdio: err: wait for irq service, bus_fsm:0x8
+[   21.564147@4] aml_sd_emmc_data_thread 2642 sdio: cmd:52
+[   21.574192@0] [aml_sd_emmc_irq] sdio: resp_timeout,vstat:0xa3ff2800,virqc:3fff
+[   21.576633@0] [aml_host_bus_fsm_show] sdio: err: wait for irq service, bus_fsm:0x8
+[   21.584001@4] aml_sd_emmc_data_thread 2642 sdio: cmd:8
+[   21.622092@7] sdio: queuing unknown CIS tuple 0x01 (3 bytes)
+[   21.635558@7] sdio: queuing unknown CIS tuple 0x1a (5 bytes)
+[   21.642494@5] sdio: queuing unknown CIS tuple 0x1b (8 bytes)
+[   21.643703@5] sdio: queuing unknown CIS tuple 0x14 (0 bytes)
+[   21.651530@6] sdio: clk 200000000 SDR mode tuning start
+[   21.653618@6] sdio: rx_tuning_result[0] = 10
+[   21.657990@5] sdio: rx_tuning_result[2] = 10
+[   21.662357@5] sdio: rx_tuning_result[3] = 10
+[   21.666680@2] sdio: rx_tuning_result[4] = 10
+[   21.670212@2] sdio: best_win_start =2, best_win_size =4
+[   21.675778@2] sdio: sd_emmc_regs->gclock=0x1000245,sd_emmc_regs->gadjust=0x42000
+[   21.684297@2] sdio: gclock =0x1000245, gdelay=0x0, gadjust=0x42000
+[   21.690959@3] sdio: queuing unknown CIS tuple 0x80 (1 bytes)
+[   21.694635@3] sdio: queuing unknown CIS tuple 0x81 (1 bytes)
+[   21.700216@3] sdio: queuing unknown CIS tuple 0x82 (1 bytes)
+[   21.706290@3] sdio: new ultra high speed SDR104 SDIO card at address 0001
+[   21.712399@3] sdio: clock 200000000, 4-bit-bus-width
+[   21.718542@1] [sdio_reinit] finish
+[   21.921008@1] aml_wifi wifi.38: [wifi_power_ioctl] ioctl Set sdio wifi power up!
+[   21.922852@1] aml_wifi wifi.38: [wifi_power_ioctl] wifi interface dev type: sdio, length = 4
+[   21.934472@1] Loading modules backported from Linux version v3.14.22-0-gd7892a4
+[   21.938373@1] Backport generated by backports.git v3.14.22-1-0-g7793930
+[   22.034373@1] cfg80211: Calling CRDA to update world regulatory domain
+[   22.036237@1] cfg80211: World regulatory domain updated:
+[   22.040539@1] cfg80211:  DFS Master region: unset
+[   22.045134@1] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   22.053481@1] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   22.061441@1] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (300 mBi, 2000 mBm)
+[   22.069228@1] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (300 mBi, 2000 mBm)
+[   22.077119@1] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[   22.084926@1] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (300 mBi, 2000 mBm)
+[   22.092721@1] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+[   22.141479@7] BT_RADIO going: off
+[   22.141519@7] BCM_BT: going OFF
+[   22.167326@7] BT_RADIO going: on
+[   22.167360@7] BCM_BT: going ON
+[   22.248058@3] aml_wifi wifi.38: [extern_wifi_set_enable] WIFI  Disable! 240
+[   22.450054@3] aml_wifi wifi.38: [extern_wifi_set_enable] WIFI  Enable! 240
+[   22.585424@2] meson_uart c11084c0.serial: ttyS1 use xtal(8M) 24000000 change 0 to 9600
+[   22.587754@2] meson_uart c11084c0.serial: ttyS1 use xtal(8M) 24000000 change 9600 to 9600
+[   22.595987@4] meson_uart c11084c0.serial: ttyS1 use xtal(8M) 24000000 change 9600 to 115200
+[   22.651332@3] sdio_reset_comm():
+[   22.691667@3] sdio: queuing unknown CIS tuple 0x01 (3 bytes)
+[   22.708455@3] sdio: queuing unknown CIS tuple 0x1a (5 bytes)
+[   22.713989@3] sdio: queuing unknown CIS tuple 0x1b (8 bytes)
+[   22.718117@3] sdio: clk 200000000 SDR mode tuning start
+[   22.719608@3] sdio: rx_tuning_result[0] = 10
+[   22.723845@3] sdio: rx_tuning_result[2] = 10
+[   22.728116@3] sdio: rx_tuning_result[3] = 10
+[   22.732281@3] sdio: rx_tuning_result[4] = 10
+[   22.736234@3] sdio: best_win_start =2, best_win_size =4
+[   22.741350@3] sdio: sd_emmc_regs->gclock=0x1000245,sd_emmc_regs->gadjust=0x42000
+[   22.748851@3] sdio: gclock =0x1000245, gdelay=0x0, gadjust=0x42000
+[   22.754854@3] [sdio_reinit] finish
+[   22.758160@3] wlan: loading driver v4.5.10.016
+[   22.763112@3] hifDeviceInserted: Dumping clocks (50000000,200000000)
+[   22.768901@3] Decrease host clock from 50000000 to 200000000(50000000,200000000)
+[   22.776266@3] HIFDumpCCCR 0(43) 1(3) 2(0) 3(0) 4(0) 5(0) 6(0) 7(6) 8(17) 9(0) A(10) B(0) C(0) D(0) E(0) F(0) 10(0) 11(0) 12(1) 13(7) 14(7) 15(37) 16(1) 
+[   22.789721@3] host caps:0x0007810F, card_sd3_bus_mode:0x0000001C
+[   22.795741@3] hifDeviceInserted: Set MMC bus mode to SDR104. 
+[   22.801580@3] AR6000: Set async interrupt delay clock as 2.
+[   22.808935@3] ath_hif_sdio: HIF (Atheros/multi-bss)
+[   22.815232@2] wlan: [4908:E :HDD] wlan_hdd_cfg80211_init: wiphy->bands[i] is NULL, i = 2
+[   22.924504@5] AR6000: configuration opcode 3 is not used for Linux SDIO stack 
+[   22.927654@5] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+[   22.940901@5] Board extended Data download address: 0x0
+[   22.965820@5] wlan: [4908:E :VOS] ol_transfer_bin_file: transferring file: bdwlan30.bin size 8124 bytes done!
+[   22.970475@6] ol_download_firmware: Using 0x1234 for the remainder of init
+[   23.024084@4] wlan: [4908:E :VOS] ol_transfer_bin_file: transferring file: otp30.bin size 23773 bytes done!
+[   23.028941@6] ol_transfer_bin_file: Loading setup file qsetup30.bin
+[   23.034572@6] android_readwrite_file: file /system/etc/wifi/qca9377/qsetup30.bin filp_open error
+[   23.043192@6] ol_transfer_bin_file: Failed to get qsetup30.bin
+[   24.211772@7] wlan: [4908:E :VOS] ol_transfer_bin_file: transferring file: qwlan30.bin size 592500 bytes done!
+[   24.217075@5] +HTCCreate ..  HIF :ffffffc05726c000 
+[   24.220991@5] HIF Interrupt processing is SYNC ONLY
+[   24.225822@5] AR6000: configuration opcode 7 is only used for RTOS systems, not Linux systems
+[   24.234240@5] AR6000: configuration opcode 5 is not used for Linux SDIO stack 
+[   24.241545@1] -HTCCreate (0xffffffc0444d0000) 
+[   24.246383@1] WDA_open-4566: WMA --> wmi_unified_attach - success
+[   24.251843@1] ol_if_dfs_attach: called; ptr=ffffffc021579b54, radar_info=ffffffc05770fb58
+[   24.260287@1] wlan: [4908:E :SAP] dfs_init_radar_filters[201]: Unknown dfs domain 0 
+[   24.267694@1] +HWT
+[   24.270092@1] Target Ready! : transmit resources : 3 size:1792, MaxMsgsPerHTCBundle = 32
+[   24.277645@1] HTC Service Index : 1 TX : 0x100 : alloc:3 
+[   24.282961@1] HTC Service:0x0001, ULpipe:1 DLpipe:0 id:0 Ready
+[   24.288765@1] -HWT
+[   24.290873@1] MAILBOX SWAP Service is enabled!
+[   24.295137@1] Reduced Tx Complete service is enabled!
+[   24.301338@1] is_full_reorder_offloaded? 0
+[   24.304170@1] HTC Service TX : 0x300 : allocation is zero! 
+[   24.310998@1] HTC Service:0x0300, ULpipe:1 DLpipe:0 id:1 Ready
+[   24.315494@1] HTC Service:0x0300 ep:1 TX flow control disabled
+[   24.321288@1] htt_tx_attach:htt_desc_start:0xffffffc02de40000 htt_desc_end:0xffffffc02de5c200
+[   24.330949@1] HTC Service:0x0100, ULpipe:3 DLpipe:2 id:2 Ready
+[   24.335509@1] wma_pre_start-4928: WMA --> wmi_unified_connect_htc_service - success
+[   24.343112@0] wma_mc_process_msg-21188: McThread: WNI_CFG_DNLD_REQ
+[   24.350633@1] HTC using TX credit flow control
+[   24.354023@4] wmitlv_check_and_pad_tlvs: WARN: TLV truncated. tlv_size_diff=24, curr_tlv_len=132
+[   24.362405@4] __wmi_control_rx: WMI UNIFIED SERVICE READY event
+[   24.368198@4] wma_rx_service_ready_event-23912: WMA <-- WMI_SERVICE_READY_EVENTID
+[   24.375651@4] wlan: [2997:E :WDA] wma_rx_service_ready_event: Firmware build version : 0000030a
+[   24.384260@4] wlan: [2997:E :WDA] wma_rx_service_ready_event: Board version: 0.22014009
+[   24.392158@4] wma_rx_service_ready_event-24027: WMA --> WMI_INIT_CMDID
+[   24.405516@4] __wmi_control_rx:  WMI UNIFIED READY event
+[   24.405560@4] wma_rx_ready_event-24056: WMA <-- WMI_READY_EVENTID
+[   24.411391@2] ------------[ cut here ]------------
+[   24.416057@2] WARNING: CPU: 2 PID: 4908 at /home/server/work/oranth/android7.0/n-oranth_0619_patch0804/hardware/wifi/qualcomm/drivers/qca9377/AIO/drivers/backports/net/wireless/reg.c:1388 wiphy_apply_custom_regulatory+0x1c4/0x1f8 [cfg80211]()
+[   24.437312@2] wiphy should have REGULATORY_CUSTOM_REG
+[   24.442286@2] Modules linked in: wlan(O+) mac80211 cfg80211(O) compat(O) aml_fd628(O) ddr_window mali_kbase(O)
+[   24.452209@2] CPU: 2 PID: 4908 Comm: AR6K startup Tainted: G           O 3.14.29-g990065d #1
+[   24.460584@2] Call trace:
+[   24.463167@2] [<ffffffc001089390>] dump_backtrace+0x0/0x144
+[   24.468726@2] [<ffffffc0010894f0>] show_stack+0x1c/0x28
+[   24.473866@2] [<ffffffc001b1fe60>] dump_stack+0x74/0xb8
+[   24.479070@2] [<ffffffc00109ed10>] warn_slowpath_common+0x98/0xc0
+[   24.485111@2] [<ffffffc00109edac>] warn_slowpath_fmt+0x74/0x88
+[   24.490875@2] [<ffffffbffc086528>] wiphy_apply_custom_regulatory+0x1c0/0x1f8 [cfg80211]
+[   24.498887@2] [<ffffffbffc31edd0>] vos_init_wiphy_from_eeprom+0xb8/0x280 [wlan]
+[   24.506152@2] [<ffffffbffc1d5c3c>] hdd_wlan_startup+0x778/0x10e0 [wlan]
+[   24.512669@2] [<ffffffbffc37c834>] hif_register_tbl_attach+0x44c/0x554 [wlan]
+[   24.519750@2] [<ffffffbffc37d098>] hif_pm_runtime_put+0x280/0xb14 [wlan]
+[   24.526343@2] [<ffffffc0010c2ec0>] kthread+0xd8/0xf0
+[   24.531217@2] ---[ end trace 9dbb20a2eee372ae ]---
+[   24.536922@2] wlan: [4908:E :VOS] error: wiphy->bands is NULL, i = 2
+[   24.542269@2] wlan: [4908:F :HDD] pAdapter is null !!
+[   24.547933@2] wlan: [4908:E :PMC] PMC: Cannot enable BMPS timer. BMPS is disabled
+[   24.554787@2] wlan: [4908:E :SME] csr_init_chan_list: 326: init time country code 00
+[   24.562628@2] wlan: [4908:E :WDA] MCC TX Pause Event Handler register
+[   24.568791@2] wlan: [4908:E :WDA] Target does not support batch scan feature
+[   24.576206@2] session id - 0, AddSta session - 0
+[   24.577488@4] target uses HTT version 3.27; host uses 3.9
+[   24.577491@4] *** Warning: host/target HTT versions are different, though compatible!
+[   24.593538@4] wlan: [4911:E :WDA] wma_unified_vdev_create_send: ID = 0 VAP Addr = 88:83:5d:9f:ec:93
+[   24.602836@4] wma_vdev_attach-5777: vdev_id 0, txrx_vdev_handle = ffffffc04469ec00
+[   24.610422@2] wlan: [4908:E :HDD] wlan_hdd_tdls_init TDLS Implicit trigger not enabled!
+[   24.622926@0] session id - 1, AddSta session - 0
+[   24.622969@7] wlan: [4911:E :WDA] Invalid wda_cli_set pdev command/Not yet implemented 0x34
+[   24.630819@7] wlan: [4911:E :WDA] wma_unified_vdev_create_send: ID = 1 VAP Addr = 8a:83:5d:21:ec:93
+[   24.634275@4] meson_uart c11084c0.serial: ttyS1 use xtal(8M) 24000000 change 115200 to 2000000
+[   24.648344@7] wma_vdev_attach-5777: vdev_id 1, txrx_vdev_handle = ffffffc02ceed200
+[   24.655775@1] wma_vdev_attach-5843: P2P Device: creating self peer 8a:83:5d:21:ec:93, vdev_id 1
+[   24.664483@1] wlan: [4911:E :WDA] wma_create_peer: Created peer with peer_addr 8a:83:5d:21:ec:93 vdev_id 1, peer_count - 1
+[   24.680809@1] wlan: [4911:E :WDA] Invalid wda_cli_set pdev command/Not yet implemented 0x34
+[   24.681358@5] Host SW:4.5.10.016, FW:0.0.0.778, HW:QCA9377_REV1_1
+[   24.681484@5] wlan_logging_sock_activate_svc: Initalizing FEConsoleLog = 0 NumBuff = 32
+[   24.682387@5] wlan_logging_sock_activate_svc: Activated wlan_logging svc
+[   24.682466@3] wlan: driver loaded
+[   24.707473@1] wlan: [4911:E :WDA] TM sending the following to firmware: min 0 max 110 enable 1
+[   24.716006@1] wlan: [4911:E :WDA] TM Sending thermal mgmt cmd: low temp 0, upper temp 110, enabled 1
+[   24.858784@1] wma_vdev_detach-5142: P2P Device: removing self peer 8a:83:5d:21:ec:93
+[   24.860894@1] wlan: [4911:E :WDA] wma_remove_peer: Removed peer with peer_addr 8a:83:5d:21:ec:93 vdevid 1 peer_count 0
+[   24.871599@1] wma_vdev_detach-5191: vdev_id:1 vdev_hdl:ffffffc02ceed200
+[   24.878085@1] wlan: [0:E :WDA] Call txrx detach with callback for vdev 1
+[   24.884819@3] session id - 1, AddSta session - 0
+[   24.889325@1] wlan: [4911:E :WDA] wma_unified_vdev_create_send: ID = 1 VAP Addr = 8a:83:5d:21:ec:93
+[   24.898312@1] wma_vdev_attach-5777: vdev_id 1, txrx_vdev_handle = ffffffc02cf6b400
+[   24.898793@4] TXRX: ol_txrx_peer_find_add_id: Delete Peer ffffffc03f33d000
+[   24.912627@1] wma_vdev_attach-5843: P2P Device: creating self peer 8a:83:5d:21:ec:93, vdev_id 1
+[   24.921246@1] wlan: [4911:E :WDA] wma_create_peer: Created peer with peer_addr 8a:83:5d:21:ec:93 vdev_id 1, peer_count - 1
+[   24.933397@3] IPv6: ADDRCONF(NETDEV_UP): p2p0: link is not ready
+[   25.044519@5] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   25.195225@5] wlan: [5036:E :HDD] hdd_driver_command: SME Change Country code fail, status=1
+[   28.704474@4] type=1400 audit(1420070434.210:73): avc: denied { getattr } for pid=5103 comm="bootstat" path="/vendor" dev="rootfs" ino=43 scontext=u:r:bootstat:s0 tcontext=u:object_r:rootfs:s0 tclass=lnk_file permissive=1
+[   28.789900@1] init: property 'ro.usb.vendor.string' doesn't exist while expanding '${ro.usb.vendor.string}'
+[   28.794007@1] init: write: cannot expand '${ro.usb.vendor.string}'
+[   28.800445@1] init: property 'ro.usb.product.string' doesn't exist while expanding '${ro.usb.product.string}'
+[   28.810039@1] init: write: cannot expand '${ro.usb.product.string}'
+[   28.817385@1] init: Service preinstall does not have a SELinux domain defined.
+[   28.824138@1] init: property 'ro.usb.vendor.string' doesn't exist while expanding '${ro.usb.vendor.string}'
+[   28.824798@4] type=1400 audit(1420070434.340:74): avc: denied { execute_no_trans } for pid=5119 comm="init" path="/system/bin/preinstall.sh" dev="mmcblk0p12" ino=447 scontext=u:r:init:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=1
+[   28.836443@5] type=1400 audit(1420070434.350:75): avc: denied { execute_no_trans } for pid=5121 comm="preinstall.sh" path="/system/bin/sh" dev="mmcblk0p12" ino=490 scontext=u:r:init:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=1
+[   28.859178@5] type=1400 audit(1420070434.370:76): avc: denied { write } for pid=5121 comm="app_process" path="pipe:[17403]" dev="pipefs" ino=17403 scontext=u:r:zygote:s0 tcontext=u:r:init:s0 tclass=fifo_file permissive=1
+[   28.895497@1] init: write: cannot expand '${ro.usb.vendor.string}'
+[   28.901605@1] init: property 'ro.usb.product.string' doesn't exist while expanding '${ro.usb.product.string}'
+[   28.911486@1] init: write: cannot expand '${ro.usb.product.string}'
+[   28.917892@1] init: property 'ro.usb.vendor.string' doesn't exist while expanding '${ro.usb.vendor.string}'
+[   28.927315@1] init: write: cannot expand '${ro.usb.vendor.string}'
+[   28.933429@1] init: property 'ro.usb.product.string' doesn't exist while expanding '${ro.usb.product.string}'
+[   28.944089@1] init: write: cannot expand '${ro.usb.product.string}'
+[   28.951380@7] wlan: [5036:E :HDD] received scan request
+[   28.956186@4] wlan: [4911:E :WDA] scan_id a001, vdev_id 0, scan type 0, msg_type 1103
+[   29.018852@6] dig: isBootCompleted:1!
+[   29.020029@5] dig: setDataRoCount count:0!
+[   29.642429@3] .gms.persistent[5127]: syscall 384
+[   29.642466@3] Code: e1a01002 e1a02003 e89c0078 ef000000 (e8bd00f0) 
+[   29.647910@3] CPU: 3 PID: 5127 Comm: .gms.persistent Tainted: G        W  O 3.14.29-g990065d #1
+[   29.656958@3] task: ffffffc03f3f6000 ti: ffffffc055dfc000 task.ti: ffffffc055dfc000
+[   29.663849@3] PC is at 0xf337871c
+[   29.667268@3] LR is at 0xeb762ee7
+[   29.670405@3] vma for f337871c:
+[   29.673499@3] f3361000-f33e5000 r-xp 00000000 b3:0c 1418 [   29.676944@2] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   29.676971@2] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[   29.692152@3] /system/lib/libc.so
+[   29.695496@3] vma for eb762ee7:
+[   29.696239@2] xhci-hcd xhci-hcd.0.auto: irq 62, io mem 0xc9000000
+[   29.697340@1] hub 1-0:1.0: USB hub found
+[   29.697383@2] hub 1-0:1.0: 3 ports detected
+[   29.697639@2] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   29.697649@2] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[   29.698673@2] hub 2-0:1.0: USB hub found
+[   29.698708@1] hub 2-0:1.0: config failed, hub doesn't have any ports! (err -19)
+[   29.700206@1] file system registered
+[   29.704550@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.704550@1] ffs_data_put(): freeing
+[   29.707135@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.707135@1] ffs_data_put(): freeing
+[   29.710380@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.710381@1] ffs_data_put(): freeing
+[   29.712845@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.712846@1] ffs_data_put(): freeing
+[   29.715465@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.715465@1] ffs_data_put(): freeing
+[   29.718035@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.718036@1] ffs_data_put(): freeing
+[   29.720676@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.720676@1] ffs_data_put(): freeing
+[   29.723403@1] init: finit_module for "/system/lib/dwc3.ko" failed: File exists
+[   29.723403@1] ffs_data_put(): freeing
+[   29.724244@1] android_usb: Cannot enable 'adb' (-22)
+[   29.724573@1] android_usb: Cannot enable 'adb' (-22)
+[   29.724849@1] android_usb: Cannot enable 'adb' (-22)
+[   29.725108@1] android_usb: Cannot enable 'adb' (-22)
+[   29.725417@1] android_usb: Cannot enable 'adb' (-22)
+[   29.725716@1] android_usb: Cannot enable 'adb' (-22)
+[   29.725979@1] android_usb: Cannot enable 'adb' (-22)
+[   29.726236@1] android_usb: Cannot enable 'adb' (-22)
+[   29.756024@5] android_usb: Cannot enable 'adb' (-22)
+[   29.756025@5] type=1400 audit(1420070435.210:77): avc: denied { execute } for pid=5121 comm="main" path="/dev/ashmem" dev="tmpfs" ino=411 scontext=u:r:zygote:s0 tcontext=u:object_r:ashmem_device:s0 tclass=chr_file permissive=1
+[   29.781601@5] type=1400 audit(1420070435.210:78): avc: denied { execute } for pid=5121 comm="main" path=2F6465762F6173686D656D2F64616C76696B2D6A69742D636F64652D6361636865202864656C6574656429 dev="tmpfs" ino=15853 scontext=u:r:zygote:s0 tcontext=u:object_r:zygote_tmpfs:s0 tclass=file permissive=1
+[   29.826879@5] type=1400 audit(1420070435.210:79): avc: denied { call } for pid=5121 comm="main" scontext=u:r:zygote:s0 tcontext=u:r:servicemanager:s0 tclass=binder permissive=1
+[   29.827447@5] type=1400 audit(1420070435.210:80): avc: denied { search } for pid=4116 comm="servicemanager" name="5121" dev="proc" ino=10850 scontext=u:r:servicemanager:s0 tcontext=u:r:zygote:s0 tclass=dir permissive=1
+[   29.828031@5] type=1400 audit(1420070435.210:81): avc: denied { read } for pid=4116 comm="servicemanager" name="current" dev="proc" ino=13855 scontext=u:r:servicemanager:s0 tcontext=u:r:zygote:s0 tclass=file permissive=1
+[   29.828187@5] type=1400 audit(1420070435.210:82): avc: denied { open } for pid=4116 comm="servicemanager" path="/proc/5121/attr/current" dev="proc" ino=13855 scontext=u:r:servicemanager:s0 tcontext=u:r:zygote:s0 tclass=file permissive=1
+[   29.828297@5] type=1400 audit(1420070435.210:83): avc: denied { getattr } for pid=4116 comm="servicemanager" scontext=u:r:servicemanager:s0 tcontext=u:r:zygote:s0 tclass=process permissive=1
+[   29.829786@5] type=1400 audit(1420070435.210:84): avc: denied { call } for pid=5121 comm="main" scontext=u:r:zygote:s0 tcontext=u:r:system_server:s0 tclass=binder permissive=1
+[   29.829933@5] type=1400 audit(1420070435.210:85): avc: denied { transfer } for pid=5121 comm="main" scontext=u:r:zygote:s0 tcontext=u:r:system_server:s0 tclass=binder permissive=1
+[   29.831399@5] type=1400 audit(1420070435.210:86): avc: denied { transfer } for pid=4832 comm="Binder:4501_6" scontext=u:r:system_server:s0 tcontext=u:r:zygote:s0 tclass=binder permissive=1
+[   29.833189@5] type=1400 audit(1420070435.210:87): avc: denied { write } for pid=5121 comm="main" path="pipe:[17403]" dev="pipefs" ino=17403 scontext=u:r:zygote:s0 tcontext=u:r:init:s0 tclass=fifo_file permissive=1
+[   29.878525@5] type=1400 audit(1420070435.210:88): avc: denied { write } for pid=5337 comm="setprop" name="property_service" dev="tmpfs" ino=395 scontext=u:r:toolbox:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+[   29.879197@5] type=1400 audit(1420070435.210:89): avc: denied { connectto } for pid=5337 comm="setprop" path="/dev/socket/property_service" scontext=u:r:toolbox:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+[   30.116371@1] eb6fb000-eb794000 r-xp 01f8b000 b3:0c 2353 /system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
+[   30.126054@3] pc : [<00000000f337871c>] lr : [<00000000eb762ee7>] pstate: 200f0010
+[   30.133566@3] sp : 00000000ffa9df70
+[   30.137075@3] x12: 00000000ffa9df80 
+[   30.140545@3] x11: 00000000ffa9e2d4 x10: 0000000000000000 
+[   30.145978@3] x9 : 00000000ffffffff x8 : 0000000000000001 
+[   30.151410@3] x7 : 0000000000000180 x6 : 00000000eb79f8b4 
+[   30.156843@3] x5 : 0000000000000000 x4 : 0000000000000001 
+[   30.162279@3] x3 : 0000000000000000 x2 : 0000000000000001 
+[   30.167708@3] x1 : 0000000000000001 x0 : 00000000ffa9df87 
+[   30.173144@3] 
+[   30.173144@3] PC: 0xf337869c:
+[   30.177810@3] 869c  e5902048 eee12a10 e5903000 e3c33001 e280204c e8924ff0 e592d024 e0244003
+[   30.185994@3] 86bc  e0255003 e0266003 e0277003 e0288003 e0299003 e02aa003 e02bb003 e02dd003
+[   30.194313@3] 86dc  e02ee003 e92d4002 e1a00003 fa000795 e8bd4001 e3300000 03a00001 e12fff1e
+[   30.202552@3] 86fc  e1a0c00d e92d00f0 e1a07000 e1a00001 e1a01002 e1a02003 e89c0078 ef000000
+[   30.210833@3] 871c  e8bd00f0 e3700a01 912fff1e e2600000 ea017134 ee1d3f70 e5933004 e3a00000
+[   30.219116@3] 873c  e583000c e1a0c007 e59f7014 ef000000 e1a0700c e3700a01 912fff1e e2600000
+[   30.227393@3] 875c  ea017128 000000be 00000000 f200429a f8918116 e92df000 f8914001 2a00f040
+[   30.235672@3] 877c  f891dd51 2a40f000 ea81db79 f0130300 d1490f03 0f03f011 f811d008 1e523b01
+[   30.243954@3] 
+[   30.243954@3] LR: 0xeb762e67:
+[   30.248557@3] 2e64  d0d42800 3120f8d4 44b11bad 0301f103 3120f8c4 0300f04f 4544d1e4 4620d102
+[   30.256805@3] 2e84  ff64f7ff f8d76879 680b208c d001429a ebb6f7a3 46bd3794 8ff0e8bd 0003aec4
+[   30.265088@3] 2ea4  ffffff73 b5084a03 f7ff447a 2001ff57 bf00bd08 0002f1af 4d40b537 4628447d
+[   30.273364@3] 2ec4  feb8f7d7 46284b3e 0507f10d 681c447b febef7d7 f44f2201 462970c0 f7a34613
+[   30.281644@3] 2ee4  2801ec9e 4b37d104 0202f06f e028447b d1283001 eb72f7a3 2b0b6803 4932d123
+[   30.289925@3] 2f04  22a02002 f7a34479 3001eb70 f7a3d104 6803eb66 d0f22b04 f44f4629 220170c0
+[   30.298205@3] 2f24  f7a32300 1c41ec7c f7a3d105 6803eb58 d0f12b04 2801e007 4b24d105 0202f06f
+[   30.306484@3] 2f44  601a447b 2c00e037 4821d133 44782100 ebe6f7a3 46041c42 f7a3d105 6803eb40
+[   30.314766@3] 2f64  d0f22b04 2800e001 f7a3da01 d107eb32 ec5af7a3 20004604 eb5af7a3 ddf42c00
+[   30.323047@3] 
+[   30.323047@3] SP: 0xffa9def0:
+[   30.327703@3] def0  00000001 f2985400 f29e5140 00002919 ffa9e100 f27656b3 00000001 f2581d15
+[   30.335896@3] df10  00000000 4eb4052a 00000001 f272fc79 00000000 00000000 0000000b 00000000
+[   30.344174@3] df30  ffa9e050 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.352458@3] df50  00000000 12ce2be0 702aeb00 702ac388 00000000 ffa9df87 00000000 ffa9e128
+[   30.360736@3] df70  00000000 ffa9df87 00000000 ffa9e128 00000000 00000001 00000000 eb79f8b4
+[   30.369018@3] df90  eb762ebd f33a8ec9 0000000b 00000000 00000008 00000020 ffa9e134 ffa9e348
+[   30.377296@3] dfb0  ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4 eb73ac6d f33ee008 eb762ff3
+[   30.385577@3] dfd0  f33ee008 eb79205f 00000010 eb762d9d 00000001 00000000 72e78347 d924f968
+[   30.393858@3] 
+[   30.393858@3] r0: 0xffa9df07:
+[   30.398476@3] df04  f27656b3 00000001 f2581d15 00000000 4eb4052a 00000001 f272fc79 00000000
+[   30.406707@3] df24  00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000 00000000
+[   30.414993@3] df44  00000000 00000000 00000000 00000000 12ce2be0 702aeb00 702ac388 00000000
+[   30.423267@3] df64  ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128 00000000
+[   30.431547@3] df84  00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000 00000008
+[   30.439827@3] dfa4  00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4
+[   30.448107@3] dfc4  eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d 00000001
+[   30.456387@3] dfe4  00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001 ffa9e09c
+[   30.464671@3] e004  00000101 ffa9e09c f52139e0 f52139e0 f2758f9d d924f968 d7eaff1a 12ce2be0
+[   30.472951@3] 
+[   30.472951@3] r6: 0xeb79f834:
+[   30.477603@3] f834  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.485803@3] f854  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.494077@3] f874  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.502358@3] f894  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.510638@3] f8b4  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.518918@3] f8d4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.527198@3] f8f4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.535479@3] f914  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.543761@3] 
+[   30.543761@3] r7: 0x100:
+[   30.547944@3] 0100  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.556181@3] 0120  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.564463@3] 0140  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.572738@3] 0160  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.581021@3] 0180  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.589301@3] 01a0  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.597580@3] 01c0  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.605860@3] 01e0  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.614142@3] 
+[   30.614142@3] r9: 0xffffff7f:
+[   30.618762@3] ff7c  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.626992@3] ff9c  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.635271@3] ffbc  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.643549@3] ffdc  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.651832@3] fffc  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.660113@3] 001c  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.668391@3] 003c  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.676673@3] 005c  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.684954@3] 007c  ******** ******** ******** ******** ******** ******** ******** ********
+[   30.693239@3] 
+[   30.693239@3] r11: 0xffa9e254:
+[   30.697956@3] e254  00000006 f2985400 ffa9e3ec f2985400 00000000 00000000 00000000 00000000
+[   30.706167@3] e274  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   30.714453@3] e294  00000000 00000000 00000000 00000000 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348
+[   30.722726@3] e2b4  00000000 ffa9e2d4 f253ba43 00000000 12cf5be0 ffa9e5a8 ffa9e338 ffa9e2f8
+[   30.731007@3] e2d4  d80114a5 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348 ffa9e308 00000000 00000000
+[   30.739287@3] e2f4  f2896e11 ffa9e5a8 00000000 ffa9e348 ffa9e308 f2985400 ffa9e3ec f2985400
+[   30.747568@3] e314  ffa9e3fc f2985400 ffa9e3fc f2985400 ffa9e404 ffa9e430 f4eeb1c5 e8b95450
+[   30.755850@3] e334  f2541cb1 ffa9e42c 702ac388 702aeb00 12cf30f0 72e78347 12cf5be0 f52133d4
+[   30.764131@3] 
+[   30.764131@3] r12: 0xffa9df00:
+[   30.768828@3] df00  ffa9e100 f27656b3 00000001 f2581d15 00000000 4eb4052a 00000001 f272fc79
+[   30.777064@3] df20  00000000 00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000
+[   30.785350@3] df40  00000000 00000000 00000000 00000000 00000000 12ce2be0 702aeb00 702ac388
+[   30.793624@3] df60  00000000 ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128
+[   30.801904@3] df80  00000000 00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000
+[   30.810184@3] dfa0  00000008 00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134
+[   30.818465@3] dfc0  ffa9e2d4 eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d
+[   30.826745@3] dfe0  00000001 00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001
+[   30.835027@3] 
+[   31.270117@2] gle.android.gms[5444]: syscall 384
+[   31.270152@2] Code: e1a01002 e1a02003 e89c0078 ef000000 (e8bd00f0) 
+[   31.275445@2] CPU: 2 PID: 5444 Comm: gle.android.gms Tainted: G        W  O 3.14.29-g990065d #1
+[   31.283955@2] task: ffffffc01627b000 ti: ffffffc0576cc000 task.ti: ffffffc0576cc000
+[   31.291601@2] PC is at 0xf337871c
+[   31.294884@2] LR is at 0xeb746ee7
+[   31.298091@2] vma for f337871c:
+[   31.301191@2] f3361000-f33e5000 r-xp 00000000 b3:0c 1418 /system/lib/libc.so
+[   31.308179@2] vma for eb746ee7:
+[   31.311283@2] eb6df000-eb778000 r-xp 01f8b000 b3:0c 2353 /system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
+[   31.321116@2] pc : [<00000000f337871c>] lr : [<00000000eb746ee7>] pstate: 200f0010
+[   31.328677@2] sp : 00000000ffa9df70
+[   31.332070@2] x12: 00000000ffa9df80 
+[   31.335606@2] x11: 00000000ffa9e2d4 x10: 0000000000000000 
+[   31.341039@2] x9 : 00000000ffffffff x8 : 0000000000000001 
+[   31.346470@2] x7 : 0000000000000180 x6 : 00000000eb7838b4 
+[   31.351903@2] x5 : 0000000000000000 x4 : 0000000000000001 
+[   31.357337@2] x3 : 0000000000000000 x2 : 0000000000000001 
+[   31.362769@2] x1 : 0000000000000001 x0 : 00000000ffa9df87 
+[   31.368210@2] 
+[   31.368210@2] PC: 0xf337869c:
+[   31.372775@2] 869c  e5902048 eee12a10 e5903000 e3c33001 e280204c e8924ff0 e592d024 e0244003
+[   31.381060@2] 86bc  e0255003 e0266003 e0277003 e0288003 e0299003 e02aa003 e02bb003 e02dd003
+[   31.389336@2] 86dc  e02ee003 e92d4002 e1a00003 fa000795 e8bd4001 e3300000 03a00001 e12fff1e
+[   31.397619@2] 86fc  e1a0c00d e92d00f0 e1a07000 e1a00001 e1a01002 e1a02003 e89c0078 ef000000
+[   31.405899@2] 871c  e8bd00f0 e3700a01 912fff1e e2600000 ea017134 ee1d3f70 e5933004 e3a00000
+[   31.414175@2] 873c  e583000c e1a0c007 e59f7014 ef000000 e1a0700c e3700a01 912fff1e e2600000
+[   31.422456@2] 875c  ea017128 000000be 00000000 f200429a f8918116 e92df000 f8914001 2a00f040
+[   31.430736@2] 877c  f891dd51 2a40f000 ea81db79 f0130300 d1490f03 0f03f011 f811d008 1e523b01
+[   31.439020@2] 
+[   31.439020@2] LR: 0xeb746e67:
+[   31.443599@2] 6e64  d0d42800 3120f8d4 44b11bad 0301f103 3120f8c4 0300f04f 4544d1e4 4620d102
+[   31.451871@2] 6e84  ff64f7ff f8d76879 680b208c d001429a ebb6f7a3 46bd3794 8ff0e8bd 0003aec4
+[   31.460147@2] 6ea4  ffffff73 b5084a03 f7ff447a 2001ff57 bf00bd08 0002f1af 4d40b537 4628447d
+[   31.468427@2] 6ec4  feb8f7d7 46284b3e 0507f10d 681c447b febef7d7 f44f2201 462970c0 f7a34613
+[   31.476717@2] 6ee4  2801ec9e 4b37d104 0202f06f e028447b d1283001 eb72f7a3 2b0b6803 4932d123
+[   31.484990@2] 6f04  22a02002 f7a34479 3001eb70 f7a3d104 6803eb66 d0f22b04 f44f4629 220170c0
+[   31.493267@2] 6f24  f7a32300 1c41ec7c f7a3d105 6803eb58 d0f12b04 2801e007 4b24d105 0202f06f
+[   31.501547@2] 6f44  601a447b 2c00e037 4821d133 44782100 ebe6f7a3 46041c42 f7a3d105 6803eb40
+[   31.509827@2] 6f64  d0f22b04 2800e001 f7a3da01 d107eb32 ec5af7a3 20004604 eb5af7a3 ddf42c00
+[   31.518110@2] 
+[   31.518110@2] SP: 0xffa9def0:
+[   31.522692@2] def0  00000001 f2985400 f29e5140 00002919 ffa9e100 f27656b3 00000001 f2581d15
+[   31.530959@2] df10  00000000 4eb4052a 00000001 f272fc79 00000000 00000000 0000000b 00000000
+[   31.539239@2] df30  ffa9e050 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.547519@2] df50  00000000 12d3d4f0 702aeb00 702ac388 00000000 ffa9df87 00000000 ffa9e128
+[   31.555801@2] df70  00000000 ffa9df87 00000000 ffa9e128 00000000 00000001 00000000 eb7838b4
+[   31.564083@2] df90  eb746ebd f33a8ec9 0000000b 00000000 00000008 00000020 ffa9e134 ffa9e348
+[   31.572358@2] dfb0  ffa9e128 ffa9dff0 e63340e4 ffa9e134 ffa9e2d4 eb71ec6d f33ee008 eb746ff3
+[   31.580643@2] dfd0  f33ee008 eb77605f 00000010 eb746d9d 00000001 00000000 72e78347 d924f968
+[   31.588921@2] 
+[   31.588921@2] r0: 0xffa9df07:
+[   31.593504@2] df04  f27656b3 00000001 f2581d15 00000000 4eb4052a 00000001 f272fc79 00000000
+[   31.601772@2] df24  00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000 00000000
+[   31.610052@2] df44  00000000 00000000 00000000 00000000 12d3d4f0[   31.615392@5] wlan: [3102:E :WDA]  scan complete - scan_id a001, vdev_id 0
+[   31.615838@4] wlan: [4911:E :SME] Found 5 BSS
+[   31.616322@4] wlan: [4911:E :PMC] PMC: Cannot enable BMPS timer. BMPS is disabled
+[   31.634405@2]  702aeb00 702ac388 00000000
+[   31.638522@2] df64  ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128 00000000
+[   31.646793@2] df84  00000001 00000000 eb7838b4 eb746ebd f33a8ec9 0000000b 00000000 00000008
+[   31.655075@2] dfa4  00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e63340e4 ffa9e134 ffa9e2d4
+[   31.663352@2] dfc4  eb71ec6d f33ee008 eb746ff3 f33ee008 eb77605f 00000010 eb746d9d 00000001
+[   31.671632@2] dfe4  00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001 ffa9e09c
+[   31.679915@2] e004  00000101 ffa9e09c f52172d0 f52172d0 f2758f9d d924f968 d7eaff1a 12d3d4f0
+[   31.688196@2] 
+[   31.688196@2] r6: 0xeb783834:
+[   31.692777@2] 3834  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.701044@2] 3854  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.709324@2] 3874  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.717604@2] 3894  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.725887@2] 38b4  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.734163@2] 38d4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.742444@2] 38f4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.750723@2] 3914  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.759024@2] 
+[   31.759024@2] r7: 0x100:
+[   31.763161@2] 0100  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.771427@2] 0120  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.779721@2] 0140  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.787988@2] 0160  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.796267@2] 0180  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.804548@2] 01a0  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.812824@2] 01c0  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.821107@2] 01e0  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.829393@2] 
+[   31.829393@2] r9: 0xffffff7f:
+[   31.833965@2] ff7c  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.842239@2] ff9c  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.850518@2] ffbc  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.858798@2] ffdc  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.867079@2] fffc  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.875358@2] 001c  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.883634@2] 003c  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.891926@2] 005c  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.900198@2] 007c  ******** ******** ******** ******** ******** ******** ******** ********
+[   31.908482@2] 
+[   31.908482@2] r11: 0xffa9e254:
+[   31.913132@2] e254  00000006 f2985400 ffa9e3ec f2985400 00000000 00000000 00000000 00000000
+[   31.921412@2] e274  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   31.929692@2] e294  00000000 00000000 00000000 00000000 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348
+[   31.937972@2] e2b4  00000000 ffa9e2d4 f253ba43 00000000 12d55140 ffa9e5a8 ffa9e338 ffa9e2f8
+[   31.946252@2] e2d4  d80114a5 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348 ffa9e308 00000000 00000000
+[   31.954535@2] e2f4  f2896e11 ffa9e5a8 00000000 ffa9e348 ffa9e308 f2985400 ffa9e3ec f2985400
+[   31.962813@2] e314  ffa9e3fc f2985400 ffa9e3fc f2985400 ffa9e404 ffa9e430 f4eeb1c5 e8b95720
+[   31.971108@2] e334  f2541cb1 ffa9e42c 702ac388 702aeb00 12d076f0 72e78347 12d55140 f5216cc4
+[   31.979377@2] 
+[   31.979377@2] r12: 0xffa9df00:
+[   31.984040@2] df00  ffa9e100 f27656b3 00000001 f2581d15 00000000 4eb4052a 00000001 f272fc79
+[   31.992310@2] df20  00000000 00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000
+[   32.000589@2] df40  00000000 00000000 00000000 00000000 00000000 12d3d4f0 702aeb00 702ac388
+[   32.008869@2] df60  00000000 ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128
+[   32.017150@2] df80  00000000 00000001 00000000 eb7838b4 eb746ebd f33a8ec9 0000000b 00000000
+[   32.025432@2] dfa0  00000008 00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e63340e4 ffa9e134
+[   32.033709@2] dfc0  ffa9e2d4 eb71ec6d f33ee008 eb746ff3 f33ee008 eb77605f 00000010 eb746d9d
+[   32.041993@2] dfe0  00000001 00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001
+[   32.050270@2] 
+[   32.052998@4] audio_dsp: drc high cut scale set to 100%
+[   32.058597@6] audio_dsp: drc low boost scale set to 100%
+[   32.064500@6] audio_dsp: drc mode set to LINE
+[   33.693990@0] pool-2-thread-2[5740]: syscall 384
+[   33.694031@0] Code: e1a01002 e1a02003 e89c0078 ef000000 (e8bd00f0) 
+[   33.699339@0] CPU: 0 PID: 5740 Comm: pool-2-thread-2 Tainted: G        W  O 3.14.29-g990065d #1
+[   33.708008@0] task: ffffffc00b968000 ti: ffffffc011ec0000 task.ti: ffffffc011ec0000
+[   33.715903@0] PC is at 0xf337871c
+[   33.718723@0] LR is at 0xe773aee7
+[   33.721973@0] vma for f337871c:
+[   33.725165@0] f3361000-f33e5000 r-xp 00000000 b3:0c 1418 /system/lib/libc.so
+[   33.732062@0] vma for e773aee7:
+[   33.735262@0] e76d3000-e776c000 r-xp 00000000 b3:0d 32995 /data/user_de/0/com.google.android.gms/app_extracted_libs/armeabi-v7a/libgmscore.so
+[   33.748118@0] pc : [<00000000f337871c>] lr : [<00000000e773aee7>] pstate: 200f0010
+[   33.755362@0] sp : 00000000eb67ff00
+[   33.758749@0] x12: 00000000eb67ff10 
+[   33.762242@0] x11: 00000000eb680264 x10: 0000000000000000 
+[   33.767680@0] x9 : 00000000ffffffff x8 : 0000000000000001 
+[   33.773106@0] x7 : 0000000000000180 x6 : 00000000e77778b4 
+[   33.778542@0] x5 : 0000000000000000 x4 : 0000000000000001 
+[   33.783973@0] x3 : 0000000000000000 x2 : 0000000000000001 
+[   33.789407@0] x1 : 0000000000000001 x0 : 00000000eb67ff17 
+[   33.794847@0] 
+[   33.794847@0] PC: 0xf337869c:
+[   33.799507@0] 869c  e5902048 eee12a10 e5903000 e3c33001 e280204c e8924ff0 e592d024 e0244003
+[   33.807701@0] 86bc  e0255003 e0266003 e0277003 e0288003 e0299003 e02aa003 e02bb003 e02dd003
+[   33.815972@0] 86dc  e02ee003 e92d4002 e1a00003 fa000795 e8bd4001 e3300000 03a00001 e12fff1e
+[   33.824303@0] 86fc  e1a0c00d e92d00f0 e1a07000 e1a00001 e1a01002 e1a02003 e89c0078 ef000000
+[   33.832532@0] 871c  e8bd00f0 e3700a01 912fff1e e2600000 ea017134 ee1d3f70 e5933004 e3a00000
+[   33.840812@0] 873c  e583000c e1a0c007 e59f7014 ef000000 e1a0700c e3700a01 912fff1e e2600000
+[   33.849093@0] 875c  ea017128 000000be 00000000 f200429a f8918116 e92df000 f8914001 2a00f040
+[   33.857394@0] 877c  f891dd51 2a40f000 ea81db79 f0130300 d1490f03 0f03f011 f811d008 1e523b01
+[   33.865663@0] 
+[   33.865663@0] LR: 0xe773ae67:
+[   33.870249@0] ae64  d0d42800 3120f8d4 44b11bad 0301f103 3120f8c4 0300f04f 4544d1e4 4620d102
+[   33.878503@0] ae84  ff64f7ff f8d76879 680b208c d001429a ebb6f7a3 46bd3794 8ff0e8bd 0003aec4
+[   33.886782@0] aea4  ffffff73 b5084a03 f7ff447a 2001ff57 bf00bd08 0002f1af 4d40b537 4628447d
+[   33.895071@0] aec4  feb8f7d7 46284b3e 0507f10d 681c447b febef7d7 f44f2201 462970c0 f7a34613
+[   33.903342@0] aee4  2801ec9e 4b37d104 0202f06f e028447b d1283001 eb72f7a3 2b0b6803 4932d123
+[   33.911623@0] af04  22a02002 f7a34479 3001eb70 f7a3d104 6803eb66 d0f22b04 f44f4629 220170c0
+[   33.919904@0] af24  f7a32300 1c41ec7c f7a3d105 6803eb58 d0f12b04 2801e007 4b24d105 0202f06f
+[   33.928192@0] af44  601a447b 2c00e037 4821d133 44782100 ebe6f7a3 46041c42 f7a3d105 6803eb40
+[   33.936469@0] af64  d0f22b04 2800e001 f7a3da01 d107eb32 ec5af7a3 20004604 eb5af7a3 ddf42c00
+[   33.944748@0] 
+[   33.944748@0] SP: 0xeb67fe80:
+[   33.949359@0] fe80  00000001 e6317400 f29e5140 00002919 eb680090 f27656b3 00000001 f2581d15
+[   33.957596@0] fea0  eb6800b8 700d20cc 00000000 00000000 00000000 00000000 0000000b 00000000
+[   33.965874@0] fec0  eb67ffe0 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   33.974153@0] fee0  00000000 12d7f430 702aeb00 702ac388 00000000 eb67ff17 00000000 eb6800b8
+[   33.982433@0] ff00  00000000 eb67ff17 00000000 eb6800b8 00000000 00000001 00000000 e77778b4
+[   33.990714@0] ff20  e773aebd f33a8ec9 0000000b 00000000 00000008 00000020 eb6800c4 eb6802d8
+[   33.999006@0] ff40  eb6800b8 eb67ff80 eb464164 eb6800c4 eb680264 e7712c6d f33ee008 e773aff3
+[   34.007274@0] ff60  f33ee008 e776a05f 00000010 e773ad9d 00000001 00000000 72e78347 d8509968
+[   34.015559@0] 
+[   34.015559@0] r0: 0xeb67fe97:
+[   34.020163@0] fe94  f27656b3 00000001 f2581d15 eb6800b8 700d20cc 00000000 00000000 00000000
+[   34.028282@3] .android.gms.ui[5792]: syscall 384
+[   34.028289@3] Code: e1a01002 e1a02003 e89c0078 ef000000 (e8bd00f0) 
+[   34.028295@3] CPU: 3 PID: 5792 Comm: .android.gms.ui Tainted: G        W  O 3.14.29-g990065d #1
+[   34.028299@3] task: ffffffc00e7a7000 ti: ffffffc00bbd4000 task.ti: ffffffc00bbd4000
+[   34.028307@3] PC is at 0xf337871c
+[   34.028309@3] LR is at 0xeb762ee7
+[   34.028315@3] vma for f337871c:
+[   34.028325@3] f3361000-f33e5000 r-xp 00000000 b3:0c 1418 /system/lib/libc.so
+[   34.028327@3] vma for eb762ee7:
+[   34.028334@3] eb6fb000-eb794000 r-xp 01f8b000 b3:0c 2353 /system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
+[   34.028336@3] pc : [<00000000f337871c>] lr : [<00000000eb762ee7>] pstate: 200f0010
+[   34.028337@3] sp : 00000000ffa9df70
+[   34.028339@3] x12: 00000000ffa9df80 
+[   34.028342@3] x11: 00000000ffa9e2d4 x10: 0000000000000000 
+[   34.028345@3] x9 : 00000000ffffffff x8 : 0000000000000001 
+[   34.028348@3] x7 : 0000000000000180 x6 : 00000000eb79f8b4 
+[   34.028350@3] x5 : 0000000000000000 x4 : 0000000000000001 
+[   34.028353@3] x3 : 0000000000000000 x2 : 0000000000000001 
+[   34.028356@3] x1 : 0000000000000001 x0 : 00000000ffa9df87 
+[   34.028357@3] 
+[   34.028357@3] PC: 0xf337869c:
+[   34.028365@3] 869c  e5902048 eee12a10 e5903000 e3c33001 e280204c e8924ff0 e592d024 e0244003
+[   34.028372@3] 86bc  e0255003 e0266003 e0277003 e0288003 e0299003 e02aa003 e02bb003 e02dd003
+[   34.028378@3] 86dc  e02ee003 e92d4002 e1a00003 fa000795 e8bd4001 e3300000 03a00001 e12fff1e
+[   34.028385@3] 86fc  e1a0c00d e92d00f0 e1a07000 e1a00001 e1a01002 e1a02003 e89c0078 ef000000
+[   34.028392@3] 871c  e8bd00f0 e3700a01 912fff1e e2600000 ea017134 ee1d3f70 e5933004 e3a00000
+[   34.028398@3] 873c  e583000c e1a0c007 e59f7014 ef000000 e1a0700c e3700a01 912fff1e e2600000
+[   34.028410@3] 875c  ea017128 000000be 00000000 f200429a f8918116 e92df000 f8914001 2a00f040
+[   34.028417@3] 877c  f891dd51 2a40f000 ea81db79 f0130300 d1490f03 0f03f011 f811d008 1e523b01
+[   34.028419@3] 
+[   34.028419@3] LR: 0xeb762e67:
+[   34.028426@3] 2e64  d0d42800 3120f8d4 44b11bad 0301f103 3120f8c4 0300f04f 4544d1e4 4620d102
+[   34.028432@3] 2e84  ff64f7ff f8d76879 680b208c d001429a ebb6f7a3 46bd3794 8ff0e8bd 0003aec4
+[   34.028439@3] 2ea4  ffffff73 b5084a03 f7ff447a 2001ff57 bf00bd08 0002f1af 4d40b537 4628447d
+[   34.028446@3] 2ec4  feb8f7d7 46284b3e 0507f10d 681c447b febef7d7 f44f2201 462970c0 f7a34613
+[   34.028452@3] 2ee4  2801ec9e 4b37d104 0202f06f e028447b d1283001 eb72f7a3 2b0b6803 4932d123
+[   34.028459@3] 2f04  22a02002 f7a34479 3001eb70 f7a3d104 6803eb66 d0f22b04 f44f4629 220170c0
+[   34.028466@3] 2f24  f7a32300 1c41ec7c f7a3d105 6803eb58 d0f12b04 2801e007 4b24d105 0202f06f
+[   34.028473@3] 2f44  601a447b 2c00e037 4821d133 44782100 ebe6f7a3 46041c42 f7a3d105 6803eb40
+[   34.028480@3] 2f64  d0f22b04 2800e001 f7a3da01 d107eb32 ec5af7a3 20004604 eb5af7a3 ddf42c00
+[   34.028481@3] 
+[   34.028481@3] SP: 0xffa9def0:
+[   34.028488@3] def0  00000001 f2985400 f29e5140 00002919 ffa9e100 f27656b3 00000001 f2581d15
+[   34.028494@3] df10  ffa9e128 700d20cc 00000000 00000000 00000000 00000000 0000000b 00000000
+[   34.028501@3] df30  ffa9e050 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028507@3] df50  00000000 12cea370 702aeb00 702ac388 00000000 ffa9df87 00000000 ffa9e128
+[   34.028514@3] df70  00000000 ffa9df87 00000000 ffa9e128 00000000 00000001 00000000 eb79f8b4
+[   34.028520@3] df90  eb762ebd f33a8ec9 0000000b 00000000 00000008 00000020 ffa9e134 ffa9e348
+[   34.028527@3] dfb0  ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4 eb73ac6d f33ee008 eb762ff3
+[   34.028533@3] dfd0  f33ee008 eb79205f 00000010 eb762d9d 00000001 00000000 72e78347 d924f968
+[   34.028535@3] 
+[   34.028535@3] r0: 0xffa9df07:
+[   34.028541@3] df04  f27656b3 00000001 f2581d15 ffa9e128 700d20cc 00000000 00000000 00000000
+[   34.028548@3] df24  00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000 00000000
+[   34.028554@3] df44  00000000 00000000 00000000 00000000 12cea370 702aeb00 702ac388 00000000
+[   34.028561@3] df64  ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128 00000000
+[   34.028567@3] df84  00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000 00000008
+[   34.028574@3] dfa4  00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4
+[   34.028580@3] dfc4  eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d 00000001
+[   34.028587@3] dfe4  00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001 ffa9e09c
+[   34.028594@3] e004  00000101 ffa9e09c f5211c30 f5211c30 f2758f9d d924f968 d7eaff1a 12cea370
+[   34.028597@3] 
+[   34.028597@3] r6: 0xeb79f834:
+[   34.028603@3] f834  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028609@3] f854  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028615@3] f874  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028622@3] f894  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028628@3] f8b4  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028634@3] f8d4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028640@3] f8f4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028646@3] f914  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028648@3] 
+[   34.028648@3] r7: 0x100:
+[   34.028667@3] 0100  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028678@3] 0120  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028688@3] 0140  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028699@3] 0160  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028710@3] 0180  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028721@3] 01a0  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028731@3] 01c0  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028742@3] 01e0  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028744@3] 
+[   34.028744@3] r9: 0xffffff7f:
+[   34.028758@3] ff7c  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028769@3] ff9c  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028780@3] ffbc  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028791@3] ffdc  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028799@3] fffc  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028806@3] 001c  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028813@3] 003c  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028820@3] 005c  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028827@3] 007c  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.028829@3] 
+[   34.028829@3] r11: 0xffa9e254:
+[   34.028836@3] e254  00000006 f2985400 ffa9e3ec f2985400 00000000 00000000 00000000 00000000
+[   34.028842@3] e274  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.028848@3] e294  00000000 00000000 00000000 00000000 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348
+[   34.028855@3] e2b4  00000000 ffa9e2d4 f253ba43 00000000 12cecce0 ffa9e5a8 ffa9e338 ffa9e2f8
+[   34.028862@3] e2d4  d80114a5 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348 ffa9e308 00000000 00000000
+[   34.028869@3] e2f4  f2896e11 ffa9e5a8 00000000 ffa9e348 ffa9e308 f2985400 ffa9e3ec f2985400
+[   34.028875@3] e314  ffa9e3fc f2985400 ffa9e3fc f2985400 ffa9e404 ffa9e430 f4eeb1c5 e8b956d0
+[   34.028882@3] e334  f2541cb1 ffa9e42c 702ac388 702aeb00 12ccd590 72e78347 12cecce0 f5211624
+[   34.028884@3] 
+[   34.028884@3] r12: 0xffa9df00:
+[   34.028890@3] df00  ffa9e100 f27656b3 00000001 f2581d15 ffa9e128 700d20cc 00000000 00000000
+[   34.028896@3] df20  00000000 00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000
+[   34.028903@3] df40  00000000 00000000 00000000 00000000 00000000 12cea370 702aeb00 702ac388
+[   34.028909@3] df60  00000000 ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128
+[   34.028915@3] df80  00000000 00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000
+[   34.028922@3] dfa0  00000008 00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134
+[   34.028929@3] dfc0  ffa9e2d4 eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d
+[   34.028935@3] dfe0  00000001 00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001
+[   34.028936@3] 
+[   34.796476@3] feb4  00000000 0000000b 00000000 eb67ffe0 00000000 00000000 00000000 00000000
+[   34.803877@3] fed4  00000000 00000000 00000000 00000000 12d7f430 702aeb00 702ac388 00000000
+[   34.812162@0] fef4  eb67ff17 00000000 eb6800b8 00000000 eb67ff17 00000000 eb6800b8 00000000
+[   34.820440@0] ff14  00000001 00000000 e77778b4 e773aebd f33a8ec9 0000000b 00000000 00000008
+[   34.828717@0] ff34  00000020 eb6800c4 eb6802d8 eb6800b8 eb67ff80 eb464164 eb6800c4 eb680264
+[   34.837003@0] ff54  e7712c6d f33ee008 e773aff3 f33ee008 e776a05f 00000010 e773ad9d 00000001
+[   34.845284@0] ff74  00000000 72e78347 d8509968 00000024 d850993c d8509944 00000001 eb68002c
+[   34.853559@0] ff94  00000101 eb68002c f131f7e0 f131f7e0 f2758f9d d8509968 d7169f1a 12d7f430
+[   34.861846@0] 
+[   34.861846@0] r6: 0xe7777834:
+[   34.866468@0] 7834  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.874693@0] 7854  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.882970@0] 7874  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.891251@0] 7894  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.899536@0] 78b4  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.907812@0] 78d4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.916090@0] 78f4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.924393@0] 7914  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   34.932656@0] 
+[   34.932656@0] r7: 0x100:
+[   34.936904@0] 0100  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.945075@0] 0120  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.953354@0] 0140  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.961633@0] 0160  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.969912@0] 0180  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.978195@0] 01a0  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.986473@0] 01c0  ******** ******** ******** ******** ******** ******** ******** ********
+[   34.994753@0] 01e0  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.003038@0] 
+[   35.003038@0] r9: 0xffffff7f:
+[   35.007654@0] ff7c  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.015884@0] ff9c  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.024163@0] ffbc  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.032446@0] ffdc  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.040725@0] fffc  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.049004@0] 001c  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.057285@0] 003c  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.065563@0] 005c  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.073844@0] 007c  ******** ******** ******** ******** ******** ******** ******** ********
+[   35.082130@0] 
+[   35.082130@0] r11: 0xeb6801e4:
+[   35.086826@0] 01e4  00000001 e6317400 eb68037c 00000000 00000000 00000000 00000000 00000000
+[   35.095111@0] 0204  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   35.103338@0] 0224  00000000 00000000 00000000 00000000 eb680538 eb6802d8 eb680298 eb6802d8
+[   35.111619@0] 0244  00000000 eb680264 f253ba43 00000000 12d89180 eb680538 eb6802c8 eb680288
+[   35.119899@0] 0264  d72cb4a5 eb680538 eb6802d8 eb680298 eb6802d8 eb680298 00000000 00000000
+[   35.128181@0] 0284  f2896e11 eb680538 00000000 eb6802d8 eb680298 e6317400 eb68037c 00000000
+[   35.136459@0] 02a4  eb68038c e6317400 eb68038c 00007000 f2a118c0 f33f307c f2a118c8 00000022
+[   35.144742@0] 02c4  f33b9b99 f2a128e0 702ac388 702aeb00 d6381340 72e78347 12d89180 f131f1d4
+[   35.153024@0] 
+[   35.153024@0] r12: 0xeb67fe90:
+[   35.157809@0] fe90  eb680090 f27656b3 00000001 f2581d15 eb6800b8 700d20cc 00000000 00000000
+[   35.165956@0] feb0  00000000 00000000 0000000b 00000000 eb67ffe0 00000000 00000000 00000000
+[   35.174282@0] fed0  00000000 00000000 00000000 00000000 00000000 12d7f430 702aeb00 702ac388
+[   35.182517@0] fef0  00000000 eb67ff17 00000000 eb6800b8 00000000 eb67ff17 00000000 eb6800b8
+[   35.190798@0] ff10  00000000 00000001 00000000 e77778b4 e773aebd f33a8ec9 0000000b 00000000
+[   35.199077@0] ff30  00000008 00000020 eb6800c4 eb6802d8 eb6800b8 eb67ff80 eb464164 eb6800c4
+[   35.207948@0] ff50  eb680264 e7712c6d f33ee008 e773aff3 f33ee008 e776a05f 00000010 e773ad9d
+[   35.215640@0] ff70  00000001 00000000 72e78347 d8509968 00000024 d850993c d8509944 00000001
+[   35.223916@0] 
+[   35.652888@5] type=1400 audit(1420070441.160:90): avc: denied { read } for pid=5924 comm=".mobdro.android" name="mobdro.apk" dev="mmcblk0p13" ino=489603 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:apk_data_file:s0 tclass=lnk_file permissive=1
+[   35.671214@5] type=1400 audit(1420070441.170:91): avc: denied { getattr } for pid=5924 comm=".mobdro.android" path="/data/app/mobdro.apk" dev="mmcblk0p13" ino=489603 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:apk_data_file:s0 tclass=lnk_file permissive=1
+[   36.190539@0] id.gms.unstable[5991]: syscall 384
+[   36.190587@0] Code: e1a01002 e1a02003 e89c0078 ef000000 (e8bd00f0) 
+[   36.195960@0] CPU: 0 PID: 5991 Comm: id.gms.unstable Tainted: G        W  O 3.14.29-g990065d #1
+[   36.204447@0] task: ffffffc0075da000 ti: ffffffc0076ac000 task.ti: ffffffc0076ac000
+[   36.212004@0] PC is at 0xf337871c
+[   36.216532@0] LR is at 0xeb762ee7
+[   36.218564@0] vma for f337871c:
+[   36.221619@0] f3361000-f33e5000 r-xp 00000000 b3:0c 1418 /system/lib/libc.so
+[   36.228608@0] vma for eb762ee7:
+[   36.231719@0] eb6fb000-eb794000 r-xp 01f8b000 b3:0c 2353 /system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
+[   36.241543@0] pc : [<00000000f337871c>] lr : [<00000000eb762ee7>] pstate: 200f0010
+[   36.249169@0] sp : 00000000ffa9df70
+[   36.252515@0] x12: 00000000ffa9df80 
+[   36.256030@0] x11: 00000000ffa9e2d4 x10: 0000000000000000 
+[   36.261460@0] x9 : 00000000ffffffff x8 : 0000000000000001 
+[   36.266895@0] x7 : 0000000000000180 x6 : 00000000eb79f8b4 
+[   36.272328@0] x5 : 0000000000000000 x4 : 0000000000000001 
+[   36.277763@0] x3 : 0000000000000000 x2 : 0000000000000001 
+[   36.283194@0] x1 : 0000000000000001 x0 : 00000000ffa9df87 
+[   36.288636@0] 
+[   36.288636@0] PC: 0xf337869c:
+[   36.293214@0] 869c  e5902048 eee12a10 e5903000 e3c33001 e280204c e8924ff0 e592d024 e0244003
+[   36.301484@0] 86bc  e0255003 e0266003 e0277003 e0288003 e0299003 e02aa003 e02bb003 e02dd003
+[   36.309761@0] 86dc  e02ee003 e92d4002 e1a00003 fa000795 e8bd4001 e3300000 03a00001 e12fff1e
+[   36.318047@0] 86fc  e1a0c00d e92d00f0 e1a07000 e1a00001 e1a01002 e1a02003 e89c0078 ef000000
+[   36.326321@0] 871c  e8bd00f0 e3700a01 912fff1e e2600000 ea017134 ee1d3f70 e5933004 e3a00000
+[   36.334604@0] 873c  e583000c e1a0c007 e59f7014 ef000000 e1a0700c e3700a01 912fff1e e2600000
+[   36.342880@0] 875c  ea017128 000000be 00000000 f200429a f8918116 e92df000 f8914001 2a00f040
+[   36.351160@0] 877c  f891dd51 2a40f000 ea81db79 f0130300 d1490f03 0f03f011 f811d008 1e523b01
+[   36.359443@0] 
+[   36.359443@0] LR: 0xeb762e67:
+[   36.364011@0] 2e64  d0d42800 3120f8d4 44b11bad 0301f103 3120f8c4 0300f04f 4544d1e4 4620d102
+[   36.372292@0] 2e84  ff64f7ff f8d76879 680b208c d001429a ebb6f7a3 46bd3794 8ff0e8bd 0003aec4
+[   36.380572@0] 2ea4  ffffff73 b5084a03 f7ff447a 2001ff57 bf00bd08 0002f1af 4d40b537 4628447d
+[   36.388862@0] 2ec4  feb8f7d7 46284b3e 0507f10d 681c447b febef7d7 f44f2201 462970c0 f7a34613
+[   36.397135@0] 2ee4  2801ec9e 4b37d104 0202f06f e028447b d1283001 eb72f7a3 2b0b6803 4932d123
+[   36.405412@0] 2f04  22a02002 f7a34479 3001eb70 f7a3d104 6803eb66 d0f22b04 f44f4629 220170c0
+[   36.413692@0] 2f24  f7a32300 1c41ec7c f7a3d105 6803eb58 d0f12b04 2801e007 4b24d105 0202f06f
+[   36.421972@0] 2f44  601a447b 2c00e037 4821d133 44782100 ebe6f7a3 46041c42 f7a3d105 6803eb40
+[   36.430252@0] 2f64  d0f22b04 2800e001 f7a3da01 d107eb32 ec5af7a3 20004604 eb5af7a3 ddf42c00
+[   36.438547@0] 
+[   36.438547@0] SP: 0xffa9def0:
+[   36.443131@0] def0  00000001 f2985400 f29e5140 00002919 ffa9e100 f27656b3 00000001 f2581d15
+[   36.451383@0] df10  00000000 4eb4052a 00000001 f272fc79 00000000 00000000 0000000b 00000000
+[   36.459665@0] df30  ffa9e050 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.467945@0] df50  00000000 12ce84f0 702aeb00 702ac388 00000000 ffa9df87 00000000 ffa9e128
+[   36.476224@0] df70  00000000 ffa9df87 00000000 ffa9e128 00000000 00000001 00000000 eb79f8b4
+[   36.484507@0] df90  eb762ebd f33a8ec9 0000000b 00000000 00000008 00000020 ffa9e134 ffa9e348
+[   36.492783@0] dfb0  ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4 eb73ac6d f33ee008 eb762ff3
+[   36.501064@0] dfd0  f33ee008 eb79205f 00000010 eb762d9d 00000001 00000000 72e78347 d924f968
+[   36.509347@0] 
+[   36.509347@0] r0: 0xffa9df07:
+[   36.513914@0] df04  f27656b3 00000001 f2581d15 00000000 4eb4052a 00000001 f272fc79 00000000
+[   36.522199@0] df24  00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000 00000000
+[   36.530475@0] df44  00000000 00000000 00000000 00000000 12ce84f0 702aeb00 702ac388 00000000
+[   36.538756@0] df64  ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128 00000000
+[   36.547036@0] df84  00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000 00000008
+[   36.556906@0] dfa4  00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4
+[   36.563593@0] dfc4  eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d 00000001
+[   36.571883@0] dfe4  00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001 ffa9e09c
+[   36.580161@0] e004  00000101 ffa9e09c f5211c30 f5211c30 f2758f9d d924f968 d7eaff1a 12ce84f0
+[   36.588445@0] 
+[   36.588445@0] r6: 0xeb79f834:
+[   36.593013@0] f834  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.601286@0] f854  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.609576@0] f874  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.617849@0] f894  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.626126@0] f8b4  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.634409@0] f8d4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.642685@0] f8f4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.650966@0] f914  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.659251@0] 
+[   36.659251@0] r7: 0x100:
+[   36.663397@0] 0100  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.671669@0] 0120  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.679949@0] 0140  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.688229@0] 0160  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.696509@0] 0180  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.704790@0] 01a0  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.713069@0] 01c0  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.721348@0] 01e0  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.729635@0] 
+[   36.729635@0] r9: 0xffffff7f:
+[   36.734211@0] ff7c  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.742484@0] ff9c  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.750760@0] ffbc  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.759039@0] ffdc  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.767343@0] fffc  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.775600@0] 001c  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.783878@0] 003c  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.792160@0] 005c  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.800442@0] 007c  ******** ******** ******** ******** ******** ******** ******** ********
+[   36.808726@0] 
+[   36.808726@0] r11: 0xffa9e254:
+[   36.813374@0] e254  00000006 f2985400 ffa9e3ec f2985400 00000000 00000000 00000000 00000000
+[   36.821661@0] e274  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   36.829940@0] e294  00000000 00000000 00000000 00000000 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348
+[   36.838223@0] e2b4  00000000 ffa9e2d4 f253ba43 00000000 12cead40 ffa9e5a8 ffa9e338 ffa9e2f8
+[   36.846495@0] e2d4  d80114a5 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348 ffa9e308 00000000 00000000
+[   36.854779@0] e2f4  f2896e11 ffa9e5a8 00000000 ffa9e348 ffa9e308 f2985400 ffa9e3ec f2985400
+[   36.863055@0] e314  ffa9e3fc f2985400 ffa9e3fc f2985400 ffa9e404 ffa9e430 f4eeb1c5 e8b956d0
+[   36.871334@0] e334  f2541cb1 ffa9e42c 702ac388 702aeb00 12cc86c0 72e78347 12cead40 f5211624
+[   36.879620@0] 
+[   36.879620@0] r12: 0xffa9df00:
+[   36.884304@0] df00  ffa9e100 f27656b3 00000001 f2581d15 00000000 4eb4052a 00000001 f272fc79
+[   36.892552@0] df20  00000000 00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000
+[   36.900832@0] df40  00000000 00000000 00000000 00000000 00000000 12ce84f0 702aeb00 702ac388
+[   36.909113@0] df60  00000000 ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128
+[   36.917422@0] df80  00000000 00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000
+[   36.925673@0] dfa0  00000008 00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134
+[   36.933951@0] dfc0  ffa9e2d4 eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d
+[   36.942233@0] dfe0  00000001 00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001
+[   36.950511@0] 
+[   62.031775@6] wlan: [5036:E :HDD] received scan request
+[   62.033153@4] wlan: [4911:E :WDA] scan_id a002, vdev_id 0, scan type 0, msg_type 1103
+[   62.397896@0] android.gms:car[6133]: syscall 384
+[   62.397932@0] Code: e1a01002 e1a02003 e89c0078 ef000000 (e8bd00f0) 
+[   62.403097@0] CPU: 0 PID: 6133 Comm: android.gms:car Tainted: G        W  O 3.14.29-g990065d #1
+[   62.411839@0] task: ffffffc02d4b0000 ti: ffffffc044a04000 task.ti: ffffffc044a04000
+[   62.419567@0] PC is at 0xf337871c
+[   62.422586@0] LR is at 0xeb762ee7
+[   62.425945@0] vma for f337871c:
+[   62.428994@0] f3361000-f33e5000 r-xp 00000000 b3:0c 1418 /system/lib/libc.so
+[   62.435960@0] vma for eb762ee7:
+[   62.439072@0] eb6fb000-eb794000 r-xp 01f8b000 b3:0c 2353 /system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
+[   62.448892@0] pc : [<00000000f337871c>] lr : [<00000000eb762ee7>] pstate: 200f0010
+[   62.456432@0] sp : 00000000ffa9df70
+[   62.459858@0] x12: 00000000ffa9df80 
+[   62.463381@0] x11: 00000000ffa9e2d4 x10: 0000000000000000 
+[   62.468820@0] x9 : 00000000ffffffff x8 : 0000000000000001 
+[   62.474266@0] x7 : 0000000000000180 x6 : 00000000eb79f8b4 
+[   62.479682@0] x5 : 0000000000000000 x4 : 0000000000000001 
+[   62.485117@0] x3 : 0000000000000000 x2 : 0000000000000001 
+[   62.490549@0] x1 : 0000000000000001 x0 : 00000000ffa9df87 
+[   62.495995@0] 
+[   62.495995@0] PC: 0xf337869c:
+[   62.500573@0] 869c  e5902048 eee12a10 e5903000 e3c33001 e280204c e8924ff0 e592d024 e0244003
+[   62.508834@0] 86bc  e0255003 e0266003 e0277003 e0288003 e0299003 e02aa003 e02bb003 e02dd003
+[   62.517115@0] 86dc  e02ee003 e92d4002 e1a00003 fa000795 e8bd4001 e3300000 03a00001 e12fff1e
+[   62.525396@0] 86fc  e1a0c00d e92d00f0 e1a07000 e1a00001 e1a01002 e1a02003 e89c0078 ef000000
+[   62.533674@0] 871c  e8bd00f0 e3700a01 912fff1e e2600000 ea017134 ee1d3f70 e5933004 e3a00000
+[   62.541959@0] 873c  e583000c e1a0c007 e59f7014 ef000000 e1a0700c e3700a01 912fff1e e2600000
+[   62.550239@0] 875c  ea017128 000000be 00000000 f200429a f8918116 e92df000 f8914001 2a00f040
+[   62.558515@0] 877c  f891dd51 2a40f000 ea81db79 f0130300 d1490f03 0f03f011 f811d008 1e523b01
+[   62.566797@0] 
+[   62.566797@0] LR: 0xeb762e67:
+[   62.571373@0] 2e64  d0d42800 3120f8d4 44b11bad 0301f103 3120f8c4 0300f04f 4544d1e4 4620d102
+[   62.579646@0] 2e84  ff64f7ff f8d76879 680b208c d001429a ebb6f7a3 46bd3794 8ff0e8bd 0003aec4
+[   62.587926@0] 2ea4  ffffff73 b5084a03 f7ff447a 2001ff57 bf00bd08 0002f1af 4d40b537 4628447d
+[   62.596206@0] 2ec4  feb8f7d7 46284b3e 0507f10d 681c447b febef7d7 f44f2201 462970c0 f7a34613
+[   62.604487@0] 2ee4  2801ec9e 4b37d104 0202f06f e028447b d1283001 eb72f7a3 2b0b6803 4932d123
+[   62.612765@0] 2f04  22a02002 f7a34479 3001eb70 f7a3d104 6803eb66 d0f22b04 f44f4629 220170c0
+[   62.621046@0] 2f24  f7a32300 1c41ec7c f7a3d105 6803eb58 d0f12b04 2801e007 4b24d105 0202f06f
+[   62.629326@0] 2f44  601a447b 2c00e037 4821d133 44782100 ebe6f7a3 46041c42 f7a3d105 6803eb40
+[   62.637606@0] 2f64  d0f22b04 2800e001 f7a3da01 d107eb32 ec5af7a3 20004604 eb5af7a3 ddf42c00
+[   62.645890@0] 
+[   62.645890@0] SP: 0xffa9def0:
+[   62.650484@0] def0  00000001 f2985400 f29e5140 00002919 ffa9e100 f27656b3 00000001 f2581d15
+[   62.658737@0] df10  ffa9e128 700d20cc 00000000 00000000 00000000 00000000 0000000b 00000000
+[   62.667017@0] df30  ffa9e050 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.675303@0] df50  00000000 12ce4850 702aeb00 702ac388 00000000 ffa9df87 00000000 ffa9e128
+[   62.683577@0] df70  00000000 ffa9df87 00000000 ffa9e128 00000000 00000001 00000000 eb79f8b4
+[   62.691857@0] df90  eb762ebd f33a8ec9 0000000b 00000000 00000008 00000020 ffa9e134 ffa9e348
+[   62.700137@0] dfb0  ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4 eb73ac6d f33ee008 eb762ff3
+[   62.708417@0] dfd0  f33ee008 eb79205f 00000010 eb762d9d 00000001 00000000 72e78347 d924f968
+[   62.716698@0] 
+[   62.716698@0] r0: 0xffa9df07:
+[   62.721281@0] df04  f27656b3 00000001 f2581d15 ffa9e128 700d20cc 00000000 00000000 00000000
+[   62.729548@0] df24  00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000 00000000
+[   62.737830@0] df44  00000000 00000000 00000000 00000000 12ce4850 702aeb00 702ac388 00000000
+[   62.746109@0] df64  ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128 00000000
+[   62.754389@0] df84  00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000 00000008
+[   62.762669@0] dfa4  00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134 ffa9e2d4
+[   62.770949@0] dfc4  eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d 00000001
+[   62.779228@0] dfe4  00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001 ffa9e09c
+[   62.787508@0] e004  00000101 ffa9e09c f5211c30 f5211c30 f2758f9d d924f968 d7eaff1a 12ce4850
+[   62.795792@0] 
+[   62.795792@0] r6: 0xeb79f834:
+[   62.800410@0] f834  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.808641@0] f854  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.816920@0] f874  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.825199@0] f894  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.833479@0] f8b4  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.841759@0] f8d4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.850040@0] f8f4  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.858321@0] f914  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   62.866603@0] 
+[   62.866603@0] r7: 0x100:
+[   62.870747@0] 0100  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.879020@0] 0120  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.887303@0] 0140  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.895581@0] 0160  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.903859@0] 0180  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.912140@0] 01a0  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.920420@0] 01c0  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.928708@0] 01e0  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.936986@0] 
+[   62.936986@0] r9: 0xffffff7f:
+[   62.941566@0] ff7c  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.949839@0] ff9c  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.958113@0] ffbc  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.966392@0] ffdc  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.974686@0] fffc  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.982952@0] 001c  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.991232@0] 003c  ******** ******** ******** ******** ******** ******** ******** ********
+[   62.999511@0] 005c  ******** ******** ******** ******** ******** ******** ******** ********
+[   63.007791@0] 007c  ******** ******** ******** ******** ******** ******** ******** ********
+[   63.016077@0] 
+[   63.016077@0] r11: 0xffa9e254:
+[   63.020759@0] e254  00000006 f2985400 ffa9e3ec f2985400 00000000 00000000 00000000 00000000
+[   63.029008@0] e274  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   63.037291@0] e294  00000000 00000000 00000000 00000000 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348
+[   63.045570@0] e2b4  00000000 ffa9e2d4 f253ba43 00000000 12cebda0 ffa9e5a8 ffa9e338 ffa9e2f8
+[   63.053848@0] e2d4  d80114a5 ffa9e5a8 ffa9e348 ffa9e308 ffa9e348 ffa9e308 00000000 00000000
+[   63.062128@0] e2f4  f2896e11 ffa9e5a8 00000000 ffa9e348 ffa9e308 f2985400 ffa9e3ec f2985400
+[   63.070408@0] e314  ffa9e3fc f2985400 ffa9e3fc f2985400 ffa9e404 ffa9e430 f4eeb1c5 e8b956d0
+[   63.078688@0] e334  f2541cb1 ffa9e42c 702ac388 702aeb00 12cc67f0 72e78347 12cebda0 f5211624
+[   63.086973@0] 
+[   63.086973@0] r12: 0xffa9df00:
+[   63.091637@0] df00  ffa9e100 f27656b3 00000001 f2581d15 ffa9e128 700d20cc 00000000 00000000
+[   63.099908@0] df20  00000000 00000000 0000000b 00000000 ffa9e050 00000000 00000000 00000000
+[   63.108187@0] df40  00000000 00000000 00000000 00000000 00000000 12ce4850 702aeb00 702ac388
+[   63.116466@0] df60  00000000 ffa9df87 00000000 ffa9e128 00000000 ffa9df87 00000000 ffa9e128
+[   63.124762@0] df80  00000000 00000001 00000000 eb79f8b4 eb762ebd f33a8ec9 0000000b 00000000
+[   63.133026@0] dfa0  00000008 00000020 ffa9e134 ffa9e348 ffa9e128 ffa9dff0 e8bdf664 ffa9e134
+[   63.141306@0] dfc0  ffa9e2d4 eb73ac6d f33ee008 eb762ff3 f33ee008 eb79205f 00000010 eb762d9d
+[   63.149586@0] dfe0  00000001 00000000 72e78347 d924f968 00000024 d924f93c d924f944 00000001
+[   63.157869@0] 
+[   64.689882@6] wlan: [3094:E :WDA]  scan complete - scan_id a002, vdev_id 0
+[   64.691383@4] wlan: [4911:E :SME] Found 8 BSS
+[   64.696187@4] wlan: [4911:E :PMC] PMC: Cannot enable BMPS timer. BMPS is disabled
+[  120.109845@5] wlan: [5036:E :HDD] received scan request
+[  120.110601@6] wlan: [4911:E :WDA] scan_id a003, vdev_id 0, scan type 0, msg_type 1103
+[  122.768959@6] wlan: [6169:E :WDA]  scan complete - scan_id a003, vdev_id 0
+[  122.770828@4] wlan: [4911:E :SME] Found 5 BSS
+[  122.776018@4] wlan: [4911:E :PMC] PMC: Cannot enable BMPS timer. BMPS is disabled
+[  217.750303@6] wlan: [5036:E :HDD] received scan request
+[  217.752657@4] wlan: [4911:E :WDA] scan_id a004, vdev_id 0, scan type 0, msg_type 1103
+[  220.409018@6] wlan: [6169:E :WDA]  scan complete - scan_id a004, vdev_id 0
+[  220.412247@7] wlan: [4911:E :SME] Found 8 BSS
+[  220.419888@7] wlan: [4911:E :PMC] PMC: Cannot enable BMPS timer. BMPS is disabled
