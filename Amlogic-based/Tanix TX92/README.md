@@ -73,22 +73,3 @@ reading u-boot.ext
 ```
 
 Where can we get a precompiled EFI enabled U-Boot from?
-
-## Trying to run mainline kernel from kernelci.org
-
-https://kernelci.org/boot/meson-gxm-nexbox-a1/ has known working kernels for an Amlogic S912 device.
-
-How can we boot them?
-
-It seems that they are using Linaro LAVA https://git.lavasoftware.org/lava/lava which roughly does:
-* Download kernel
-* Download kernel modules
-* Download initrd
-* Umpack initrd and put kernel modules inside
-* Repack initrd
-* Run kernel trough mkimage
-* Run initrd through mkimage
-* Communicate with the device over serial, enter U-Boot there
-* Cause U-Boot to load the files over Ethernet (TFTP) and boot them
-
-> LAVA is a continuous integration system for deploying operating systems onto physical and virtual hardware for running tests. Tests can be simple boot testing, bootloader testing and system level testing, although extra hardware may be required.
