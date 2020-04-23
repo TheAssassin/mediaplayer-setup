@@ -48,6 +48,29 @@ Amlogic systems are supposed to be able to boot generic "mainline" kernels. If w
 
 @150balbes Armbian uses a `boot.cmd` compiled into a `boot.scr`  and `s905_autoscript.cmd` compiled into a `s905_autoscript` that uses `uEnv.txt` to configure boot parameters. At least in those scripts it is mandatory to have an `uInitrd`, otherwise it will not proceed to run the boot command.
 
+## Trying to run mainline kernel from kernelci.org
+
+kernelci.org is the closest thing to "upstream-packaged binaries" of the Linux kernel.
+
+https://kernelci.org/soc/amlogic/ has known working kernels for many Amlogic devices.
+
+__How can we boot them?__
+
+It seems that they are using Linaro LAVA https://git.lavasoftware.org/lava/lava which roughly does:
+* Download kernel
+* Download kernel modules
+* Download initrd
+* Umpack initrd and put kernel modules inside
+* Repack initrd
+* Run kernel trough mkimage
+* Run initrd through mkimage
+* Communicate with the device over serial, enter U-Boot there
+* Cause U-Boot to load the files over Ethernet (TFTP) and boot them
+
+> LAVA is a continuous integration system for deploying operating systems onto physical and virtual hardware for running tests. Tests can be simple boot testing, bootloader testing and system level testing, although extra hardware may be required.
+
+This seems to be the code that does it: https://git.lavasoftware.org/lava/lava/-/blob/master/lava_dispatcher/actions/deploy/apply_overlay.py
+
 ### Generate uInitrd
 
 @150balbes Armbian automatically converts initrd to  `uInitrd` as required by running [this](https://github.com/150balbes/Build-Armbian/blob/master/packages/bsp/common/etc/initramfs/post-update.d/99-uboot) code:
