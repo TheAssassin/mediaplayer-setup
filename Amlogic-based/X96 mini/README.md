@@ -22,3 +22,31 @@ Due to severe thermal issues, the device was opened up to see what's going on. W
 ## Tested distros
 
 - CoreELEC (see [CoreELEC](CoreELEC.md) for more information)
+
+
+## Serial port
+
+A 3d printed pogo pin fixture has been used to access the tiny serial port test points using P50-B1 0.68mm pogo pins.
+
+Note that what looks like test points does not seem to be actually connected, I had to use the inner row of what looks like unpopulated resistor footprints.
+
+## U-Boot
+
+From the stock U-Boot, we can access USB devices like this:
+
+```
+gxl_p281_v1#usb start
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... init_part() 278: PART_TYPE_DOS
+1 Storage Device(s) found
+
+gxl_p281_v1#usb storage
+  Device 0: Vendor: Kingston Rev:  Prod: DataTraveler 3.0
+            Type: Removable Hard Disk
+            Capacity: 7377.6 MB = 7.2 GB (15109516 x 512)
+```
