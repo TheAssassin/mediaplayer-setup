@@ -90,6 +90,24 @@ bmp display ${loadaddr_logo}
 bmp scale
 ```
 
+## Disabling HDMI
+
+According to https://github.com/linux-meson/meta-amlogic/blob/master/recipes-bsp/u-boot/u-boot-odroidc1/odroidc1/boot.ini,
+
+```
+# Disable VPU (Video decoding engine, Saves RAM!!!)
+# 0 = disabled
+# 1 = enabled
+setenv vpu "1"
+if test "${vpu}" = "0"; then fdt rm /mesonstream; fdt rm /vdec; fdt rm /ppmgr; fi
+
+# Disable HDMI Output (Again, saves ram!)
+# 0 = disabled
+# 1 = enabled
+setenv hdmioutput "1"
+if test "${hdmioutput}" = "0"; then fdt rm /mesonfb; fi
+```
+
 ## Open questions
 
 Feel free to contribute
