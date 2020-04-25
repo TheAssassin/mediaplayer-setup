@@ -138,3 +138,7 @@ These are not Amlogic-specific. It is not documented whether/how they interact w
 Feel free to contribute
 
 * Can Android be booted from SD card and/or USB? How?
+
+## References
+
+* https://github.com/umiddelb/armhf/wiki/Get-more-out-of-%22Das-U-Boot%22
