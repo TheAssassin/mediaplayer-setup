@@ -8,7 +8,7 @@ So here is what we have figured out. Feel free to correct.
 
 # aml_autoscript theory of operation
 
-* When an Amlogic system detects that the reset button ("toothpick method") has been pressed during power-up, it (probably the stock U-Boot on the device) searches for a file called `aml_autoscript` on external media such as SD card or USB mass storage (this is known to work at least for the first partition if it is formatted fat32 - to be documented whether it also works for other partitions and filesystems)
+* When an Amlogic system detects that the reset button ("toothpick method") has been pressed during power-up, it (probably the stock U-Boot on the device) searches for a file called `aml_autoscript` on external media such as SD card or USB mass storage (this is known to work at least for the first partition if it is formatted fat32 - to be documented whether it also works for other partitions and filesystems) (Possibly newer U-Boot versions can also handle ext4 with commands such as ext4load)
 * For models based on Amlogic S802/S805/812 this might NOT work from USB but only from SD card (to be verified). This might be due to an older U-Boot version installed from the factory on those machines. (To be determined whether this limitation can be lifted by using a newer U-Boot.)
 * The file `aml_autoscript` can be created by editing a text file `aml_autoscript.txt`, and then running `mkimage -A arm -O linux -T script -C none -d aml_autoscript.txt aml_autoscript`
 * `aml_autoscript.txt` can contain U-Boot commands
@@ -75,3 +75,11 @@ There are probably many more. Need to be documented.
 Feel free to contribute
 
 * Can Android be booted from SD card and/or USB? How?
+
+# Loading custom boot logo
+
+There seems to be a U-Boot environment variable that determines how the boot logo is loaded, e.g,
+
+`prepare=logo size ${outputmode}; video open; video clear; video dev open ${outputmode};imgread pic logo bootup ${loadaddr_logo}; bmp display ${bootup_offset}; bmp scale;`
+
+It seems to be possible to replace this by something that reads the logo from a file on SD/USB instead: https://github.com/linux-meson/meta-amlogic/blob/master/recipes-bsp/u-boot/u-boot-odroidc1/0004-Loading-bootlogo-with-ext4load-instead-of-movi.patch
