@@ -73,3 +73,5 @@ reading u-boot.ext
 ```
 
 Where can we get a precompiled EFI enabled U-Boot from?
+
+Answer: openSUSE has a Khadas VIM2 U-Boot which can boot this board, but the TX92 boot screen is garbled.
