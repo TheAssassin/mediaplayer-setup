@@ -17,7 +17,7 @@ So here is what we have figured out. Feel free to correct.
 
 In some instructions you will read that you need to boot into the stock Android, go to the "Backup & Restore" app, and select a zip file to "activate multi-boot". Probably the same effect can be achieved by using `aml_autoscript` and powering up with the reset button pressed ("toothpick method"). This needs to be verified.
 
-Note: On some 3rd-party systems you might also see `s905_autoscript`. This seems to be something introduced by @150balbes, not something official from Amlogic. Hence it is not covered here.
+Note: On some 3rd-party systems you might also see `s905_autoscript`. This seems to be something introduced by @150balbes, not something official from Amlogic or U-Boot. Hence it is not covered here.
 
 ## printenv, getenv, setenv, saveenv
 
