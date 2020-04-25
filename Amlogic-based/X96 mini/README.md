@@ -26,7 +26,7 @@ Due to severe thermal issues, the device was opened up to see what's going on. W
 
 ## Serial port
 
-A 3d printed pogo pin fixture has been used to access the tiny serial port test points using P50-B1 0.68mm pogo pins.
+A 3d printed pogo pin fixture has been used to access the tiny serial port solder points using P50-B1 0.68mm pogo pins.
 
 Note that what looks like test points does not seem to be actually connected, I had to use the inner row of what looks like unpopulated resistor footprints.
 
