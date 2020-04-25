@@ -12,6 +12,6 @@ So here is what we have figured out. Feel free to correct.
 * `aml_autoscript.txt` can contain U-Boot commands
 * It should be possible to chainload a newer U-Boot from `aml_autoscript`. To be determined: Will newer (mainline) U-Boot also search for and execute `aml_autoscript`? If so, how can we avoid an infinite loop?
 
-In some instructions you will read that you need to boot into the stock Android, go to the "Backup & Restore" app, and select a zip file to "activate multi-boot". Probably the same effect can be achieved by using `aml_autoscript` and powering up with the reset button pressed ("toothpick method").
+In some instructions you will read that you need to boot into the stock Android, go to the "Backup & Restore" app, and select a zip file to "activate multi-boot". Probably the same effect can be achieved by using `aml_autoscript` and powering up with the reset button pressed ("toothpick method"). This needs to be verified.
 
 Note: On some 3rd-party systems you might also see `s905_autoscript`. This seems to be something introduced by @150balbes, not something official from Amlogic. Hence it is not covered here.
