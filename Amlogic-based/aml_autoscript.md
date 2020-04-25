@@ -9,7 +9,8 @@ So here is what we have figured out. Feel free to correct.
 ## aml_autoscript theory of operation
 
 * When an Amlogic system detects that the reset button ("toothpick method") has been pressed during power-up, it (probably the stock U-Boot on the device) searches for a file called `aml_autoscript` on external media such as SD card or USB mass storage (this is known to work at least for the first partition if it is formatted fat32 - to be documented whether it also works for other partitions and filesystems) (Possibly newer U-Boot versions can also handle ext4 with commands such as ext4load)
-* For models based on Amlogic S802/S805/812 this might NOT work from USB but only from SD card (to be verified). This might be due to an older U-Boot version installed from the factory on those machines. (To be determined whether this limitation can be lifted by using a newer U-Boot.)
+* Pressing the reset button ("toothpick method") must be pressed during __power-up__. Doing it during a __reboot__ is __not__ sufficient
+* For models based on Amlogic S802/S805/812 this might NOT work from USB but only from SD card (to be verified). This might be due to an older U-Boot version installed from the factory on those machines. (To be determined whether this limitation can be lifted by using a newer U-Boot)
 * The file `aml_autoscript` can be created by editing a text file `aml_autoscript.txt`, and then running `mkimage -A arm -O linux -T script -C none -d aml_autoscript.txt aml_autoscript`
 * `aml_autoscript.txt` can contain U-Boot commands
 * It should be possible to chainload a newer U-Boot from `aml_autoscript`. To be determined: Will newer (mainline) U-Boot also search for and execute `aml_autoscript`? If so, how can we avoid an infinite loop?
