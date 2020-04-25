@@ -128,6 +128,8 @@ At least in newer versions of U-Boot, there is also the possibility to use `uEnv
 * `uEnv.txt` allows presetting of the U-Boot environment variable values, prior to running bootcmd. These are plain text files that do not need to run through `mkimage`
 * `boot.scr` allows running of a U-Boot script file, prior to running bootcmd
 
+These are not Amlogic-specific. It is not documented whether/how they interact with `aml_autoscript`.
+
 ## Open questions
 
 Feel free to contribute
