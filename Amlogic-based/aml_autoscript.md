@@ -121,6 +121,13 @@ setenv hdmioutput "1"
 if test "${hdmioutput}" = "0"; then fdt rm /mesonfb; fi
 ```
 
+## uEnv.txt and boot.scr
+
+At least in newer versions of U-Boot, there is also the possibility to use `uEnv.txt` and `boot.scr`. According to https://stackoverflow.com/a/37970903,
+
+* `uEnv.txt` allows presetting of the U-Boot environment variable values, prior to running bootcmd
+* `boot.scr` allows running of a U-Boot script file, prior to running bootcmd
+
 ## Open questions
 
 Feel free to contribute
