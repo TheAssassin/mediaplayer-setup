@@ -23,6 +23,19 @@ Note: On some 3rd-party systems you might also see `s905_autoscript`. This seems
 
 U-Boot can store U-Boot environment variables persistently. To show them, run `printenv`. To set an U-Boot environment variable temporarily, run `setenv <key> <value>`. To persist all set U-Boot environment variables across boots, run `saveenv`.
 
+The `bootcmd` variable has a special meaning in (not only Amlogic) U-Boot. According to https://www.denx.de/wiki/view/DULG/UBootEnvVariables:
+
+> This variable defines a command string that is automatically executed when the initial countdown is not interrupted.
+This command is only executed when the variable `bootdelay` is also defined! 
+
+It can look e.g., like this:
+
+```
+bootcmd=if test ${bootfromnand} = 1; then setenv bootfromnand 0; saveenv; else run bootfromsd; run bootfromusb; fi; run storeboot
+```
+
+__Question:__ it does not mention anything about `aml_autoscript` - so is it safe to assume that `aml_autoscript` will run even before that?
+
 There are some special U-Boot environment variables that determine how Amlogic systems are booted.
 
 https://github.com/150balbes/Amlogic_S905-u-boot/blob/master/common/cmd_reboot.c defines
