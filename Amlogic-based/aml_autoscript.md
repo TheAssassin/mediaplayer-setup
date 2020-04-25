@@ -78,6 +78,18 @@ There seems to be a U-Boot environment variable that determines how the boot log
 
 It seems to be possible to replace this by something that reads the logo from a file on SD/USB instead: https://github.com/linux-meson/meta-amlogic/blob/master/recipes-bsp/u-boot/u-boot-odroidc1/0004-Loading-bootlogo-with-ext4load-instead-of-movi.patch
 
+According to https://github.com/linux-meson/meta-amlogic/blob/master/recipes-bsp/u-boot/u-boot-odroidc1/odroidc1/boot.ini the following should work for loading and displaying a bootlogo. The image needs to be a 24-bit Windows BMP image only and default size is 1280×720. An example image is at https://github.com/linux-meson/meta-amlogic/blob/master/recipes-bsp/u-boot/u-boot-odroidc1/odroidc1/bootlogo.bmp?raw=true.
+
+```
+logo size ${outputmode}
+video open
+video clear
+video dev open ${outputmode}
+ext4load mmc 0:1 ${loadaddr_logo} /boot/bootlogo.bmp
+bmp display ${loadaddr_logo}
+bmp scale
+```
+
 ## Open questions
 
 Feel free to contribute
