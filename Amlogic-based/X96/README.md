@@ -76,3 +76,43 @@ __It is working__, we can see that the original u-boot on the device is loading 
 __HDMI output with this u-boot is still to be verified.__
 
 We may now try to load openSUSE ISO using `efiboot` and `grub.efi`...
+
+```
+gxl_p212_v1#usb init
+Unknown command 'usb' - try 'help'
+gxl_p212_v1#usb start
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... Device not responding to set address.
+
+      USB device not accepting new address (error=80000000)
+1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+gxl_p212_v1#usb tree
+USB device tree:
+  1  Hub (5 Gb/s, 0mA)
+     u-boot XHCI Host Controller 
+   
+gxl_p212_v1#
+USB device tree:
+  1  Hub (5 Gb/s, 0mA)
+     u-boot XHCI Host Controller 
+   
+gxl_p212_v1#usb reset
+Host not halted after 16000 microseconds.
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... Device not responding to set address.
+
+      USB device not accepting new address (error=80000000)
+1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+```
+
+__Why are we getting this error? Why can't we access USB mass storage devices from U-Boot here?__
