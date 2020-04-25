@@ -21,7 +21,9 @@ Note: On some 3rd-party systems you might also see `s905_autoscript`. This seems
 
 ## printenv, getenv, setenv, saveenv
 
-U-Boot can store U-Boot environment variables persistently. To show them, run `printenv`. To set an U-Boot environment variable temporarily, run `setenv <key> <value>`. To persist all set U-Boot environment variables across boots, run `saveenv`.
+U-Boot can store U-Boot environment variables persistently. To show them, run `printenv` in U-Boot. To set an U-Boot environment variable temporarily, run `setenv <key> <value>`. To persist all set U-Boot environment variables across boots, run `saveenv`.
+
+In a __booted__ Linux system, `fw_printenv` and `fw_setenv` can be used to access those.
 
 The `bootcmd` variable has a special meaning in (not only Amlogic) U-Boot. According to https://www.denx.de/wiki/view/DULG/UBootEnvVariables:
 
