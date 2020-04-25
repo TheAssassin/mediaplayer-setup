@@ -70,12 +70,6 @@ https://github.com/codesnake/uboot-amlogic/blob/master/common/cmd_logo.c defines
 
 There are probably many more. Need to be documented.
 
-## Open questions
-
-Feel free to contribute
-
-* Can Android be booted from SD card and/or USB? How?
-
 ## Loading custom boot logo
 
 There seems to be a U-Boot environment variable that determines how the boot logo is loaded, e.g,
@@ -83,3 +77,9 @@ There seems to be a U-Boot environment variable that determines how the boot log
 `prepare=logo size ${outputmode}; video open; video clear; video dev open ${outputmode};imgread pic logo bootup ${loadaddr_logo}; bmp display ${bootup_offset}; bmp scale;`
 
 It seems to be possible to replace this by something that reads the logo from a file on SD/USB instead: https://github.com/linux-meson/meta-amlogic/blob/master/recipes-bsp/u-boot/u-boot-odroidc1/0004-Loading-bootlogo-with-ext4load-instead-of-movi.patch
+
+## Open questions
+
+Feel free to contribute
+
+* Can Android be booted from SD card and/or USB? How?
