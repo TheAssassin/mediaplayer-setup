@@ -73,7 +73,7 @@ Starting kernel ...
 
 __It is working__, we can see that the original u-boot on the device is loading the `u-boot.ext` from the SD card, which in turn is booting the systen.
 
-__HDMI output with this u-boot is still to be verified.__
+__HDMI output with this u-boot is working, including the X96 boot splash image.__
 
 We may now try to load openSUSE ISO using `efiboot` and `grub.efi`...
 
@@ -116,3 +116,5 @@ scanning bus 0 for devices... Device not responding to set address.
 ```
 
 __Why are we getting this error? Why can't we access USB mass storage devices from U-Boot here?__
+
+We seem to be getting the same error with the stock U-Boot... very strange!
