@@ -25,9 +25,9 @@ U-Boot can store U-Boot environment variables persistently. To show them, run `p
 
 There are some special U-Boot environment variables that determine how Amlogic systems are booted.
 
-https://github.com/codesnake/uboot-amlogic/blob/master/common/cmd_reboot.c defines
+https://github.com/150balbes/Amlogic_S905-u-boot/blob/master/common/cmd_reboot.c defines
 
-* reboot_mode (`normal`, `factory_reset`, `update`, `usb_burning`, `charging`) - __to be documented__
+* reboot_mode (`normal`, `factory_reset`, `update`, `usb_burning`, `suspend_off`, `hibernate`, `crash_dump`, `kernel_panic`, `charging`) - __to be documented__
 
 According to https://github.com/longsleep/u-boot-odroidc/blob/master/arch/arm/include/asm/arch-m6tvd/reboot.h,
 
