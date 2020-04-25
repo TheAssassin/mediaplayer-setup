@@ -25,6 +25,29 @@ U-Boot can store U-Boot environment variables persistently. To show them, run `p
 
 There are some special U-Boot environment variables that determine how Amlogic systems are booted.
 
+https://github.com/codesnake/uboot-amlogic/blob/master/common/cmd_reboot.c defines
+
+* reboot_mode (`normal`, `factory_reset`, `update`, `usb_burning`, `charging`) - __to be documented__
+
+According to https://github.com/longsleep/u-boot-odroidc/blob/master/arch/arm/include/asm/arch-m6tvd/reboot.h,
+
+```
+/*
+ * Commands accepted by the arm_machine_restart() system call.
+ *
+ * AMLOGIC_NORMAL_BOOT     			Restart system normally.
+ * AMLOGIC_FACTORY_RESET_REBOOT      Restart system into recovery factory reset.
+ * AMLOGIC_UPDATE_REBOOT			Restart system into recovery update.
+ * AMLOGIC_CHARGING_REBOOT     		Restart system into charging.
+ * AMLOGIC_CRASH_REBOOT   			Restart system with system crach.
+ * AMLOGIC_FACTORY_TEST_REBOOT    	Restart system into factory test.
+ * AMLOGIC_SYSTEM_SWITCH_REBOOT  	Restart system for switch other OS.
+ * AMLOGIC_SAFE_REBOOT       			Restart system into safe mode.
+ * AMLOGIC_LOCK_REBOOT  			Restart system into lock mode.
+ * elvis.yu---elvis.yu@amlogic.com
+ */
+ ```
+
 https://github.com/codesnake/uboot-amlogic/blob/master/drivers/video/aml_video.c defines
 
 * fb_addr
