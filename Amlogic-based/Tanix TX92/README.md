@@ -75,3 +75,65 @@ reading u-boot.ext
 Where can we get a precompiled EFI enabled U-Boot from?
 
 Answer: openSUSE has a Khadas VIM2 U-Boot which can boot this board, but the TX92 boot screen is garbled.
+
+TX92 (s912) can boot this U-Boot, e.g., by placing it as `u-boot.ext` file in a @150balbes BOOT partition:
+
+https://build.opensuse.org/package/binaries/hardware:boot/u-boot:khadas-vim2/openSUSE_Factory_ARM
+
+
+```
+reading u-boot.ext
+625673 bytes read in 38 ms (15.7 MiB/s)
+## Starting application at 0x01000000 ...
+
+
+U-Boot 2020.04 (Apr 17 2020 - 12:05:54 +0000) khadas-vim2
+
+Model: Khadas VIM2
+SoC:   Amlogic Meson GXM (S912) Revision 22:a (82:2)
+DRAM:  2 GiB
+MMC:   mmc@70000: 0, mmc@72000: 1, mmc@74000: 2
+In:    serial
+Out:   serial
+Err:   serial
+[BL31]: tee size: 0
+[BL31]: tee size: 0
+Net:   eth0: ethernet@c9410000
+Hit any key to stop autoboot:  0 
+=> 
+```
+
+It has a command `usbboot`, and it has a command `bootefi`.
+
+But: __TX92 boot screen is garbled, HDMI output thereafter is fine. USB booting probably not working from this board yet because storage device is not detected.__
+
+```
+=> usb reset
+resetting USB...
+Bus dwc3@c9000000: Register 3000140 NbrPorts 3
+Starting the controller
+USB XHCI 1.00
+scanning bus dwc3@c9000000 for devices... Device not responding to set address.
+
+      USB device not accepting new address (error=80000000)
+1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+=> usb info 
+1: Hub,  USB Revision 3.0
+ - U-Boot XHCI Host Controller 
+ - Class: Hub
+ - PacketSize: 512  Configurations: 1
+ - Vendor: 0x0000  Product 0x0000 Version 1.0
+   Configuration: 1
+   - Interfaces: 1 Self Powered 0mA
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 1
+     - Class Hub
+     - Endpoint 1 In Interrupt MaxPacket 8 Interval 255ms
+```
+
+The openSUSE wiki https://en.opensuse.org/HCL:Khadas_Vim2 mentions
+
+> As of U-Boot v2019.07-rc4, booting directly from USB was not working.
+
+Possibly this is still the case?
