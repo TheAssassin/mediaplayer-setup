@@ -1,0 +1,12 @@
+# aml_autoscript
+
+Amlogic-based systems have a mechanism involving a file called `aml_autoscript` that allows one to execute U-Boot commands from external media such as SD card or USB mass storage.
+
+Unfortunately, the exact workings of `aml_autoscript` seem to be undocumented.
+
+So here is what we have figured out. Feel free to correct.
+
+* When an Amlogic system detects that the reset button ("toothpick method") has been pressed during power-up, it (probably the stock U-Boot on the device) searchs for a file called `aml_autoscript` on external media such as SD card or USB mass storage (this is known to work at least for the first partition if it is formatted fat32 - to be documented whether it also works for other partitions and filesystems)
+* The file `aml_autoscript` can be created by editing a text file `aml_autoscript.txt`, and then running `mkimage -A arm -O linux -T script -C none -d aml_autoscript.txt aml_autoscript`
+* `aml_autoscript.txt` can contain U-Boot commands
+* Sometimes you also see `s905_autoscript`. This seems to be something introduced by @150balbes, not something official from Amlogic
