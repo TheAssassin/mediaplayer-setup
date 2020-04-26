@@ -46,6 +46,10 @@ make -j$(nproc)
 # https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
 # below?
 
+# It seems that http://wiki.loverpi.com/faq:sbc:libre-aml-s805x-howto-compile-u-boot is addressing those issues.
+# Why is this not documented in 
+# https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
+
 # Image creation
 # ==============
 
