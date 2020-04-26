@@ -16,8 +16,6 @@ As of April 2020, https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/tree
 * u200 (Amlogic S905D2)
 * w400 (tbd)
 
-__It seems like there is no U-Boot configuration for p281 (Amlogic S905W)__  (which is used in retail products with especially good price-performance ratio such as X96 mini). How to solve this? According to http://linux-meson.com/doku.php, the Amlogic S905W is similar to the Amlogic S905X, so we might try to use U-Boot for p212 (e.g., LibreTech AC, LibreTech CC).
-
 ## Compiling U-Boot
 
 As of April 2020, compiling U-Boot according to the instructions in the Amlogic U-Boot Custodian Tree fails (likely due to outdated documentation regarding toolchains).
