@@ -68,32 +68,18 @@ export CROSS_COMPILE=aarch64-none-elf-
 git clone --depth 1 https://github.com/BayLibre/u-boot.git -b n-amlogic-openlinux-20170606 amlogic-u-boot
 cd amlogic-u-boot
 make gxl_p212_v1_defconfig
-make -j$(nproc)
 
-# At this point getting
+# Undocumented workaround for
 # /bin/sh: 1: /bin/sh: 1: /opt/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin/aarch64-none-elf-gcc:
 # not found /opt/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin/aarch64-none-elf-gcc: not found
-# /opt???
+sudo ln -s $(readlink -f ../gcc-linaro-aarch64-none-elf-4.8-2013.11_linux) /opt/
 
-# Undocumented workaround???
-sudo ln -s $(readlink -f ../../gcc-linaro-aarch64-none-elf-4.8-2013.11_linux) /opt/
+make -j$(nproc)
 
-# Here compilation stops with
-#
-# ../../tools/../include/linux/../../scripts/dtc/libfdt/libfdt_env.h:27:30: error: conflicting types for ‘fdt64_t’
-# typedef uint64_t FDT_BITWISE fdt64_t;
-#
-# It is unclear how to resolve this.
-# Possibly try to follow http://loverpi.wdfiles.com/local--files/faq%3Asbc%3Alibre-aml-s805x-howto-compile-u-boot/u-boot_build_cheat_sheet.txt
-# to the letter, especially using the lxc container stated there at the top. How to do this without lxc?
-#
-###################
-# TODO: Remove
-# typedef uint64_t FDT_BITWISE fdt64_t;
-# from
-# ../scripts/dtc/libfdt/libfdt_env.h
-# Thanks @TheAssassin
-###################
+###############################################################################################################
+# Here compilation stops with ***MANY*** build errors. Something is clearly not going well at all!
+# Any help appreciated.
+###############################################################################################################
 
 export FIPDIR=$PWD/fip
 
