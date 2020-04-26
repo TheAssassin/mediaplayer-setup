@@ -16,11 +16,11 @@ LibreELEC, CoreELEC, AlexELEC are media center focused distributions with builds
 
 ### Armbian
 
-Armbian is a project to run Debian and/or Ubuntu on ARM-based systems. Unfortunately they don't want to support retail products, only developer boards. Despite its name, this is not an official Debian project.
+Armbian is a project to run Debian and/or Ubuntu on ARM-based systems. Unfortunately __they don't want to support retail products, only developer boards__ (however, the price-performance ratio of mass-produced retail products is _much_ better than for low-volume developer boards). Despite its name, this is not an official Debian project.
 
 ### @150balbes Armbian
 
-@150balbes is a developer who is doing special Armbian builds for Amlogic-based retail products ("TV boxes"). Despite its name, this is not an official Armbian project and the Armbian project refuses to support his work.
+@150balbes is a developer who is doing special Armbian builds for Amlogic-based retail products ("TV boxes"). Despite its name, this is not an official Armbian project and __the Armbian project refuses to upstream the @150balbes work__.
 
 ### Debian, openSUSE, Fedora, Ubuntu,...
 
