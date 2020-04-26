@@ -17,7 +17,15 @@ To attach the serial converter, connect
 * __DO NOT__ connect VCC
 * Power the device via its power supply
 
-The connectors or test points for the serial console are usually on the PCB and not accessible from the outside of retail products. So you need to open your box. Depending on the device, it may be necessary to use Pogo Pins to contact the tiny test points or solder points marked with TX, RX, GND.
+The connectors or test points for the serial console are usually on the PCB and not accessible from the outside of retail products. So you need to open your box. 
+
+## Using Pogo Pins
+
+Depending on the device, it may be necessary to use Pogo Pins to contact the tiny test points or solder points marked with TX, RX, GND.
+
+A 3d printed pogo pin fixture can used to access the tiny serial port test points using P50-B1 0.68mm pogo pins. This fixture can be contacted to the board using a "third hand" commonly used for soldering.
+
+## Connecting with `screen`
 
 To connect, do on the host computer:
 
