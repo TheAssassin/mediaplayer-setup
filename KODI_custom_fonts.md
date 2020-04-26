@@ -1,4 +1,4 @@
-# Custom fonts for default skin
+# Custom fonts for KODI default skin
 
 In KODI, fonts are defined by and shipped with the skin. The default skin is on a read-only squashfs partition on *ELEC systems.
 
