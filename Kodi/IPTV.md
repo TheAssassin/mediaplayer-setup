@@ -54,6 +54,10 @@ For USA, there is e.g., https://freeiptvserver.com/dl/us_260420_iptvsource_com.m
 
 Strangely, even free-to-air (FTA) local/regional US channels sometimes don't provide globally-watchable streams directly hosted by the broadcasting station itself (unlike in Germany, where the broadcasting station itself offers IPTV streams). Why? After all, FTA stations are supposed to be either publicly funded or advertising based. So why don't they offer their signals directly to end users? It may be necessary to find services which "re-broadcast" their signals. But beware: Some of those services may either be location-restricted themselves, locked to certain device MAC addresses, or cost money or are otherwise shady (sometimes under the disguise of "donations", e.g., services made for the [IPTV Stalker Middleware](https://github.com/azhurb/stalker_portal) which can be accessed by https://github.com/kodi-pvr/pvr.stalker. (Remember that all we want is to watch FTA stations, not anything that costs money.)
 
+Even Google seems to be operating a service in the US that "re-broadcasts" TV station's signals: https://tv.youtube.com/welcome/, but even their service costs money and doesn't work globally ("Nationwide with local network coverage").
+
+To see which local TV stations are in a certain US geograpical area, can use https://tv.youtube.com/welcome/ and enter a ZIP code, e.g., 02111 for Boston, then see "Locals".
+
 For Global, there is e.g., https://bit.ly/FluxusTV-IPTV = https://pastebin.com/raw/ZzGTySZE
 
 But those apparently don't have matching EPG data.
