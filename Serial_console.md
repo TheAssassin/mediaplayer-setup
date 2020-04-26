@@ -7,6 +7,8 @@ For this you need:
 * A host computer ("desktop", we are a using Linux system)
 * A USB-to-serial converter (e.g.,  Prolific PL2303 based)
 
+![](img/prolific.jpg)
+
 To attach the serial converter, connect
 
 * GND to GND
