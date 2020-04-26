@@ -1,5 +1,9 @@
 # USB A-A Cable
 
+An USB A-A Cable can be used to communicate with Amlogic-based devices (e.g., to read or flash images, and to interact with the U-Boot bootloader) in cases where it is not possible to use a serial console. 
+
+__NOTE: Currently this always fails with `ERR: AmlUsbBulkCmd failed!`, any insight is appreciated.__
+
 By shorting these pins e.g., with a DuPont male cable, we can get the device disregard what is stored in the internal memory. This allows us to use the Amlogic flash tools.
 
 ![](https://forum.freaktab.com/filedata/fetch?id=638047&d=1490467056)
