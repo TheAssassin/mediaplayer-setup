@@ -16,6 +16,8 @@ As of April 2020, https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/tree
 * u200 (Amlogic S905D2)
 * w400 (tbd)
 
+Unfortunately, the [Amlogic U-Boot Custodian Tree GitLab project](https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic) does not have Issues enabled, so it is unnecessarily hard to communicate with the project.
+
 ## Compiling U-Boot
 
 As of April 2020, compiling U-Boot according to the instructions in the Amlogic U-Boot Custodian Tree fails (likely due to outdated documentation regarding toolchains).
