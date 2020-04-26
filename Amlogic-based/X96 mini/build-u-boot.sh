@@ -79,6 +79,24 @@ make -j$(nproc)
 ###############################################################################################################
 # Here compilation stops with ***MANY*** build errors. Something is clearly not going well at all!
 # Any help appreciated.
+#
+# In file included from ./../include/libfdt_env.h:12:0,
+#                  from <command-line>:0:
+# ../../tools/../include/linux/../../scripts/dtc/libfdt/libfdt_env.h:47:45: error: expected ‘)’ before ‘x’
+#  static inline uint32_t fdt32_to_cpu(fdt32_t x)
+#                                             ^
+# ./../include/compiler.h:66:6: note: in definition of macro ‘uswap_32’
+#   ((((x) & 0xff000000) >> 24) | \
+#       ^
+# ./../include/libfdt_env.h:21:26: note: in expansion of macro ‘be32_to_cpu’
+#  #define fdt32_to_cpu(x)  be32_to_cpu(x)
+#                           ^~~~~~~~~~~
+# ../../tools/../include/linux/../../scripts/dtc/libfdt/libfdt_env.h:47:24: note: in expansion of macro ‘fdt32_to_cpu’
+#  static inline uint32_t fdt32_to_cpu(fdt32_t x)
+#                         ^~~~~~~~~~~~
+# ./../include/compiler.h:66:9: error: expected ‘)’ before ‘&’ token
+#   ((((x) & 0xff000000) >> 24) | \
+#
 ###############################################################################################################
 
 export FIPDIR=$PWD/fip
