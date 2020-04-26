@@ -70,6 +70,8 @@ According to https://sites.google.com/view/droid-tv/streaming-gaming/google-adt-
 
 > ADT-3 Developer Kit is an Android TV™ streaming media player device for software developers to validate their applications on the latest version of the OS. The device runs Android 10 and is certified to pass CTS, GTS, and VTS. It is not a hardware reference design, but represents a stable, certified example of an Android TV device for 3rd party application developers. The device is not intended for consumer use and should only be used by developers.
 
+It seems to be similar/identical to Askey STI6130.
+
 The question is whether that ROM can be ported to other Amlogic-based devices.
 
 Still to be tested. Any insights appreciated.
