@@ -42,7 +42,10 @@ Still to be tested.
 
 ### atvXperience
 
-atvXperience AOSP-based ROMs are available for Amlogic-based devices:
+atvXperience is marketed as an aftermarket version of AndroidTV OS for Amlogic based devices
+
+ROMs are available for S905W, S905X, and S912.
+
 https://www.atvxperience.com/#s905x
 
 Note that their licensing is quite restrictive ("Under no circumstances, no matter how vague, may it be redistributed for commercial gain"). It is unclear whether their license is even compatible with AOSP licensing.
