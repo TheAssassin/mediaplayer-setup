@@ -38,8 +38,6 @@ There are AOSP images at http://share.loverpi.com/board/libre-computer-project/l
 
 TODO: Compare the SD and non-SD image, figure out and document the difference, and try to convert other AOSP builds (including the stock ROM coming from factory) to something that can be booted from SD.
 
-There seems to be a version that can run from SD on s905x devices: https://www.atvxperience.com/downloads/#s905x
-
 Still to be tested.
 
 ### atvXperience
@@ -51,6 +49,8 @@ ROMs are available for S905W, S905X, and S912.
 https://www.atvxperience.com/#s905x
 
 Note that their licensing is quite restrictive ("Under no circumstances, no matter how vague, may it be redistributed for commercial gain"). It is unclear whether their license is even compatible with AOSP licensing.
+
+There seems to be a version that can run from SD on S905W devices: https://www.atvxperience.com/downloads/
 
 Still to be tested.
 
