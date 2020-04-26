@@ -1,12 +1,23 @@
 # USB A-A Cable
 
+## Quick summary
+
+* Take a USB extension cord and cut off the metal can on the "extension" side. Get an USB A-A cable. Plug into OTG port on the device __while the reset button is pressed__. No need to short any pins on any chips! `lsusb` should show `ID 1b8e:c003 Amlogic, Inc.`
+* Follow https://forum.khadas.com/t/burning-tools-for-linux-pc/1832 to install the burning tool for Linux
+
+Success, can talk to the device:
+
+```
+$ sudo ./aml-flash-tool/tools/update identify
+AmlUsbIdentifyHost
+This firmware version is 0-7-0-16
+```
+
+## Longer version
+
 An USB A-A Cable can be used to communicate with Amlogic-based devices (e.g., to read or flash images, and to interact with the U-Boot bootloader) in cases where it is not possible to use a serial console. 
 
 __NOTE: Currently this always fails with `ERR: AmlUsbBulkCmd failed!`, any insight is appreciated.__
-
-By shorting these pins e.g., with a DuPont male cable, we can get the device disregard what is stored in the internal memory. This allows us to use the Amlogic flash tools.
-
-![](https://forum.freaktab.com/filedata/fetch?id=638047&d=1490467056)
 
 Use a USB A-A cable. Those are uncommon. If you don't have one, you can turn a USB A extension cable into one by removing the outer shield from the female part of the cable to turn it into a male one (be careful, such a cable is very fragile; better buy a proper one). This cable needs to go into the USB OTG port; on the x96 this is the port that is next to the IR jack. You know that you have the correct port when you can see in your dmesg output:
 
@@ -17,7 +28,11 @@ Use a USB A-A cable. Those are uncommon. If you don't have one, you can turn a U
 [22003.849173] usb 9-2.3: USB disconnect, device number 42
 ```
 
-If there is a valid bootloader on the internal NAND eMMC memory, then this device will disconnect immediately. To make it permanent, we need to shorten the shown pins on the NAND eMMC chip (in my case, SAMSUNG KMLAG...) while plugging in the USB A-A cable. If this is done correctly, the blue LED will turn red and stay red, and the USB device will show up in dmesg like this:
+If there is a valid bootloader on the internal NAND eMMC memory, then this device will disconnect immediately. To make it permanent, we need to hold the reset button pressed while power-up, __or__ shorten the shown pins on the NAND eMMC chip (in my case, SAMSUNG KMLAG...) while plugging in the USB A-A cable.
+
+![](https://forum.freaktab.com/filedata/fetch?id=638047&d=1490467056)
+
+If this is done correctly, the blue LED will turn red and stay red, and the USB device will show up in dmesg like this:
 
 ```
 [22181.037732] usb 9-2.3: New USB device found, idVendor=1b8e, idProduct=c003, bcdDevice= 0.20
