@@ -4,6 +4,34 @@ Ambient lighting using Neopixels and an ESP8266 or other Arduino. This can work 
 
 Unfortunately this seems not to be documented end-to-end anywhere.
 
+## Ensure /dev/amvideocap0 is available
+
+Check that `/dev/amvideocap0` is present. 
+
+On MXQ with it crashes because `/dev/amvideocap0` is missing.
+
+FIXME: How to solve this?
+
+```
+AlexELEC:~ # hyperion-aml 
+hyperion-aml:
+	Version   : 2.0.0 ()
+	build time: Jul 25 2019 13:01:40
+[hyperion-aml FRAMEBUFFERGRABBER] <INFO> Display opened with resolution: 1920x1080@32bit
+[hyperion-aml SSDPDISCOVER] <INFO> Search for Service [urn:hyperion-project.org:device:basic:1]
+[hyperion-aml SSDPDISCOVER] <INFO> Search timeout, service [urn:hyperion-project.org:device:basic:1] not found
+[hyperion-aml FLATBUFCONNECTION] <INFO> Connecting to Hyperion: 127.0.0.1:19400
+[hyperion-aml AMLOGICGRABBER] <INFO> VPU mode
+[hyperion-aml AMLOGICGRABBER] <ERROR> Failed to open the AMLOGIC device (2 - No such file or directory):
+
+AlexELEC:~ # hyperiond
+[hyperiond MAIN] <WARNING> Create new config file (/storage/.hyperion/config/hyperion_main.json)
+[hyperiond DAEMON] <ERROR> grabber device 'amvideocap0' for type amlogic not found!
+Floating point exception
+```
+
+On other boxes/systems, `/dev/amvideocap0` seems to be available.
+
 ## Hardware setup
 
 Use WeMOS D1 Mini with WLED 0.9.1 (build 2002222) firmware from https://github.com/Aircoookie/WLED/
@@ -19,7 +47,6 @@ The add-on `service.hyperion.service` needs to be installed.
 ## Hyperion configuration
 
 Configuration needs to be created (e.g., with HyperCon V1.03.3, a Java-based tool that runs on a desktop computer).
-
 
 Device needs to be set to e.g., `/dev/ttyUSB0`, and baudrate needs to be set to 115,200 (otherwise `systemctl status service.hyperion.service` will say `Unable to open RS232 device (IO Exception (25): Inappropriate ioctl for device`).
 
