@@ -81,3 +81,9 @@ In https://groups.io/g/u-boot-amlogic/message/178, a project leader states
 > we don't support reference designs for S905W since this soc is not sold for SBCs, but only on final products.
 
 This is a pity. SBCs are usually way worse in terms of price-performance ratio than retail products. So the project should really consider to also support those. SBCs and reference boards are useful during the development process while no retail products are available yet, but with the wide availability of retail products those are much preferred by end users.
+
+The reason may be [this](https://groups.io/g/u-boot-amlogic/message/181):
+
+> We always avoided replacing the bootloader of a closed device, because we don't have the source of
+the FIP components (DDR setup, Power Pins & PWM, DVFS table), and usually these boxes has custom
+setups that could diverge from the reference designs.
