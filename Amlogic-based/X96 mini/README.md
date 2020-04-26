@@ -94,7 +94,7 @@ But:
 bootloader (in the first 4MiB) and use the p281 amlogic u-boot config to generate the FIP
 binaries as explained in the mainline README file of P212.
 
-It looks like here someone has added support for p281:
+It looks like here [someone has added support for p281](https://www.codedbearder.com/posts/mainline-linux-on-tx3-mini/) in a private branch:
 https://github.com/arnarg/u-boot/commit/167be0c207e6be5e710355d33a89fe4e8091ba3d
 
 Can we compile this? Can we confirm this works on the x96 mini? Can we then get it into the [Amlogic U-Boot Custodian Tree](https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic)?
