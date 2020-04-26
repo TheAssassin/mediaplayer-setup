@@ -17,10 +17,9 @@ The Aircoookie firmware can be configured over WLAN, see https://github.com/Airc
 Configuration needs to be created (e.g., with HyperCon V1.03.3, a Java-based tool that runs on a desktop computer).
 
 
-
 Device needs to be set to e.g., `/dev/ttyUSB0`, and baudrate needs to be set to 115,200 (otherwise `systemctl status service.hyperion.service` will say `Unable to open RS232 device (IO Exception (25): Inappropriate ioctl for device`).
 
-Then it needs to be __hand-edited for Amlogic-based devices__ like this:
+Then it needs to be __hand-edited for Amlogic-based devices__ like this: Since HyperCon does not support the Amlogic grabber, select "Internal Frame Grabber" in HyperCon, create the configuration, and then manually replace the Internal Frame Grabber section in the JSON with
 
 ```
 	// AMLOGIC GRABBER CONFIG
