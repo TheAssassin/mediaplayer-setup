@@ -1,6 +1,8 @@
 # advancedsettings.xml
 
-Note: The advancedsettings.xml file does not exist by default. You have to create it first! 
+The `advancedsettings.xml` file can be used to pre-configure the system. Its settings are not accessible from the GUI.
+
+__Note:__ The `advancedsettings.xml` file does not exist by default. You have to create it first! 
 
 ## Disabling the Kodi splash
 
@@ -22,4 +24,6 @@ killall kodi.bin
 
 ## Overriding guisettings.xml settings
 
-> You can also define the settings normally defined in the GUI (and stored in guisettings.xml) in advancedsettings.xml. Most guisettings.xml settings defined in advancedsettings.xml will override the guisettings.xml values, and the settings will be removed completely from the interface. 
+https://kodi.wiki/view/Advancedsettings.xml:
+
+> You can also define the settings normally defined in the GUI (and stored in `guisettings.xml`) in `advancedsettings.xml`. Most guisettings.xml settings defined in `advancedsettings.xml` will override the `guisettings.xml` values, __and the settings will be removed completely from the interface__. 
