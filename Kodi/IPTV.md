@@ -52,7 +52,7 @@ How can configuration for multiple countries be added, e.g., Germany (as shown a
 
 For USA, there is e.g., https://freeiptvserver.com/dl/us_260420_iptvsource_com.m3u
 
-Strangely, even free-to-air (FTA) local/regional US channels sometimes don't provide globally-watchable streams directly hosted by the broadcasting station itself (unlike in Germany, where the broadcasting station itself offers IPTV streams). Why? After all, FTA stations are supposed to be either publicly funded or advertising based. So why don't they offer their signals directly to end users? It may be necessary to find services which "re-broadcast" their signals. But beware: Some of those services may either be location-restricted themselves, or cost money.
+Strangely, even free-to-air (FTA) local/regional US channels sometimes don't provide globally-watchable streams directly hosted by the broadcasting station itself (unlike in Germany, where the broadcasting station itself offers IPTV streams). Why? After all, FTA stations are supposed to be either publicly funded or advertising based. So why don't they offer their signals directly to end users? It may be necessary to find services which "re-broadcast" their signals. But beware: Some of those services may either be location-restricted themselves, or cost money (sometimes under the disguise of "donations").
 
 For Global, there is e.g., https://bit.ly/FluxusTV-IPTV = https://pastebin.com/raw/ZzGTySZE
 
