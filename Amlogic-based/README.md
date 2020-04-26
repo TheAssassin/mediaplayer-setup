@@ -38,6 +38,8 @@ There are AOSP images at http://share.loverpi.com/board/libre-computer-project/l
 
 TODO: Compare the SD and non-SD image, figure out and document the difference, and try to convert other AOSP builds (including the stock ROM coming from factory) to something that can be booted from SD.
 
+There seems to be a version that can run from SD on s905x devices: https://www.atvxperience.com/downloads/#s905x
+
 Still to be tested.
 
 ### atvXperience
