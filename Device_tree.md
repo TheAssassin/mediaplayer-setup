@@ -3,6 +3,16 @@
 Information about the hardware is stored in a device tree, also known as dts (device tree source) and dtb (device tree binary).
 The dtb must match the hardware of the machine. Most Amlogic-based retail products are based on some reference boards, the names of which start with p (e.g., p281).
 
+## Device tree compatibility over time
+
+According to https://groups.io/g/u-boot-amlogic/message/181,
+
+> The mainline u-boot syncs the mainline Linux device tree, which was entirely rewritten to match
+the standard rules and requirements of upstream development, so you can't use the amlogic linux
+device tree files.
+
+This means that if we use the very latest (mainline) U-Boot and/or Linux kernel, then we may need to use a newer dtb thank what comes with the device from the factory as well.
+
 ## Reading device tree properties
 
 In a booted Linux system, device tree properties can be read by using `fdtget`. http://manpages.ubuntu.com/manpages/trusty/man1/fdtget.1.html
@@ -10,7 +20,6 @@ In a booted Linux system, device tree properties can be read by using `fdtget`. 
 ## Changing device tree properties in U-Boot
 
 It seems to be possible to override device tree properties in U-Boot boot scripts. To be written.
-
 
 ## Device tree collections
 
