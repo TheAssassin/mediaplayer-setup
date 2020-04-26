@@ -10,22 +10,28 @@
 
 sudo apt-get -y install git lib32ncurses5 lib32z1 bison lib32stdc++6 flex
 
-# u-boot compilation
-# ==================
 
 # https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
 # seems not to document where to get aarch64-none-elf-* from - using the one from below may be outdated?
-wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
-wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
-tar xvfJ gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
-tar xvfJ gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
-export PATH=$PWD/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin:$PWD/gcc-linaro-arm-none-eabi-4.8-2013.11_linux/bin:$PATH
+# wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
+# wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
+# tar xvfJ gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
+# tar xvfJ gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
+# export PATH=$PWD/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin:$PWD/gcc-linaro-arm-none-eabi-4.8-2013.11_linux/bin:$PATH
+
+# Maybe this works?
+sudo apt-get -y install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu 
+
+# u-boot compilation
+# ==================
 
 git clone --depth 1 https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic
 cd u-boot-amlogic
 
 export ARCH=arm
-export CROSS_COMPILE=aarch64-none-elf-
+# export CROSS_COMPILE=aarch64-none-elf- # WRONG! This seems to be WRONG in https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
+export CROSS_COMPILE=aarch64-linux-gnu- # WORKS!
+
 make p212_defconfig
 make -j$(nproc)
 
@@ -58,10 +64,32 @@ wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc
 tar xvfJ gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
 tar xvfJ gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
 export PATH=$PWD/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin:$PWD/gcc-linaro-arm-none-eabi-4.8-2013.11_linux/bin:$PATH
+export CROSS_COMPILE=aarch64-none-elf-
 git clone --depth 1 https://github.com/BayLibre/u-boot.git -b n-amlogic-openlinux-20170606 amlogic-u-boot
 cd amlogic-u-boot
 make gxl_p212_v1_defconfig
 make -j$(nproc)
+
+# At this point getting
+# /bin/sh: 1: /bin/sh: 1: /opt/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin/aarch64-none-elf-gcc:
+# not found /opt/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin/aarch64-none-elf-gcc: not found
+# /opt???
+
+# Undocumented workaround???
+sudo ln -s $(readlink -f ../../gcc-linaro-aarch64-none-elf-4.8-2013.11_linux) /opt/
+
+# Here compilation stops with
+#
+# ../../tools/../include/linux/../../scripts/dtc/libfdt/libfdt_env.h:27:30: error: conflicting types for ‘fdt64_t’
+# typedef uint64_t FDT_BITWISE fdt64_t;
+#
+# It is unclear how to resolve this.
+# Possibly try to follow http://loverpi.wdfiles.com/local--files/faq%3Asbc%3Alibre-aml-s805x-howto-compile-u-boot/u-boot_build_cheat_sheet.txt
+# to the letter, especially using the lxc container stated there at the top. How to do this without lxc?
+###################
+# FIXME
+###################
+
 export FIPDIR=$PWD/fip
 
 cd ..
