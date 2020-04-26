@@ -63,4 +63,9 @@ I get this on Ubuntu 16.04 (one of the supposedly supported systems). On that sy
 [  318.100690] usb 9-2.3: usbfs: process 13179 (update) did not claim interface 0 before use
 ```
 
-TODO: Try on another desktop machine, and as a last resort with the Windows flashing tools.
+FIXME: How can this be fixed?
+
+## TODO
+
+* Try on another desktop machine
+* As a last resort try with the Windows flashing tools (did not get those to work either due to some missing dlls)
