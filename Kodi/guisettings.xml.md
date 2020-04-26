@@ -4,7 +4,7 @@
 
 "German" is just a placeholder for your locale, serving as an example here.
 
-### by remastering the Kodi system (is persistent upon Kodi factory reset)
+### By remastering the Kodi system (is persistent upon Kodi factory reset)
 
 Need to edit `/usr/share/kodi/config/guisettings.xml` in the squashfs `SYSTEM` file to include
 
