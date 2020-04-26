@@ -32,6 +32,8 @@ It may be possible to run Arch Linux ARM on Amlogic-based devices. See https://g
 
 ## AOSP support
 
+Still to be investigated whether mainline Linux kernel and U-Boot can be used to boot AOSP. Any insights appreciated. Being able to run stock AOSP or builds from Google would be preferred.
+
 ### Libre Computer Board builds
 
 There are AOSP images at http://share.loverpi.com/board/libre-computer-project/libre-computer-board-aml-s905x-cc/image/android/. One of them supports booting from SD: http://share.loverpi.com/board/libre-computer-project/libre-computer-board-aml-s905x-cc/image/android/libre-computer-aml-s905x-cc-android-nougat-aosp-user-sdcard-20170912.zip. These images are made for the Libre Computer Board AML-S905X-CC 4K Mini Computer 2GB. Can they run on retail Amlogic-based hardware? How can other AOSP-based operating systems be ported and booted from SD?
