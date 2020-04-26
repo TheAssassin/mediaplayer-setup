@@ -5,19 +5,29 @@
 # This script is following the instructions from
 # https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
 
+# undocumented preparation
+# ========================
+
+sudo apt-get -y install git
+
 # u-boot compilation
 # ==================
 
 # https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
-# seems not to document where to get aarch64-none-elf-* from
+# seems not to document where to get aarch64-none-elf-* from - using the one from below may be outdated?
+wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
+wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
+tar xvfJ gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
+tar xvfJ gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
+export PATH=$PWD/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin:$PWD/gcc-linaro-arm-none-eabi-4.8-2013.11_linux/bin:$PATH
 
-git clone -depth 1 https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic
+git clone --depth 1 https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic
 cd u-boot-amlogic
 
 export ARCH=arm
 export CROSS_COMPILE=aarch64-none-elf-
 make p212_defconfig
-make
+make -j$(nproc)
 
 # Image creation
 # ==============
@@ -27,7 +37,7 @@ wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc
 tar xvfJ gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
 tar xvfJ gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
 export PATH=$PWD/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin:$PWD/gcc-linaro-arm-none-eabi-4.8-2013.11_linux/bin:$PATH
-git clone -depth 1 https://github.com/BayLibre/u-boot.git -b n-amlogic-openlinux-20170606 amlogic-u-boot
+git clone --depth 1 https://github.com/BayLibre/u-boot.git -b n-amlogic-openlinux-20170606 amlogic-u-boot
 cd amlogic-u-boot
 make gxl_p212_v1_defconfig
 make -j$(nproc)
