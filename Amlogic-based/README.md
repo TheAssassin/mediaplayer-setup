@@ -32,7 +32,7 @@ It may be possible to run Arch Linux ARM on Amlogic-based devices. See https://g
 
 ## AOSP support
 
-Still to be investigated whether mainline Linux kernel and U-Boot can be used to boot AOSP. Any insights appreciated. Being able to run stock AOSP or builds from Google would be preferred.
+Still to be investigated whether mainline Linux kernel and U-Boot can be used to boot AOSP. Any insights appreciated. Being able to run stock AOSP, LineageOS builds, or builds from Google would be preferred.
 
 ### Libre Computer Board builds
 
@@ -40,7 +40,7 @@ There are AOSP images at http://share.loverpi.com/board/libre-computer-project/l
 
 TODO: Compare the SD and non-SD image, figure out and document the difference, and try to convert other AOSP builds (including the stock ROM coming from factory) to something that can be booted from SD.
 
-Still to be tested.
+Still to be tested. Any insights appreciated.
 
 ### atvXperience
 
@@ -54,7 +54,25 @@ Note that their licensing is quite restrictive ("Under no circumstances, no matt
 
 There seems to be a version that can run from SD on S905W devices: https://www.atvxperience.com/downloads/
 
-Still to be tested.
+Still to be tested. Any insights appreciated.
+
+### Android TV 10
+
+Google has released a reference device for Android TV 10, or "Android 10 on Android TV" (sic) as they call it.
+
+https://android-developers.googleblog.com/2019/12/android-10-on-android-tv.html
+
+Google ADT-3 will not be sold to consumers, only developers, which will be able to purchase the kit through an OEM partner.
+
+https://www.cnx-software.com/2019/12/11/google-adt-3-developer-tv-box-android-tv-on-android-10/
+
+According to https://sites.google.com/view/droid-tv/streaming-gaming/google-adt-3, it is using Amlogic S905Y2. it appears to be manufactured by ASKEY and is advertised for 79 USD at https://store.askey.com/adt-3.html.
+
+> ADT-3 Developer Kit is an Android TV™ streaming media player device for software developers to validate their applications on the latest version of the OS. The device runs Android 10 and is certified to pass CTS, GTS, and VTS. It is not a hardware reference design, but represents a stable, certified example of an Android TV device for 3rd party application developers. The device is not intended for consumer use and should only be used by developers.
+
+The question is whether that ROM can be ported to other Amlogic-based devices.
+
+Still to be tested. Any insights appreciated.
 
 ## Booting
 
