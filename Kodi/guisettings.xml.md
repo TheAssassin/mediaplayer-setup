@@ -1,5 +1,7 @@
 # guisettings.xml
 
+__Note:__ If you want to preconfigure certain things and not have them available to be changed in the GUI, then you may want to use `advancedsettings.xml` instead.
+
 ## Setting everything to German
 
 "German" is just a placeholder for your locale, serving as an example here.
