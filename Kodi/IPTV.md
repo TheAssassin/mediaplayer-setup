@@ -1,6 +1,10 @@
-# IPTV configuration for Germany
+# IPTV configuration
+
+## Example for Germany
 
 The https://github.com/kodi-pvr/pvr.iptvsimple/releases add-on (an official Kodi add-on from their repository) can be used to play IPTV. To become usable, one needs to configure it with playlists and optionally EPG data. https://www.kodi-tipps.de/kodi-iptv-einrichten-live-tv-mit-kodi-anschauen/ has more detailed information (in German).
+
+This example is for Germany; it should be similar for other countries.
 
 ## Pre-configure out-of-the-box
 
@@ -37,3 +41,9 @@ cat > /storage/.kodi/userdata/addon_data/pvr.iptvsimple/settings.xml <<\EOF
 EOF
 killall kodi.bin
 ```
+
+## Open questions
+
+Contributions welcome.
+
+* How can configuration for multiple countries be added, e.g., Germany (as shown above) and USA?
