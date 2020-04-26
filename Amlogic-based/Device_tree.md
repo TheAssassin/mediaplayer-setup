@@ -1,7 +1,7 @@
 # Device tree
 
 Information about the hardware is stored in a device tree, also known as dtb (device tree binary).
-The dtb must match the hardware of the machine. Most Amlogic-based retail products are based on some reference boards, the names of which start with q.
+The dtb must match the hardware of the machine. Most Amlogic-based retail products are based on some reference boards, the names of which start with p (e.g., p281).
 
 ## Reading device tree properties
 
