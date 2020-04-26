@@ -47,4 +47,4 @@ sed -i -e 's|11E7B1|000000|g' ./colors/charcoal.xml
 killall kodi.bin
 ```
 
-FIXME: Still need to manually activate the Custom skin
+FIXME: Still need to manually activate the Custom skin and select the `charcoal` color.
