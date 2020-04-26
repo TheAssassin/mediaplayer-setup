@@ -143,4 +143,6 @@ Resetting CPU ...
 Why?
 Perhaps we need to rebuild this using https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/amlogic/meson-gxl-s905w-p281.dts instead of https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/amlogic/meson-gxl-s905w-tx3-mini.dts, although the differences seem to be minor?
 
+So as of April 2020 it seems like we need to compiel our own U-Boot binary, but the instructions at https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212 are either incomplete or outdated which is why https://github.com/TheAssassin/mediaplayer-setup/blob/master/Amlogic-based/X96%20mini/build-u-boot.sh currently fails (FIXME).
+
 Perhaps @xdarklight knows something about this?
