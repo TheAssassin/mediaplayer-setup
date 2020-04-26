@@ -46,4 +46,20 @@ killall kodi.bin
 
 Contributions welcome.
 
-* How can configuration for multiple countries be added, e.g., Germany (as shown above) and USA?
+### Adding TV stations for multiple countries
+
+How can configuration for multiple countries be added, e.g., Germany (as shown above) and USA?
+
+For USA, there is e.g., https://freeiptvserver.com/dl/us_260420_iptvsource_com.m3u
+
+Possibly we can nest m3u like this:
+
+```
+#EXTINF:-1 group-title="SERVER 8" logo="icon.png", Playlist title
+playlist1.m3u8
+playlist2.m3u8
+```
+
+Source: https://stackoverflow.com/a/45638693
+
+To be tested. Any insights welcome.
