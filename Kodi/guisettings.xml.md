@@ -1,6 +1,6 @@
 # guisettings.xml
 
-## Set everything to German
+## Setting everything to German
 
 "German" is just a placeholder for your locale, serving as an example here.
 
