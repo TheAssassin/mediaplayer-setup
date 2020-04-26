@@ -8,7 +8,7 @@
 # undocumented preparation
 # ========================
 
-sudo apt-get -y install git
+sudo apt-get -y install git lib32ncurses5 lib32z1
 
 # u-boot compilation
 # ==================
@@ -29,11 +29,12 @@ export CROSS_COMPILE=aarch64-none-elf-
 make p212_defconfig
 make -j$(nproc)
 
+# If you get those errors:
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
 # make: aarch64-none-elf-gcc: Command not found
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
-
-# Why?
+# Why? Because those are actually 32-bit. So we need to enable 32-bit support on the build system
+# sudo apt-get install lib32ncurses5 lib32z1
 
 # Image creation
 # ==============
