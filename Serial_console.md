@@ -27,6 +27,8 @@ Depending on the device, it may be necessary to use Pogo Pins to contact the tin
 
 A [3d printed pogo pin fixture](https://www.tinkercad.com/things/0eAaa5mslE4-mini-pogo-housing-for-x96-serial-amlogic) can used to access the tiny serial port test points using P50-B1 0.68mm pogo pins. This fixture can be contacted to the board using a "third hand" commonly used for soldering.
 
+![](img/third_hand.jpg)
+
 ## Connecting with `screen`
 
 To connect, do on the host computer:
