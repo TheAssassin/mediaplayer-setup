@@ -29,6 +29,12 @@ export CROSS_COMPILE=aarch64-none-elf-
 make p212_defconfig
 make -j$(nproc)
 
+# /bin/sh: 1: aarch64-none-elf-gcc: not found
+# make: aarch64-none-elf-gcc: Command not found
+# /bin/sh: 1: aarch64-none-elf-gcc: not found
+
+# Why?
+
 # Image creation
 # ==============
 
