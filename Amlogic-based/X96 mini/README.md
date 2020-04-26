@@ -50,3 +50,28 @@ gxl_p281_v1#usb storage
             Type: Removable Hard Disk
             Capacity: 7377.6 MB = 7.2 GB (15109516 x 512)
 ```
+
+## Amlogic U-Boot Custodian Tree
+
+The [Amlogic U-Boot Custodian Tree](https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic) is a branch of the official (upstream) U-Boot project in which the Amlogic-related work is happening. __It seems like there is no U-Boot configuration for p281 (Amlogic S905W)__  (which is used in retail products with especially good price-performance ratio such as X96 mini). How to solve this? According to http://linux-meson.com/doku.php, the Amlogic S905W is similar to the Amlogic S905X, so we might try to use U-Boot for p212 (e.g., LibreTech AC, LibreTech CC). Unfortunately, this __does not work__:
+
+```
+gxl_p281_v1#mmc rescan
+init_part() 278: PART_TYPE_DOS
+[mmc_init] mmc init success
+gxl_p281_v1#fatks mmc 0
+Unknown command 'fatks' - try 'help'
+gxl_p281_v1#fatls mmc 0
+(...)
+   684983   u-boot.ac 
+
+7 file(s), 2 dir(s)
+
+gxl_p281_v1#fatload mmc 0 ${loadaddr} u-boot.ac
+reading u-boot.ac
+684983 bytes read in 41 ms (15.9 MiB/s)
+gxl_p281_v1#go ${loadaddr}
+## Starting application at 0x01080000 ...
+
+# (Stalled here)
+```
