@@ -12,6 +12,10 @@ Use WeMOS D1 Mini with WLED 0.9.1 (build 2002222) firmware from https://github.c
 
 The Aircoookie firmware can be configured over WLAN, see https://github.com/Aircoookie/WLED/wiki. Configure number of LEDs, etc.
 
+## Hyperion installation
+
+The add-on `service.hyperion.service` needs to be installed.
+
 ## Hyperion configuration
 
 Configuration needs to be created (e.g., with HyperCon V1.03.3, a Java-based tool that runs on a desktop computer).
