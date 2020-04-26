@@ -51,7 +51,7 @@ gxl_p281_v1#usb storage
             Capacity: 7377.6 MB = 7.2 GB (15109516 x 512)
 ```
 
-## Amlogic U-Boot Custodian Tree
+### Amlogic U-Boot Custodian Tree
 
 The [Amlogic U-Boot Custodian Tree](https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic) is a branch of the official (upstream) U-Boot project in which the Amlogic-related work is happening. __It seems like there is no U-Boot configuration for p281 (Amlogic S905W)__  (which is used in retail products with especially good price-performance ratio such as X96 mini). How to solve this? According to http://linux-meson.com/doku.php, the Amlogic S905W is similar to the Amlogic S905X, so we might try to use U-Boot for p212 (e.g., LibreTech AC, LibreTech CC). Unfortunately, this __does not work__:
 
