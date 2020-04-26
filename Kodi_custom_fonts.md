@@ -1,6 +1,6 @@
-# Custom fonts for KODI default skin
+# Custom fonts for Kodi default skin
 
-In KODI, fonts are defined by and shipped with the skin. The default skin is on a read-only squashfs partition on *ELEC systems.
+In Kodi, fonts are defined by and shipped with the skin. The default skin is on a read-only squashfs partition on *ELEC systems.
 
 However, sometimes it is desirable to have custom fonts for the default skin. To achieve this, we need to actually copy the default skin, and change the fonts in the copy, then (manually?) activate the new skin, and finally select it.
 
