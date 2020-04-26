@@ -52,7 +52,11 @@ How can configuration for multiple countries be added, e.g., Germany (as shown a
 
 For USA, there is e.g., https://freeiptvserver.com/dl/us_260420_iptvsource_com.m3u
 
+Strangely, even free-to-air (FTA) local/regional US channels sometimes don't provide globally-watchable streams directly. So it may be necessary to find services which "re-broadcast" their signals.
+
 For Global, there is e.g., https://bit.ly/FluxusTV-IPTV = https://pastebin.com/raw/ZzGTySZE
+
+But those apparently don't have matching EPG data.
 
 Possibly we can nest m3u like this:
 
@@ -65,5 +69,3 @@ playlist2.m3u8
 Source: https://stackoverflow.com/a/45638693
 
 To be tested. Any insights welcome.
-
-### Best US IPTV
