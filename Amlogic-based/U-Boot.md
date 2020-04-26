@@ -16,4 +16,4 @@ As of April 2020, https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/tree
 * u200 (Amlogic S905D2)
 * w400 (tbd)
 
-__It seems like there is no U-Boot configuration for Amlogic S905W__  (which is used in retail products with especially good price-performance ratio such as X96 mini). How to solve this?
+__It seems like there is no U-Boot configuration for p281 (Amlogic S905W)__  (which is used in retail products with especially good price-performance ratio such as X96 mini). How to solve this?
