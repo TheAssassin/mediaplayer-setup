@@ -1,5 +1,7 @@
 # USB A-A Cable
 
+An USB A-A Cable can be used to communicate with Amlogic-based devices (e.g., to read or flash images, and to interact with the U-Boot bootloader) in cases where it is not possible to use a serial console. 
+
 ## Quick summary
 
 * Take a USB extension cord and cut off the metal can on the "extension" side. Get an USB A-A cable. Plug into OTG port on the device __while the reset button is pressed__. No need to short any pins on any chips! `lsusb` should show `ID 1b8e:c003 Amlogic, Inc.`
@@ -14,8 +16,6 @@ This firmware version is 0-7-0-16
 ```
 
 ## Longer version
-
-An USB A-A Cable can be used to communicate with Amlogic-based devices (e.g., to read or flash images, and to interact with the U-Boot bootloader) in cases where it is not possible to use a serial console. 
 
 __NOTE: Currently this always fails with `ERR: AmlUsbBulkCmd failed!`, any insight is appreciated.__
 
