@@ -10,3 +10,9 @@ In a booted Linux system, device tree properties can be read by using `fdtget`. 
 ## Changing device tree properties in U-Boot
 
 It seems to be possible to override device tree properties in U-Boot boot scripts. To be written.
+
+
+## Device tree collection
+
+Debian provides device trees: 
+* Amlogic: http://ftp.inwx.de/debian/dists/sid/main/installer-arm64/current/images/device-tree/amlogic/
