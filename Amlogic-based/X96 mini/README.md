@@ -88,6 +88,8 @@ The reason may be [this](https://groups.io/g/u-boot-amlogic/message/181):
 the FIP components (DDR setup, Power Pins & PWM, DVFS table), and usually these boxes has custom
 setups that could diverge from the reference designs.
 
+What is especially confusing is that the Amlogic P281 Reference Design is explicitly listed on http://linux-meson.com/doku.php?id=hardware under "Supported Hardware", so I would have expected it to be supported.
+
 But:
 
 > If you feel confident enough, you'll need to dump the eMMC content to save the original
