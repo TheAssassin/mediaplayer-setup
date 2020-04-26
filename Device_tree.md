@@ -16,3 +16,6 @@ It seems to be possible to override device tree properties in U-Boot boot script
 
 Debian provides device trees: 
 * Amlogic: http://ftp.inwx.de/debian/dists/sid/main/installer-arm64/current/images/device-tree/amlogic/
+
+The kernel source also provides device trees:
+* Amlogic: https://github.com/torvalds/linux/tree/master/arch/arm64/boot/dts/amlogic
