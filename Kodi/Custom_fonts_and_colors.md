@@ -48,3 +48,23 @@ killall kodi.bin
 ```
 
 FIXME: Still need to manually activate the Custom skin and select the `charcoal` color.
+
+## Custom fonts for subtitles
+
+Seems like subtitles can only use the fonts installed in the system at `/usr/share/kodi/media/Fonts/`.
+
+So we either have to remaster the squashfs SYSTEM partition, or do some trickery:
+
+```
+mount --bind ~/.kodi/addons/skin.custom/fonts/ /usr/share/kodi/media/Fonts/
+
+cat >> ~/.config/autostart.sh <<\EOF
+mount --bind ~/.kodi/addons/skin.custom/fonts/ /usr/share/kodi/media/Fonts/
+EOF
+chmod +x ~/.config/autostart.sh
+
+sed -i -e 's|<setting id="subtitles.font">.*</setting>|<setting id="subtitles.font">RotisSansSerifStd.ttf</setting>|g' /storage/.kodi/userdata/guisettings.xml
+killall kodi.bin
+```
+
+Now our custom fonts can be selected. Note that no subtitles are shown at all until one of the new fonts is selected in Settings -> Player -> Language.
