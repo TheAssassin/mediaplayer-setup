@@ -52,6 +52,8 @@ How can configuration for multiple countries be added, e.g., Germany (as shown a
 
 For USA, there is e.g., https://freeiptvserver.com/dl/us_260420_iptvsource_com.m3u
 
+For Global, there is e.g., https://bit.ly/FluxusTV-IPTV = https://pastebin.com/raw/ZzGTySZE
+
 Possibly we can nest m3u like this:
 
 ```
@@ -63,3 +65,5 @@ playlist2.m3u8
 Source: https://stackoverflow.com/a/45638693
 
 To be tested. Any insights welcome.
+
+### Best US IPTV
