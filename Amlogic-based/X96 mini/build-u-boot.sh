@@ -8,7 +8,7 @@
 # undocumented preparation
 # ========================
 
-sudo apt-get -y install git lib32ncurses5 lib32z1
+sudo apt-get -y install git lib32ncurses5 lib32z1 bison lib32stdc++6 flex
 
 # u-boot compilation
 # ==================
@@ -35,6 +35,16 @@ make -j$(nproc)
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
 # Why? Because those are actually 32-bit. So we need to enable 32-bit support on the build system
 # sudo apt-get install lib32ncurses5 lib32z1
+# Why are they using 32-bit binaries rather than 64-bit ones?
+
+# Getting:
+# *** Your GCC is older than 6.0 and is not supported
+# arch/arm/config.mk:66: recipe for target 'checkgcc6' failed
+# make: *** [checkgcc6] Error 1
+
+# This indicates that we need a different aarch64-none-elf-*, a newer one than documented by
+# https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
+# below?
 
 # Image creation
 # ==============
