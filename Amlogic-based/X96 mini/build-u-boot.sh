@@ -86,8 +86,13 @@ sudo ln -s $(readlink -f ../../gcc-linaro-aarch64-none-elf-4.8-2013.11_linux) /o
 # It is unclear how to resolve this.
 # Possibly try to follow http://loverpi.wdfiles.com/local--files/faq%3Asbc%3Alibre-aml-s805x-howto-compile-u-boot/u-boot_build_cheat_sheet.txt
 # to the letter, especially using the lxc container stated there at the top. How to do this without lxc?
+#
 ###################
-# FIXME
+# TODO: Remove
+# typedef uint64_t FDT_BITWISE fdt64_t;
+# from
+# ../scripts/dtc/libfdt/libfdt_env.h
+# Thanks @TheAssassin
 ###################
 
 export FIPDIR=$PWD/fip
