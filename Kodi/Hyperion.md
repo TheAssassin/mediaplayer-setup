@@ -14,7 +14,13 @@ The Aircoookie firmware can be configured over WLAN, see https://github.com/Airc
 
 ## Hyperion configuration
 
-Configuration needs to be created (e.g., with HyperCon V1.03.3, a Java-based tool that runs on a desktop computer) and then needs to be __hand-edited for Amlogic-based devices__ like this:
+Configuration needs to be created (e.g., with HyperCon V1.03.3, a Java-based tool that runs on a desktop computer).
+
+
+
+Device needs to be set to e.g., `/dev/ttyUSB0`, and baudrate needs to be set to 115,200 (otherwise `systemctl status service.hyperion.service` will say `Unable to open RS232 device (IO Exception (25): Inappropriate ioctl for device`).
+
+Then it needs to be __hand-edited for Amlogic-based devices__ like this:
 
 ```
 	// AMLOGIC GRABBER CONFIG
@@ -27,4 +33,6 @@ Configuration needs to be created (e.g., with HyperCon V1.03.3, a Java-based too
         },
 ```
 
-It then needs to be placed into `~/.hyperion/config/hyperion_main.json`.
+It then needs to be placed into `~/.kodi/userdata/addon_data/service.hyperion/hyperion.config.json`.
+
+After a restart one should be able to access http://<address>:8099. Debug with `systemctl status service.hyperion.service` and `systemctl restart service.hyperion.service journalctl -u service.hyperion.service -n 40` (why so complicated, why doesn't `systemctl status` do this by default...).
