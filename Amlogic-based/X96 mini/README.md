@@ -94,6 +94,8 @@ But:
 bootloader (in the first 4MiB) and use the p281 amlogic u-boot config to generate the FIP
 binaries as explained in the mainline README file of P212.
 
+__TODO:__ Do this.
+
 ### arnarg tx3-mini-uboot-build U-Boot
 
 It looks like here [someone has added support for p281](https://www.codedbearder.com/posts/mainline-linux-on-tx3-mini/) in a private branch:
@@ -111,7 +113,7 @@ Unfortunately, trying to run this crashes the x96 mini, causing a reboot:
 ```
 fatls mmc 0
 fatload mmc 0 ${loadaddr} u-boot.arnarg
-go  ${loadaddr}
+go ${loadaddr}
 
 ## Starting application at 0x01080000 ...
 "Synchronous Abort" handler, esr 0x02000000
