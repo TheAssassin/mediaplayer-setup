@@ -140,3 +140,5 @@ Resetting CPU ...
 
 Why?
 Perhaps we need to rebuild this using https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/amlogic/meson-gxl-s905w-p281.dts instead of https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/amlogic/meson-gxl-s905w-tx3-mini.dts, although the differences seem to be minor?
+
+Perhaps @xdarklight knows something about this?
