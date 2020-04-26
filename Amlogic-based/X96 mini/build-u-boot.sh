@@ -8,6 +8,9 @@
 # u-boot compilation
 # ==================
 
+# https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
+# seems not to document where to get aarch64-none-elf-* from
+
 git clone -depth 1 https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic
 cd u-boot-amlogic
 
