@@ -2,6 +2,8 @@
 
 ## Set everything to German
 
+"German" is just a placeholder for your locale, serving as an example here.
+
 Why is this spread out over n settings? It would be neat to select "German" and have _everything_ German with just one setting.
 
 ```
@@ -13,3 +15,5 @@ sed -i -e 's|<setting id="locale.language">.*</setting>|<setting id="locale.lang
 sed -i -e 's|<setting id="locale.timezone">.*</setting>|<setting id="locale.timezone">Europe/Berlin</setting>|g' ~/.kodi/userdata/guisettings.xml
 sed -i -e 's|<setting id="locale.use24hourclock" default=".*">regional</setting>|<setting id="locale.use24hourclock" default="true">regional</setting>|g' ~/.kodi/userdata/guisettings.xml
 ```
+
+__Note:__ It may be necessary to also install an add-on to support German; to be investigated.
