@@ -34,4 +34,4 @@ Then it needs to be __hand-edited for Amlogic-based devices__ like this: Since H
 
 It then needs to be placed into `~/.kodi/userdata/addon_data/service.hyperion/hyperion.config.json`.
 
-After a restart one should be able to access port 8099 with a web browser. Debug with `systemctl status service.hyperion.service` and `systemctl restart service.hyperion.service journalctl -u service.hyperion.service -n 40` (why so complicated, why doesn't `systemctl status` do this by default...).
+After a restart one should be able to access port 8099 with a web browser. Debug with `systemctl status service.hyperion.service` and `systemctl restart service.hyperion.service journalctl -u service.hyperion.service -n 40` (why so complicated, why doesn't `systemctl status` do this by default...). `KODICHECK ERROR: Kodi Connection error (0)` may indicate a defective `~/.kodi/userdata/addon_data/service.hyperion/hyperion.config.json`.
