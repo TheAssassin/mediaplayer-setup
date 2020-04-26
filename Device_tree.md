@@ -28,3 +28,6 @@ Debian provides device tree binaries (dtb):
 
 The kernel source provides device tree sources (dts):
 * Amlogic: https://github.com/torvalds/linux/tree/master/arch/arm64/boot/dts/amlogic
+
+KernelCI provides device tree binaries (dtb) that are probably in close sync to what is in the kernel source:
+* Amlogic: https://storage.kernelci.org/pm/testing/v5.6-141-g61fafa3ac67b/arm64/defconfig/gcc-8/dtbs/amlogic/?C=M&O=A
