@@ -76,7 +76,7 @@ gxl_p281_v1#go ${loadaddr}
 # (Stalled here)
 ```
 
-In https://groups.io/g/u-boot-amlogic/message/178, a project leader states
+In https://groups.io/g/u-boot-amlogic/message/178, the maintainer of the Amlogic U-Boot Custodian Tree states
 
 > we don't support reference designs for S905W since this soc is not sold for SBCs, but only on final products.
 
