@@ -39,6 +39,9 @@ sed -i -e 's|estuary|custom|g' ./.kodi/userdata/guisettings.xml
 
 sed -i -e 's|arial.ttf|RotisSansSerifStd.ttf|g' ./.kodi/userdata/guisettings.xml
 
+# While we are at it, also fix the non-fitting green color
+sed -i -e 's|11E7B1|000000|g' ./colors/charcoal.xml
+
 killall kodi.bin
 ```
 
