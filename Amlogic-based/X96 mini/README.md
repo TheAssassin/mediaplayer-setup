@@ -87,3 +87,9 @@ The reason may be [this](https://groups.io/g/u-boot-amlogic/message/181):
 > We always avoided replacing the bootloader of a closed device, because we don't have the source of
 the FIP components (DDR setup, Power Pins & PWM, DVFS table), and usually these boxes has custom
 setups that could diverge from the reference designs.
+
+But:
+
+> If you feel confident enough, you'll need to dump the eMMC content to save the original
+bootloader (in the first 4MiB) and use the p281 amlogic u-boot config to generate the FIP
+binaries as explained in the mainline README file of P212.
