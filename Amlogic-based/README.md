@@ -20,7 +20,7 @@ Armbian is a project to run Debian and/or Ubuntu on ARM-based systems. Unfortuna
 
 ### @150balbes Armbian
 
-@150balbes is a developer who is doing special Armbian builds for Amlogic-based retail products ("TV boxes"). Despite its name, this is not an official Armbian project and __the Armbian project refuses to upstream the @150balbes work__.
+@150balbes is a developer who is doing special Armbian builds for Amlogic-based retail products ("TV boxes"). Despite its name, this is not an official Armbian project and __the Armbian project refuses to upstream the @150balbes work__. @150balbes Armbian builds need to be downloaded from filesharing websites, and support seems to be mostly through Armbian forums, although Armbian will not upstream the @150balbes work.
 
 ### Debian, openSUSE, Fedora, Ubuntu,...
 
