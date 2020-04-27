@@ -68,3 +68,5 @@ killall kodi.bin
 ```
 
 Now our custom fonts should be available and can be configured in Settings -> Player -> Language.
+
+__Note:__ It may also be possible to use https://kodi.wiki/view/Path_substitution for this purpose (to be investigated, insights welcome).
