@@ -6,6 +6,10 @@ __Note:__ If you want to preconfigure certain things and not have them available
 
 "German" is just a placeholder for your locale, serving as an example here.
 
+Why is this spread out over n settings? It would be neat to select "German" and have _everything_ German with just one setting.
+
+Maybe even based on geo-ip location. Might select a maching weather provider automatically as well.
+
 ### By remastering the Kodi system (is persistent upon Kodi factory reset)
 
 Need to edit `/usr/share/kodi/config/guisettings.xml` in the squashfs `SYSTEM` file to include
@@ -32,8 +36,6 @@ Need to edit `/usr/share/kodi/config/guisettings.xml` in the squashfs `SYSTEM` f
 __Note:__ It may be necessary to also install an add-on to support German; to be investigated.
 
 ### On an already-running system (is reverted upon Kodi factory reset)
-
-Why is this spread out over n settings? It would be neat to select "German" and have _everything_ German with just one setting. Maybe even based on geo-ip location.
 
 ```
 sed -i -e 's|<setting id="locale.activekeyboardlayout">.*</setting>|<setting id="locale.activekeyboardlayout">German QWERTZ</setting>|g' ~/.kodi/userdata/guisettings.xml
