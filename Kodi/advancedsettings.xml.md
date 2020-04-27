@@ -9,7 +9,7 @@ __Note:__ The `advancedsettings.xml` file does not exist by default. You have to
 Typically, there are up to 3 (three) different splash screens, which clutters up the visual appearance of the boot process:
 
 - Device boot splash (e.g., loaded by U-Boot) (usually advertises the hardware box name or its manufacturer)
-- OS boot splash (e.g., loaded by `fbi` launched by `systemd`) (usually advertises the operating system, e.g., *ELEC)
+- OS boot splash (e.g., loaded by `fbi` launched by `systemd`) (usually advertises the operating system, e.g., *ELEC) (can be changed by using `/flash/oemsplash.png`)
 - Kodi splash
 
 ```
