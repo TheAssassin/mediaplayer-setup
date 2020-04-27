@@ -95,3 +95,15 @@ killall kodi.bin
 Now our custom fonts should be available and can be configured in Settings -> Player -> Language.
 
 __Note:__ It may also be possible to use https://kodi.wiki/view/Path_substitution for this purpose (to be investigated, insights welcome).
+
+## Removing the darkening of the screen while the spinner is shown
+
+The darkening of the screen while the "I am working" spinner is shown adds to the impression that the system is slow. Especially because sometimes the screen darkens 2 times before a video is played. Removing the darkening of the screen makes the system feel less sluggish.
+
+`nano ~/.kodi/addons/skin.custom/xml/DialogBusy.xml`, add `<visible>false</visible>` like this:
+
+```
+                        <control type="image">
+                                <visible>false</visible>
+                                <texture>colors/black.png</texture>
+```
