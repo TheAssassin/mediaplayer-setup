@@ -26,6 +26,7 @@ Need to edit `/usr/share/kodi/config/guisettings.xml` in the squashfs `SYSTEM` f
     <setting id="locale.timezone">Europe/Berlin</setting>
     <setting id="locale.timezonecountry">Germany</setting>
     <setting id="locale.use24hourclock" default="true">regional</setting>
+    <setting id="subtitles.languages">German,English</setting>
 ```
 
 __Note:__ It may be necessary to also install an add-on to support German; to be investigated.
@@ -42,6 +43,7 @@ sed -i -e 's|<setting id="locale.country">.*</setting>|<setting id="locale.count
 sed -i -e 's|<setting id="locale.language">.*</setting>|<setting id="locale.language">resource.language.de_de</setting>|g' ~/.kodi/userdata/guisettings.xml
 sed -i -e 's|<setting id="locale.timezone">.*</setting>|<setting id="locale.timezone">Europe/Berlin</setting>|g' ~/.kodi/userdata/guisettings.xml
 sed -i -e 's|<setting id="locale.use24hourclock" default=".*">regional</setting>|<setting id="locale.use24hourclock" default="true">regional</setting>|g' ~/.kodi/userdata/guisettings.xml
+sed -i -e 's|<setting id="subtitles.languages">.*</setting>|<setting id="subtitles.languages">German,English</setting>|g' ~/.kodi/userdata/guisettings.xml
 ```
 
 __Note:__ It may be necessary to also install an add-on to support German; to be investigated.
