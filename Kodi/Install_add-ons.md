@@ -1,6 +1,6 @@
 # Installing add-ons
 
-# Installing add-ons into the running system
+## Installing add-ons into the running system
 
 How can we install and pre-activate add-ons _including their dependencies_ in the running system?
 
@@ -19,7 +19,7 @@ References
 
 To be investigated. Insights welcome.
 
-# Preinstalling add-ons in SYSTEM
+## Preinstalling add-ons in SYSTEM
 
 How can we preinstall and pre-activate add-ons _including their dependencies_ in the squashfs `SYSTEM` file?
 
