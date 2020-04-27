@@ -63,7 +63,7 @@ mount --bind ~/.kodi/addons/skin.custom/fonts/ /usr/share/kodi/media/Fonts/
 EOF
 chmod +x ~/.config/autostart.sh
 
-sed -i -e 's|<setting id="subtitles.font">.*</setting>|<setting id="subtitles.font">RotisSansSerifStd.ttf</setting>|g' /storage/.kodi/userdata/guisettings.xml
+sed -i -e 's|<setting id="subtitles.font">.*</setting>|<setting id="subtitles.font">RotisSansSerifStd-ExtraBold.ttf</setting>|g' /storage/.kodi/userdata/guisettings.xml
 killall kodi.bin
 ```
 
