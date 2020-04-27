@@ -63,8 +63,8 @@ mount --bind ~/.kodi/addons/skin.custom/fonts/ /usr/share/kodi/media/Fonts/
 EOF
 chmod +x ~/.config/autostart.sh
 
-sed -i -e 's|<setting id="subtitles.font">.*</setting>|<setting id="subtitles.font">RotisSansSerifStd-ExtraBold.ttf</setting>|g' /storage/.kodi/userdata/guisettings.xml
+sed -i -e 's|<setting id="subtitles.font">.*</setting>|<setting id="subtitles.font">RotisSansSerifStd-ExtraBold.ttf</setting>|g' ~/.kodi/userdata/guisettings.xml
 killall kodi.bin
 ```
 
-Now our custom fonts can be selected. Note that no subtitles are shown at all until one of the new fonts is selected in Settings -> Player -> Language.
+Now our custom fonts should be available and can be configured in Settings -> Player -> Language.
