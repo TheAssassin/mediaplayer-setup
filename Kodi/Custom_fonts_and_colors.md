@@ -70,7 +70,6 @@ FIXME: Still need to manually activate the Custom skin and select the `charcoal`
                                         <height>36</height>
                                         <texture>icons/logo-text.png</texture>
                                 </control>
-
 ```
 
 Then `killall kodi.bin`.
