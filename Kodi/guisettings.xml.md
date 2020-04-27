@@ -47,3 +47,11 @@ sed -i -e 's|<setting id="subtitles.languages">.*</setting>|<setting id="subtitl
 ```
 
 __Note:__ It may be necessary to also install an add-on to support German; to be investigated.
+
+## No blanking of the screen when video starts to play
+
+On some displays (e.g., Samsung LED TV) the screen may go black for a split-second whenever a video begins to play, and then the input and frame rate is shown on the screen, which is very annoying. This can be avoided by setting `<setting id="videoplayer.adjustrefreshrate">0</setting>`.
+
+## Removing black bordes from videos
+
+Despite having 16:9 screens, some (cinema) video still has annoying black borders at the top and bottom of the screen. This can be reduced by setting `<setting id="videoplayer.errorinaspect">20</setting>`.
