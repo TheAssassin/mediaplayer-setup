@@ -49,6 +49,32 @@ killall kodi.bin
 
 FIXME: Still need to manually activate the Custom skin and select the `charcoal` color.
 
+## Removing the upper-left corner logo
+
+`nano  ~/.kodi/addons/skin.custom/xml/Home.xml`, add `<visible>false</visible>` like this:
+
+```
+                                <control type="image">
+                                        <visible>false</visible>
+                                        <aspectratio>keep</aspectratio>
+                                        <width>56</width>
+                                        <height>56</height>
+                                        <texture colordiffuse="button_focus">icons/logo.png</texture>
+                                </control>
+                                <control type="image">
+                                        <visible>false</visible>
+                                        <left>40</left>
+                                        <top>10</top>
+                                        <aspectratio>keep</aspectratio>
+                                        <width>192</width>
+                                        <height>36</height>
+                                        <texture>icons/logo-text.png</texture>
+                                </control>
+
+```
+
+Then `killall kodi.bin`.
+
 ## Custom fonts for subtitles
 
 Seems like subtitles can only use the fonts installed in the system at `/usr/share/kodi/media/Fonts/`.
