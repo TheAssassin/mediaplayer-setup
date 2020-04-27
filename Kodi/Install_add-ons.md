@@ -16,6 +16,7 @@ xbmc.executebuiltin('EnableAddon(id)')
 References
 * https://kodi.wiki/view/List_of_built-in_functions
 * https://www.kodinerds.net/index.php/Thread/54032-InstallAddon-id-funktioniert-nicht/
+* https://github.com/xbmc/xbmc/blob/master/xbmc/addons/AddonInstaller.cpp
 
 To be investigated. Insights welcome.
 
