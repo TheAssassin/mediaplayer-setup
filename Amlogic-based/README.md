@@ -26,6 +26,12 @@ Armbian is a project to run Debian and/or Ubuntu on ARM-based systems. Unfortuna
 
 Those "mainstream" distributions are increasingly adding aarch64 builds and partly even ISO images. However, none of them are specifically built for Amlogic-based systems, and hence do not boot out of the box (possibly unless a EFI-capable U-Boot is used, to be verified).
 
+### hexdump0815 Debian, Ubuntu
+
+https://github.com/hexdump0815/imagebuilder
+
+Still to be tested.
+
 ### Arch Linux ARM
 
 It may be possible to run Arch Linux ARM on Amlogic-based devices. See https://github.com/arnarg/tx3-mini-arch-linux-build. To be investigated.
