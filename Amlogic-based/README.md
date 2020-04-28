@@ -30,6 +30,10 @@ Those "mainstream" distributions are increasingly adding aarch64 builds and part
 
 It may be possible to run Arch Linux ARM on Amlogic-based devices. See https://github.com/arnarg/tx3-mini-arch-linux-build. To be investigated.
 
+### OpenWrt
+
+OpenWrt has an Image Builder that allows one to produce tailored squashfs-based embedded firmware images using binary packages. There is work underway to support Amlogic-based devices at https://github.com/hyphop/khadas-openwrt. So far they are concentrating on expensive SBCs but possibly the same can be adapted for less expensive retail products as well. To be investigated.
+
 ## AOSP support
 
 Still to be investigated whether mainline Linux kernel and U-Boot can be used to boot AOSP. Any insights appreciated. Being able to run stock AOSP, LineageOS builds, or builds from Google would be preferred.
