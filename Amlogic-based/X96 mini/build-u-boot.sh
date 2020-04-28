@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 # TODO: TEST THIS AND ACTUALLY MAKE IT WORK; MAY BE SLIGHTLY BROKEN AS-IS
 
@@ -35,6 +35,8 @@ export CROSS_COMPILE=aarch64-linux-gnu- # WORKS!
 make p212_defconfig
 make -j$(nproc)
 
+pushd . # Remember this directory, we will come back here later
+
 # If you get those errors:
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
 # make: aarch64-none-elf-gcc: Command not found
@@ -59,6 +61,8 @@ make -j$(nproc)
 # Image creation
 # ==============
 
+cd ..
+
 wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
 wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
 tar xvfJ gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
@@ -77,8 +81,9 @@ sudo ln -s $(readlink -f ../gcc-linaro-aarch64-none-elf-4.8-2013.11_linux) /opt/
 make -j$(nproc)
 
 ###############################################################################################################
-# Here compilation stops with ***MANY*** build errors. Something is clearly not going well at all!
-# Any help appreciated.
+# If we check out the amlogic git inside the custodians git, 
+# then compilation stops here with the following errors. This is left here for people who
+# might be running into the same issue.
 #
 # In file included from ./../include/libfdt_env.h:12:0,
 #                  from <command-line>:0:
@@ -101,7 +106,7 @@ make -j$(nproc)
 
 export FIPDIR=$PWD/fip
 
-cd ..
+popd # Come back to the custodian directory
 
 mkdir fip
 
@@ -143,3 +148,5 @@ $FIPDIR/gxl/aml_encrypt_gxl --bootmk \
 		--bl30 fip/bl30_new.bin.enc \
 		--bl31 fip/bl31.img.enc \
 		--bl33 fip/bl33.bin.enc
+
+ls -lh ./fip/u-boot*.bin
