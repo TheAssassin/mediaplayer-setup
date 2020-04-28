@@ -28,21 +28,25 @@ make -j$(nproc)
 
 pushd . # Remember this directory, we will come back here later
 
-# If you get those errors:
+###############################################################################################################
+# NOTE: If you get those errors:
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
 # make: aarch64-none-elf-gcc: Command not found
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
 # then you need to enable 32-bit support on the build system:
 # sudo apt-get install lib32ncurses5 lib32z1
 # Why are they using 32-bit binaries rather than 64-bit ones?
+###############################################################################################################
 
-# If you get those errors:
+###############################################################################################################
+# NOTE: If you get those errors:
 # *** Your GCC is older than 6.0 and is not supported
 # arch/arm/config.mk:66: recipe for target 'checkgcc6' failed
 # make: *** [checkgcc6] Error 1
 # then you need a newer one than the one documented in
 # https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
 # which is used below
+###############################################################################################################
 
 # Image creation
 # ==============
@@ -67,9 +71,9 @@ sudo ln -s $(readlink -f ../gcc-linaro-aarch64-none-elf-4.8-2013.11_linux) /opt/
 make -j$(nproc)
 
 ###############################################################################################################
-# If we check out the amlogic git inside the custodians git, 
+# NOTE: If you have checked out the amlogic git inside the custodians git, 
 # then compilation stops here with the following errors. This is left here for people who
-# might be running into the same issue.
+# might be running into this issue.
 #
 # In file included from ./../include/libfdt_env.h:12:0,
 #                  from <command-line>:0:
@@ -113,7 +117,7 @@ $FIPDIR/blx_fix.sh \
 	fip/bl30_new.bin \
 	bl30
 
-python2.7 $FIPDIR/acs_tool.pyc fip/bl2.bin fip/bl2_acs.bin fip/acs.bin 0
+python2.7 $FIPDIR/acs_tool.pyc fip/bl2.bin fip/bl2_acs.bin fip/acs.bin 0 # NOTE: python2 is needed
 
 $FIPDIR/blx_fix.sh \
 	fip/bl2_acs.bin \
