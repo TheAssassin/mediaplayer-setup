@@ -143,6 +143,36 @@ Resetting CPU ...
 Why?
 Perhaps we need to rebuild this using https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/amlogic/meson-gxl-s905w-p281.dts instead of https://github.com/torvalds/linux/blob/master/arch/arm64/boot/dts/amlogic/meson-gxl-s905w-tx3-mini.dts, although the differences seem to be minor?
 
-So as of April 2020 it seems like we need to compiel our own U-Boot binary, but the instructions at https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212 are either incomplete or outdated which is why https://github.com/TheAssassin/mediaplayer-setup/blob/master/Amlogic-based/X96%20mini/build-u-boot.sh currently fails (FIXME).
+So as of April 2020 it seems like we need to compile our own U-Boot binary, which we can do using https://github.com/TheAssassin/mediaplayer-setup/blob/master/Amlogic-based/X96%20mini/build-u-boot.sh. Unfortunately, trying to use this U-Boot leads to an instant reboot (FIXME).
 
-Perhaps @xdarklight knows something about this?
+### hexdump0815 U-Boot
+
+https://github.com/hexdump0815/imagebuilder/blob/master/boot/boot-amlogic_gx-aarch64/u-boot.bin can be chainloaded on the x96 mini (note: a different load address has to be used!), but trying to use `usb start` leads to an instant reboot:
+
+```
+gxl_p281_v1#fatload mmc 0 0x01000000 u-boot.ext
+(...)
+gxl_p281_v1#go 0x01000000
+## Starting application at 0x01000000 ...
+U-Boot 2019.01 (Mar 26 2019 - 22:16:31 +0100) libretech-cc
+DRAM:  1 GiB
+MMC:   mmc@72000: 0, mmc@74000: 1
+(...)
+Hit any key to stop autoboot:  2 
+(...)
+=> usb start
+starting USB...
+USB0:   Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... XHCI timeout on event type 33... cannot recover.
+BUG at drivers/usb/host/xhci-ring.c:473/xhci_wait_for_event()!
+BUG!
+resetting ...
+bl31 reboot reason: 0xd
+bl31 reboot reason: 0x0
+system cmd  1.
+GXL:BL1:9ac50e:bb16dc;FEAT:ADFC318C:0;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+```
+
+What may be causing this, how to debug it?
