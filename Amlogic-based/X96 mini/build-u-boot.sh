@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-# TODO: TEST THIS AND ACTUALLY MAKE IT WORK; MAY BE SLIGHTLY BROKEN AS-IS
+# Known to work on Ubuntu 18.04.4 LTS
 
 # This script is following the instructions from
 # https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
@@ -8,19 +8,10 @@
 # undocumented preparation
 # ========================
 
-sudo apt-get -y install git lib32ncurses5 lib32z1 bison lib32stdc++6 flex
+sudo apt-get -y install git lib32ncurses5 lib32z1 bison lib32stdc++6 flex gcc-aarch64-linux-gnu g++-aarch64-linux-gnu 
 
-
-# https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
-# seems not to document where to get aarch64-none-elf-* from - using the one from below may be outdated?
-# wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
-# wget https://releases.linaro.org/archive/13.11/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
-# tar xvfJ gcc-linaro-aarch64-none-elf-4.8-2013.11_linux.tar.xz
-# tar xvfJ gcc-linaro-arm-none-eabi-4.8-2013.11_linux.tar.xz
-# export PATH=$PWD/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux/bin:$PWD/gcc-linaro-arm-none-eabi-4.8-2013.11_linux/bin:$PATH
-
-# Maybe this works?
-sudo apt-get -y install gcc-aarch64-linux-gnu g++-aarch64-linux-gnu 
+# Clean up from previous runs if needed
+# sudo rm -rf amlogic-u-boot/ u-boot-amlogic/ /opt/gcc-linaro-aarch64-none-elf-4.8-2013.11_linux
 
 # u-boot compilation
 # ==================
@@ -41,22 +32,17 @@ pushd . # Remember this directory, we will come back here later
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
 # make: aarch64-none-elf-gcc: Command not found
 # /bin/sh: 1: aarch64-none-elf-gcc: not found
-# Why? Because those are actually 32-bit. So we need to enable 32-bit support on the build system
+# then you need to enable 32-bit support on the build system:
 # sudo apt-get install lib32ncurses5 lib32z1
 # Why are they using 32-bit binaries rather than 64-bit ones?
 
-# Getting:
+# If you get those errors:
 # *** Your GCC is older than 6.0 and is not supported
 # arch/arm/config.mk:66: recipe for target 'checkgcc6' failed
 # make: *** [checkgcc6] Error 1
-
-# This indicates that we need a different aarch64-none-elf-*, a newer one than documented by
+# then you need a newer one than the one documented in
 # https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
-# below?
-
-# It seems that http://wiki.loverpi.com/faq:sbc:libre-aml-s805x-howto-compile-u-boot is addressing those issues.
-# Why is this not documented in 
-# https://gitlab.denx.de/u-boot/custodians/u-boot-amlogic/-/blob/u-boot-amlogic/board/amlogic/p212/README.p212
+# which is used below
 
 # Image creation
 # ==============
