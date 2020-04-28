@@ -113,7 +113,7 @@ $FIPDIR/blx_fix.sh \
 	fip/bl30_new.bin \
 	bl30
 
-$FIPDIR/acs_tool.pyc fip/bl2.bin fip/bl2_acs.bin fip/acs.bin 0
+python2.7 $FIPDIR/acs_tool.pyc fip/bl2.bin fip/bl2_acs.bin fip/acs.bin 0
 
 $FIPDIR/blx_fix.sh \
 	fip/bl2_acs.bin \
