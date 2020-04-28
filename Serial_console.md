@@ -35,7 +35,7 @@ To connect, do on the host computer:
 
 ```
 sudo apt-get -y install screen
-sudo screen /dev/ttyUSB0 115200
+sudo screen -L -Logfile log.txt /dev/ttyUSB0 115200
 ```
 
 You should now see and interact with the bootloader (U-Boot) output, as well as the boot log, and be able to interact with the booted system.
