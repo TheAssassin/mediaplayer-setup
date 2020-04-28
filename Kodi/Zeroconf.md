@@ -50,5 +50,6 @@ for line in avahi_browse("-rlp", '_wled._tcp', _iter=True):
 
 If you know a better/easier way, please let us know.
 
-References
+## References
+
 * https://github.com/xbmc/xbmc/blob/master/tools/EventClients/lib/python/zeroconf.py
