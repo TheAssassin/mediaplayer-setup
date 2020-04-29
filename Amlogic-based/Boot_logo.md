@@ -1,6 +1,6 @@
-# Splash screens
+# Boot logo
 
-## Disabling the boot splash stored in firmware
+## Disabling the boot logo stored in firmware
 
 The following takes the content of the U-Boot environment variable `prepare`, puts its content into the U-Boot environment variable `prepare-original`, and then clears the environment variable `prepare`.
 
@@ -32,3 +32,7 @@ setenv init_display "osd open;osd clear"
 
 saveenv
 ```
+
+## Using a custom boot logo
+
+See [aml_autoscript.md#loading-custom-boot-logo](aml_autoscript.md#loading-custom-boot-logo).
