@@ -176,3 +176,5 @@ GXL:BL1:9ac50e:bb16dc;FEAT:ADFC318C:0;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
 ```
 
 What may be causing this, how to debug it?
+
+As per https://github.com/hexdump0815/imagebuilder/issues/4#issuecomment-622318012,  it __works__ (as in: recognizes USB mass storage device without crashing) when one runs `usb start` before _and_ after chainloading. Does this mean that some (which?) aspects of the stock U-Boot need to be carried over/compiled into the new one?
