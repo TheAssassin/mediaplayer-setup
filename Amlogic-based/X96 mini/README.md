@@ -233,9 +233,12 @@ scanning bus dwc3@c9000000 for devices... Device not responding to set address.
 The following works:
 
 ```
-gxl_p281_v1#usb start
+usb start
 fatload mmc 0 0x01000000 u-boot.cc
 go 0x01000000
+<enter>
+<enter>
+<enter>
 usb start
 ```
 
@@ -255,3 +258,16 @@ system cmd  1.
 (reboot)
 GXL:BL1:9ac50e:bb16dc;FEAT:ADFC318C:0;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
 ```
+
+Maybe `usbboot 0 0` is wrong? __How does this work?__
+
+```
+=> usb part
+
+Partition Map for USB device 0  --   Partition Type: DOS
+
+Part    Start Sector    Num Sectors     UUID            Type
+  1     64              1795768         00000000-01     cd
+  2     1795832         30720           00000000-02     ef Boot
+```
+
