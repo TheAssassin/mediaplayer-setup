@@ -178,3 +178,80 @@ GXL:BL1:9ac50e:bb16dc;FEAT:ADFC318C:0;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
 What may be causing this, how to debug it?
 
 As per https://github.com/hexdump0815/imagebuilder/issues/4#issuecomment-622318012,  it __works__ (as in: recognizes USB mass storage device without crashing) when one runs `usb start` before _and_ after chainloading. Does this mean that some (which?) aspects of the stock U-Boot need to be carried over/compiled into the new one?
+
+
+# openSUSE U-Boot built for libretech-cc
+
+https://build.opensuse.org/package/binaries/hardware:boot/u-boot:libretech-cc/openSUSE_Factory_ARM can be used to some extent:
+
+Note `0x01000000` being used instead of `${loadaddr}`:
+
+```
+gxl_p281_v1#fatload mmc 0 0x01000000 u-boot.ext
+(...)
+gxl_p281_v1#go 0x01000000
+## Starting application at 0x01000000 ...
+
+U-Boot 2020.04 (Apr 17 2020 - 12:05:54 +0000) libretech-cc
+
+Model: Libre Computer Board AML-S905X-CC
+SoC:   Amlogic Meson GXL (S905W) Revision 21:d (a4:2)
+DRAM:  1 GiB
+MMC:   mmc@72000: 0, mmc@74000: 1
+In:    serial
+Out:   serial
+Err:   serial
+[BL31]: tee size: 0
+[BL31]: tee size: 0
+Net:   eth0: ethernet@c9410000
+Hit any key to stop autoboot:  0
+=>
+=>
+=> version
+U-Boot 2020.04 (Apr 17 2020 - 12:05:54 +0000) libretech-cc
+
+gcc (SUSE Linux) 9.3.1 20200406 [revision 6db837a5288ee3ca5ec504fbd5a765817e556ac2]
+GNU ld (GNU Binutils; openSUSE Tumbleweed) 2.34.0.20200325-1
+```
+
+Here, too, we have the USB issue:
+
+```
+=> usb start
+starting USB...
+Bus dwc3@c9000000: Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus dwc3@c9000000 for devices... Device not responding to set address.
+
+      USB device not accepting new address (error=80000000)
+1 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+=> 
+```
+
+The following works:
+
+```
+gxl_p281_v1#usb start
+fatload mmc 0 0x01000000 u-boot.cc
+go 0x01000000
+usb start
+```
+
+But we still cannot quite boot the openSUSE Live image from USB:
+
+```
+=> usbboot usb 0
+
+Loading from usb device 0, partition 1: Name: usbda1  Type: U-Boot
+BUG at drivers/usb/host/xhci-mem.c:37/xhci_flush_cache()!
+BUG!
+resetting ...
+bl31 reboot reason: 0xd
+bl31 reboot reason: 0x0
+system cmd  1.
+
+(reboot)
+GXL:BL1:9ac50e:bb16dc;FEAT:ADFC318C:0;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+```
