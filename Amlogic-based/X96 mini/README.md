@@ -271,3 +271,46 @@ Part    Start Sector    Num Sectors     UUID            Type
   2     1795832         30720           00000000-02     ef Boot
 ```
 
+Can we use the `bootefi` command? What is the correct load address? Bindly trying `0x02000000`:
+
+```
+=> fatload mmc 0 0x02000000 bootaa64.efi
+1369968 bytes read in 60 ms (21.8 MiB/s)
+
+=> bootefi 0x02000000
+7[r[999;999H[6n8Scanning disk mmc@72000.blk...
+Scanning disk mmc@74000.blk...
+** Unrecognized filesystem type **
+WARN halted endpoint, queueing URB anyway.
+Unexpected XHCI event TRB, skipping... (3bf77630 00000000 13000000 01008401)
+"Synchronous Abort" handler, esr 0x96000210
+elr: 0000000001037788 lr : 0000000001037788 (reloc)
+elr: 000000003df8f788 lr : 000000003df8f788
+x0 : 0000000000000000 x1 : 00000000000003e8
+x2 : 0000000000000040 x3 : 000000000000003f
+x4 : 000000003bf77c60 x5 : 0000000000001800
+x6 : 000000003fe5b000 x7 : 0000000000c0c0c0
+x8 : 000000003bf4e278 x9 : 0000000000000000
+x10: 00000000ffffffe8 x11: 0000000000000010
+x12: 0000000000000000 x13: 0000000000000004
+x14: 000000003bf4ede0 x15: 0000000000000021
+x16: 000000003df82078 x17: 0000000000000000
+x18: 000000003bf55de0 x19: 000000003bf76240
+x20: 000000003bf7bce0 x21: 0000000000000000
+x22: 000000003bf7add0 x23: 0000000000000000
+x24: 0000000080000203 x25: 0000000000000000
+x26: 0000000000000001 x27: 0000000000000001
+x28: 000000003bf7add0 x29: 000000003bf4e2f0
+
+Code: 97ffff43 52800401 aa1303e0 97ffffa2 (b9400c00) 
+Resetting CPU ...
+
+resetting ...
+bl31 reboot reason: 0xd
+bl31 reboot reason: 0x0
+system cmd  1.
+
+GXL:BL1:9ac50e:bb16dc;FEAT:ADFC318C:0;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+```
+
+Any help appreciated.
