@@ -242,7 +242,7 @@ usb start
 But we still cannot quite boot the openSUSE Live image from USB:
 
 ```
-=> usbboot usb 0
+=> usbboot 0 0
 
 Loading from usb device 0, partition 1: Name: usbda1  Type: U-Boot
 BUG at drivers/usb/host/xhci-mem.c:37/xhci_flush_cache()!
