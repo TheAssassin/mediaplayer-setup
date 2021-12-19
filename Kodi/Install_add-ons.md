@@ -36,3 +36,7 @@ To be investigated. Insights welcome.
 
 * Tagesschau
 * MediathekViewWeb (not MediathekView)
+
+### API Keys for YouTube app
+
+`/storage/.kodi/userdata/addon_data/plugin.video.youtube/api_keys.json` - entering those through the Kodi GUI is _very_ tedious.
