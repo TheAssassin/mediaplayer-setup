@@ -37,6 +37,22 @@ To be investigated. Insights welcome.
 * Tagesschau
 * MediathekViewWeb (not MediathekView)
 
-### API Keys for YouTube app
+## Adding URLs to the zip of a repo
 
-`/storage/.kodi/userdata/addon_data/plugin.video.youtube/api_keys.json` - entering those through the Kodi GUI is _very_ tedious.
+Instructions on how to add repos from which to install add-ons usually involve typing long URL strings, which is extremely unpleasant on a TV using a remote control, so here is a way to use SSH instead.
+
+In `/storage/.kodi/userdata/sources.xml` in the `<files>` section, add sections like
+
+```
+        <source>
+            <name>Kodinerds</name>
+            <path pathversion="1">https://repo.kodinerds.net:443/webdav/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+```
+
+Then restart Kodi.
+
+## API Keys for YouTube app
+
+`/storage/.kodi/userdata/addon_data/plugin.video.youtube/api_keys.json` - entering those through the Kodi GUI is _very_ tedious. To get a key: In https://console.developers.google.com/apis/library, under __YouTube Data API v3__, __Manage__ one needs to create a new  __OAuth 2.0 Client ID__ with Application Type __TV and Limited Input__.
