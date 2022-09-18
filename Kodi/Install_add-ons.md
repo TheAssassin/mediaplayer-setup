@@ -31,6 +31,21 @@ To be investigated. Insights welcome.
 ### Global
 
 * YouTube
+* `script.logviewer`. This can be configured with `<setting id="error_popup">true</setting>` so that Python errors are shown on the screen as they happen, instead of just giving a meaningless error window:
+
+`/storage/.kodi/userdata/addon_data/script.logviewer/settings.xml`
+
+```
+<settings version="2">
+    <setting id="invert">false</setting>
+    <setting id="lines" default="true">0</setting>
+    <setting id="custom_window" default="true">false</setting>
+    <setting id="error_popup">true</setting>
+    <setting id="exceptions_only">true</setting>
+    <setting id="http_server">false</setting>
+    <setting id="port">8080</setting>
+</settings>
+```
 
 ### German
 
