@@ -27,7 +27,7 @@ cat > /storage/.kodi/userdata/addon_data/pvr.iptvsimple/settings.xml <<\EOF
     <setting id="epgPathType">1</setting>
     <setting id="epgTimeShift" default="true">0</setting>
     <setting id="epgTSOverride" default="true">false</setting>
-    <setting id="epgUrl" default="true">https://rytec.ricx.nl/epg_data/rytecDE_Basic.gz</setting>
+    <setting id="epgUrl" default="true">https://zhort.de/epg</setting>
     <setting id="logoBaseUrl" default="true"></setting>
     <setting id="logoFromEpg">1</setting>
     <setting id="logoPath" default="true"></setting>
@@ -35,12 +35,14 @@ cat > /storage/.kodi/userdata/addon_data/pvr.iptvsimple/settings.xml <<\EOF
     <setting id="m3uCache" default="true">true</setting>
     <setting id="m3uPath" default="true"></setting>
     <setting id="m3uPathType">1</setting>
-    <setting id="m3uUrl">http://bit.ly/kn-kodi</setting>
+    <setting id="m3uUrl">https://zhort.de/deiptv</setting>
     <setting id="startNum">1</setting>
 </settings>
 EOF
 killall kodi.bin
 ```
+
+URLs courtesy of https://michelfritzsch.de/epg-service-ist-kostenlos/
 
 ## Open questions
 
