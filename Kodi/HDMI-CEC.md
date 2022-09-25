@@ -21,3 +21,28 @@ chmod +x ~/.config/autostart.sh
 ```
 
 This has been tested successfully on `LibreELEC (community): nightly-20220918-bb49fdc (AMLGX.arm)` with kernel `Linux LibreELEC 5.19.0 #1 SMP PREEMPT Sun Sep 18 15:13:27 UTC 2022 aarch64 GNU/Linux` running on a X96.
+
+Possibly this can also be achieved with systemd:
+
+```
+cat > /storage/.config/system.d/cecfix.service <<\EOF
+[Unit]
+Description=Make CEC work on LibreELEC
+After=kodi.service
+Requires=kodi.service
+
+[Install]
+WantedBy=kodi.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStartPre=/usr/bin/sleep 15
+ExecStart=/usr/bin/cec-ctl --to 0 --active-source phys-addr=1.0.0.0
+EOF
+
+systemctl enable cecfix
+systemctl start cecfix
+# Created symlink /storage/.config/system.d/kodi.service.wants/cecfix.service → /storage/.config/system.d/cecfix.service.
+```
+
