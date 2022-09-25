@@ -4,6 +4,8 @@ HDMI-CEC, also marketed by vendors like Samsung under names like, e.g., "Anynet+
 
 Unfortunately, with some versions of LibreELEC, this requires you to select "Kodi" from the TV menu "Anynet+" each time after a cold boot.
 
+![image](https://user-images.githubusercontent.com/2480569/192144726-7bd02303-9230-4806-9c52-63d78c70d6a9.png)
+
 Workaround: Execute the command `cec-ctl --to 0 --active-source phys-addr=1.0.0.0` __after__ Kodi has already been started.
 
 ```
