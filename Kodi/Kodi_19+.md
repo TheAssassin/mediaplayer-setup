@@ -8,6 +8,10 @@ This means that older add-ons will have to be updated to continue working.
 
 For more information including tools for converting code such as `futurize`, see https://kodi.wiki/view/General_information_about_migration_to_Python_3
 
+## Kodi 20 (Nexus): Need to use xbmcvfs.translatePath
+
+In all files `xbmc.translatePath` must be replaced by `xbmcvfs.translatePath` and in the affected files `import xbmcvfs must be added`, if not already present. Then it runs on Kodi 20. Unclear whether it then still runs on Kodi 18 and 19.
+
 ## Kodi 20 (Nexus): `<dir>` tags for repositories
 
 As of September 2022, many repositories cannot be used with Kodi 20, and trying to use them leads to the following error message in `/storage/.kodi/temp/kodi.log`:
