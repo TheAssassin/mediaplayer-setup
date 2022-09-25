@@ -1,6 +1,6 @@
 # HDMI-CEC
 
-HDMI-CEC, also marketed under names like, e.g., "Anynet+", allows you to control Kodi from your TV remote control.
+HDMI-CEC, also marketed by vendors like Samsung under names like, e.g., "Anynet+", allows you to control Kodi from your TV remote control.
 
 Unfortunately, with some versions of LibreELEC, this requires you to select "Kodi" from the TV menu "Anynet+" each time after a cold boot.
 
