@@ -46,3 +46,4 @@ systemctl start cecfix
 # Created symlink /storage/.config/system.d/kodi.service.wants/cecfix.service → /storage/.config/system.d/cecfix.service.
 ```
 
+For __CoreELEC__, the following _may_ help (to be verified): https://discourse.coreelec.org/t/coreelec-19-5-matrix-rc2-discussion/18858/78?u=probono
