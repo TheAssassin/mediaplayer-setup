@@ -45,3 +45,5 @@ systemctl enable cecfix
 systemctl start cecfix
 # Created symlink /storage/.config/system.d/kodi.service.wants/cecfix.service → /storage/.config/system.d/cecfix.service.
 ```
+
+__CoreELEC__ seems to be missing the needed `cec-ctl` command. It is unclear whether the same effect can be achieved using `cec-client` and if so, how. Please let us know.
