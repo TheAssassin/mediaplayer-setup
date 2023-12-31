@@ -44,7 +44,7 @@ killall kodi.bin
 
 URLs courtesy of https://github.com/jnk22/kodinerds-iptv (m3u) https://xmltv.info/ (EPG).
 
-According to https://linuxundich.de/gnu-linux/epg-zu-deutschen-sendern-in-tvtime-einblenden/, TV stations want _money_ for EPG data. Which would be kinda scandalous if true for publicly financed (öffentlich-rechtliche) stations.
+According to https://linuxundich.de/gnu-linux/epg-zu-deutschen-sendern-in-tvtime-einblenden/, TV stations want _money_ for EPG data. Which would be kinda scandalous if true for publicly financed (öffentlich-rechtliche) stations. Possibly it is neccessary to compile a custom EPG containing only data from publicly financed (öffentlich-rechtliche) stations.
 
 ## Open questions
 
