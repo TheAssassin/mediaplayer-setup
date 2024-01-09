@@ -27,7 +27,7 @@ cat > /storage/.kodi/userdata/addon_data/pvr.iptvsimple/settings.xml <<\EOF
     <setting id="epgPathType">1</setting>
     <setting id="epgTimeShift" default="true">0</setting>
     <setting id="epgTSOverride" default="true">false</setting>
-    <setting id="epgUrl" default="true">https://xmltv.info/de/epg.xml</setting>
+    <setting id="epgUrl" default="true">http://www.xmltvepg.nl/rytecDE_Basic.xz</setting>
     <setting id="logoBaseUrl" default="true"></setting>
     <setting id="logoFromEpg">1</setting>
     <setting id="logoPath" default="true"></setting>
@@ -42,7 +42,7 @@ EOF
 killall kodi.bin
 ```
 
-URLs courtesy of https://github.com/jnk22/kodinerds-iptv (m3u) https://xmltv.info/ (EPG).
+URLs courtesy of https://github.com/jnk22/kodinerds-iptv (m3u) https://github.com/doglover3920/EPGimport-Sources/blob/main/rytec.sources.xml (EPG; contains URLs for other countries and mirrors as well).
 
 According to https://linuxundich.de/gnu-linux/epg-zu-deutschen-sendern-in-tvtime-einblenden/, TV stations want _money_ for EPG data. Which would be kinda scandalous if true for publicly financed (öffentlich-rechtliche) stations. Possibly it is neccessary to compile a custom EPG containing only data from publicly financed (öffentlich-rechtliche) stations.
 
