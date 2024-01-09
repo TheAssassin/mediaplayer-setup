@@ -46,6 +46,10 @@ URLs courtesy of https://github.com/jnk22/kodinerds-iptv (m3u) https://github.co
 
 According to https://linuxundich.de/gnu-linux/epg-zu-deutschen-sendern-in-tvtime-einblenden/, TV stations want _money_ for EPG data. Which would be kinda scandalous if true for publicly financed (öffentlich-rechtliche) stations. Possibly it is neccessary to compile a custom EPG containing only data from publicly financed (öffentlich-rechtliche) stations.
 
+## De-spam channel list
+
+Using the "Group manager" on the device, it is possible to remove channels from the list of all channels. This is useful to e.g., remove all channels that don't have EPG data. Once done, the file `/storage/.kodi/userdata/Database/TVxx.db` can be copied to other devices to clone the configuration. (It seems like the number in `xx` represents the version of the database schema; files with lower numbers can be placed onto systems that have the same or higher number; the system seems to then migrate the database to the newer version automatically. Need to ensure that only one `TVxx.db` file is there.)
+
 ## Open questions
 
 Contributions welcome.
